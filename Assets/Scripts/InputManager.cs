@@ -24,7 +24,7 @@ public class InputManager : MonoBehaviour
         reverseAction = playerInput.actions["Reverse"];
         accelerateAction = playerInput.actions["Accelerate"];
         brakeAction = playerInput.actions["Brake"];
-        driftAction = playerInput.actions["Drift"]; 
+        driftAction = playerInput.actions["Drift"];
     }
 
     /* 
@@ -33,10 +33,10 @@ public class InputManager : MonoBehaviour
     * parameter is FALSE otherwise, and returns the movement direction unmodified.
     * This returns left/right movement. Left = -1 | Right = 1. (Flipped if isReversing is true)
     */
-    public float GetMoveDirectionX(bool isReversing) 
+    public float GetMoveDirectionX(bool isReversing)
     {
         Vector2 moveDirection;
-        if(!isReversing)
+        if (!isReversing)
         {
             moveDirection = moveAction.ReadValue<Vector2>().normalized;
         }
@@ -45,6 +45,42 @@ public class InputManager : MonoBehaviour
             moveDirection = -moveAction.ReadValue<Vector2>().normalized;
         }
         return moveDirection.x;
+    }
+
+    /*
+     * same as the above method, but returns forward/backward direction of joystick instead of left/right.
+     * 1 for forward, 0 for backward.
+     */
+    public float GetMoveDirectionY(bool isReversing)
+    {
+        Vector2 moveDirection;
+        if (!isReversing)
+        {
+            moveDirection = moveAction.ReadValue<Vector2>().normalized;
+        }
+        else
+        {
+            moveDirection = -moveAction.ReadValue<Vector2>().normalized;
+        }
+        return moveDirection.y;
+    }
+    
+    /*
+     * same as the above methods, but returns entire vector instead of just x or y. 
+     * this would only be used if you need to look at both forward/backward and left/right at the same time.
+     */
+    public Vector2 GetMoveDirectionVector(bool isReversing)
+    {
+        Vector2 moveDirection;
+        if (!isReversing)
+        {
+            moveDirection = moveAction.ReadValue<Vector2>().normalized;
+        }
+        else
+        {
+            moveDirection = -moveAction.ReadValue<Vector2>().normalized;
+        }
+        return moveDirection;
     }
 
     /*
