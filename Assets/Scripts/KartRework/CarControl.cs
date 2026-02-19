@@ -1,4 +1,5 @@
 
+
 using UnityEngine;
 
 public class CarControl : MonoBehaviour
@@ -64,16 +65,16 @@ public class CarControl : MonoBehaviour
         //Determine if player is accelerating or reversing
         bool isAccelerating = Mathf.Sign(vInput) == Mathf.Sign(forwardSpeed);
 
-        /*float kartRotation = Mathf.Clamp(rb.angularVelocity.y,-maxTurnSpeed,maxTurnSpeed);
-        rb.angularVelocity = new Vector3(rb.angularVelocity.x,kartRotation,rb.angularVelocity.z);*/
-        rb.maxAngularVelocity = maxTurnSpeed;
-
+        Vector3[] normals = new Vector3[4];
+        int index = 0;
         foreach (var wheel in wheels)
         {
             //Apply steering to wheels
             if (wheel.steerable)
             {
                 wheel.wheelCollider.steerAngle = hInput * currentSteerRange;
+
+
             }
 
             if(isAccelerating)
@@ -93,7 +94,20 @@ public class CarControl : MonoBehaviour
                 wheel.wheelCollider.motorTorque = 0f;
                 wheel.wheelCollider.brakeTorque = Mathf.Abs(vInput) * brakeTorque;
             }
+            RaycastHit hit;
+            if(Physics.Raycast(wheel.transform.position,-wheel.transform.up, out hit))
+            {
+                normals[index]=hit.normal;
+            }
+            index++;
         }
+
+        Vector3 groundNormal = Vector3.Normalize(normals[0]+ normals[1] + normals[2] + normals[3]);
+        Quaternion targetRotation = Quaternion.FromToRotation(transform.up,groundNormal) * transform.rotation;
+        transform.rotation =  Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 3);
+
+        float kartRotation = Mathf.Clamp(rb.angularVelocity.y,-maxTurnSpeed,maxTurnSpeed);
+        rb.angularVelocity = new Vector3(0f,kartRotation,0f);
 
 
     }
