@@ -161,6 +161,7 @@ MonoBehaviour:
   steeringRange: 30
   steeringRangeAtMaxSpeed: 10
   centreOfGravityOffset: -1
+  maxTurnSpeed: 0
 --- !u!1 &279249830877123168
 GameObject:
   m_ObjectHideFlags: 0

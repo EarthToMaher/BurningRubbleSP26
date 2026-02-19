@@ -64,8 +64,9 @@ public class CarControl : MonoBehaviour
         //Determine if player is accelerating or reversing
         bool isAccelerating = Mathf.Sign(vInput) == Mathf.Sign(forwardSpeed);
 
-        float kartRotation = Mathf.Clamp(rb.angularVelocity.y,-maxTurnSpeed,maxTurnSpeed);
-        rb.angularVelocity = new Vector3(rb.angularVelocity.x,kartRotation,rb.angularVelocity.z);
+        /*float kartRotation = Mathf.Clamp(rb.angularVelocity.y,-maxTurnSpeed,maxTurnSpeed);
+        rb.angularVelocity = new Vector3(rb.angularVelocity.x,kartRotation,rb.angularVelocity.z);*/
+        rb.maxAngularVelocity = maxTurnSpeed;
 
         foreach (var wheel in wheels)
         {
