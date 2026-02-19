@@ -1,12 +1,18 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerCamControl : MonoBehaviour
 {
+
     [SerializeField] private Camera _playerCam;
     [SerializeField] private float _maxFOV;
     [SerializeField] private float _currentFOV;
     [SerializeField] private float _time = 0.0f;
+    [SerializeField] private float _boostPauseMiliseconds = 30f;
     //[SerializeField] public float _currentSpeed;
+
+    [SerializeField] private bool _isBoosting = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -14,51 +20,67 @@ public class PlayerCamControl : MonoBehaviour
         _playerCam = this.GetComponent<Camera>();
         _currentFOV = this.GetComponent<Camera>().fieldOfView;
     }
+    void Start()
+    {
+        CamSpeedBoostEngage();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        _currentFOV = this.GetComponent<Camera>().fieldOfView;
-        CamSpeedBoost(_currentFOV);
-        //CamSpeedBoost(_currentFOV);
+        _currentFOV = this.GetComponent<Camera>().fieldOfView;  
     }
 
-
-    public void CamSpeedBoost(float currentFOV)
+    // Fully functional
+    public void CamSpeedBoostEngage()
     {
-        float _defaultFOV = currentFOV;
-        bool reverseFOV = false;
-        //Mathf.Clamp(Mathf.Lerp(currentFOV, currentFOV + (currentFOV * .35f), 1), 60, 90);
-        // Time is called everytime this function activates.
-        _time = 0.0f;
-        _time += 5f * Time.deltaTime;
-
-        Debug.Log("Moving forward");
-        if (!reverseFOV)
+        Debug.Log("CamSpeedBoostEngage called");
+        if (_isBoosting)
         {
-            Debug.Log(_time);
-            // While utilizing time, lerp between our currentFOV passed in and expand it by a calculated amount. Clamped at a minimum of 60 and max of 90.
-            _playerCam.fieldOfView = Mathf.Clamp(Mathf.Lerp(currentFOV, ((currentFOV * .35f) + currentFOV), _time), 60, 90);
-            if (currentFOV >= 80) 
-            {
-                Debug.Log("Triggered change in FOV");
-                reverseFOV = true;
-            }
-        } else if (reverseFOV)
-        {
-            Debug.Log("Moving backwards");
-            _playerCam.fieldOfView = Mathf.Clamp(Mathf.Lerp(currentFOV, _defaultFOV, _time), 60, 90);
+            Debug.Log("Engaging Coroutine");
+            StartCoroutine(CamSpeedBoostRoutine());
         }
     }
 
-    [ContextMenu("CamSpeedBoostTest")]
-    public void CamSpeedBoostTest()
+
+    // Fully functional
+    IEnumerator CamSpeedBoostRoutine()
     {
-        Debug.Log("SpeedBoostTest called");
-        //Debug.Log("Lerp value: " + ((60 * .35f) + 60));
-        //Mathf.Clamp(Mathf.Lerp(60, ((60 * .35f) + 60), 1), 60, 90);
-        //_time += 0.5f * Time.deltaTime;
-        Debug.Log(_time);
-        _playerCam.fieldOfView = Mathf.Lerp(60, ((60 * .35f) + 60), _time);
-    }
+        //Debug.Log("called");
+        float defaultFOV = _playerCam.fieldOfView;
+        float targetFOV = Mathf.Clamp(defaultFOV * 1.35f, 60f, 90f);
+
+        // Time called everytime the function activates
+        float duration = .25f;
+        float time = 0f;
+
+        //Debug.Log("Moving forward");
+
+        // Camera pullback logic 
+        while (time < duration)
+        {
+            Debug.Log("Within While loop");
+            _playerCam.fieldOfView = Mathf.Lerp(defaultFOV, targetFOV, time / duration);
+            time += Time.deltaTime;
+            Debug.Log("Time = " + time);
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(_boostPauseMiliseconds * Time.deltaTime);
+
+        // Reset the timer & set new duration
+        time = 0f;
+        duration = 1.25f;
+
+        // Camera return logic
+        while (time < duration)
+        {
+            _playerCam.fieldOfView = Mathf.Lerp(targetFOV, defaultFOV, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        _isBoosting = false;
+        
+      }
 }
