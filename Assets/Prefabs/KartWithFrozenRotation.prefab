@@ -522,7 +522,7 @@ MonoBehaviour:
   steeringRange: 20
   steeringRangeAtMaxSpeed: 10
   centreOfGravityOffset: -2
-  maxTurnSpeed: 0
+  maxTurnSpeed: 0.5
 --- !u!54 &1269077025797960726
 Rigidbody:
   m_ObjectHideFlags: 0
