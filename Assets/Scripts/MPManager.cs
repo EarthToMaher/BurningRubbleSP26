@@ -9,6 +9,7 @@ public class MPManager : MonoBehaviour
 
     //array of player prefabs
     [SerializeField] private GameObject[] players;
+    [SerializeField] private EndScreenManager endScreen;
 
     //start positions
     [SerializeField] private Vector3 player1Start;
@@ -53,6 +54,9 @@ public class MPManager : MonoBehaviour
     {
         //removes the join screen UI
         joinScreen.ClearJoinScreen();
+
+        //end screen set up
+        endScreen.SetTotalPlayers(numPlayers);
 
         //loop looks at every player
         foreach(GameObject player in players)
