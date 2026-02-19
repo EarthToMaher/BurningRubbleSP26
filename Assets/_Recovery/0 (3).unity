@@ -29558,14 +29558,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2659166653368509948, guid: 6e998770c478d8b4f9f0d3ada80530e0, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3186998240103893437, guid: 6e998770c478d8b4f9f0d3ada80530e0, type: 3}
-      propertyPath: brakeTorque
-      value: 750
-      objectReference: {fileID: 0}
     - target: {fileID: 3186998240103893437, guid: 6e998770c478d8b4f9f0d3ada80530e0, type: 3}
       propertyPath: maxTurnSpeed
       value: 0

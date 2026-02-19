@@ -5,43 +5,44 @@ using UnityEngine;
 public class CarControl : MonoBehaviour
 {
     [Header("Car Properties")]
-    public float motorTorque = 2000f;
-    public float brakeTorque = 2000f;
-    public float maxSpeed = 20f;
-    public float steeringRange = 30f;
-    public float steeringRangeAtMaxSpeed = 10f;
-    public float centreOfGravityOffset = -1.5f;
-    public float maxTurnSpeed;
+    [Tooltip("The speed at which the wheels accelerate")]public float motorTorque = 2000f;
+    [Tooltip("The speed at which the wheels decelerate")]public float brakeTorque = 2000f;
+    [Tooltip("Max speed of the car")]public float maxSpeed = 20f;
+    [Tooltip("How far the front wheels turn")]public float steeringRange = 30f;
+    [Tooltip("How far the front wheels turn at max speed")] public float steeringRangeAtMaxSpeed = 10f;
+    [Tooltip("Used for creating weight. Lower center of gravity = more weight")]public float centreOfGravityOffset = -1.5f;
+    [Tooltip("How far the car is actually allowed to turn. Prevents splipping")]public float maxTurnSpeed;
 
-    private WheelControl[] wheels;
-    private Rigidbody rb;
-
-    private CarInputActions carControls;
+    
+    private WheelControl[] wheels; //Array of wheels
+    private Rigidbody rb; //Kart RB
+    private CarInputActions carControls; //Our current control mapping, will be replaced with our new InputActions
 
     void Awake()
     {
-        carControls = new CarInputActions();
+        carControls = new CarInputActions(); //Get our controls
     }
 
     void OnEnable()
     {
-        carControls.Enable();
+        carControls.Enable(); //enables them if car is active
     }
 
     void OnDisable()
     {
-        carControls.Disable();
+        carControls.Disable(); //Disables them if not
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>(); //Get RB
 
+        //Apply center of mass to give kart weight
         Vector3 centerOfMass = rb.centerOfMass;
         centerOfMass.y += centreOfGravityOffset;
         rb.centerOfMass = centerOfMass;
 
-        wheels = GetComponentsInChildren<WheelControl>();
+        wheels = GetComponentsInChildren<WheelControl>(); //Get Wheels
     }
 
     void FixedUpdate()
@@ -65,15 +66,17 @@ public class CarControl : MonoBehaviour
         //Determine if player is accelerating or reversing
         bool isAccelerating = Mathf.Sign(vInput) == Mathf.Sign(forwardSpeed);
 
+        //Define our array of normals for alignment and an index for which spot of the array we are in
         Vector3[] normals = new Vector3[4];
         int index = 0;
+
+        //Go through logic applied to each wheel
         foreach (var wheel in wheels)
         {
             //Apply steering to wheels
             if (wheel.steerable)
             {
-                wheel.wheelCollider.steerAngle = hInput * currentSteerRange;
-
+                wheel.wheelCollider.steerAngle = hInput * currentSteerRange; //Turns wheel
 
             }
 
@@ -82,7 +85,7 @@ public class CarControl : MonoBehaviour
                 //Apply torque to wheels
                 if (wheel.motorized)
                 {
-                    wheel.wheelCollider.motorTorque = vInput * currentMotorTorque;
+                    wheel.wheelCollider.motorTorque = vInput * currentMotorTorque; //Rotates the wheel to accelerate
                 }
 
                 //Release brakes when accelerating
@@ -94,18 +97,22 @@ public class CarControl : MonoBehaviour
                 wheel.wheelCollider.motorTorque = 0f;
                 wheel.wheelCollider.brakeTorque = Mathf.Abs(vInput) * brakeTorque;
             }
+
+            //Raycast from each of our wheel to get the normals for alignment
             RaycastHit hit;
-            if(Physics.Raycast(wheel.transform.position,-wheel.transform.up, out hit))
+            if(Physics.Raycast(wheel.transform.position,-wheel.transform.up, out hit)) //Currently always true, should shorten the array then call each wheel if 1 hits
             {
-                normals[index]=hit.normal;
+                normals[index]=hit.normal;//Store our normal
             }
-            index++;
+            index++; //Update index
         }
 
-        Vector3 groundNormal = Vector3.Normalize(normals[0]+ normals[1] + normals[2] + normals[3]);
-        Quaternion targetRotation = Quaternion.FromToRotation(transform.up,groundNormal) * transform.rotation;
-        transform.rotation =  Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 3);
+        //Ground alignment logic
+        Vector3 groundNormal = Vector3.Normalize(normals[0]+ normals[1] + normals[2] + normals[3]);//Add our normals and normalize them to get our ground normal
+        Quaternion targetRotation = Quaternion.FromToRotation(transform.up,groundNormal) * transform.rotation; //Gets our target rotation by getting the difference between our ground and up normal, then multiplying it by our current rotation
+        transform.rotation =  Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 3); //Smoothly interps between them
 
+        //Logic for clamping our Kart rotation to avoid unnecessary rotations or spin outs
         float kartRotation = Mathf.Clamp(rb.angularVelocity.y,-maxTurnSpeed,maxTurnSpeed);
         rb.angularVelocity = new Vector3(0f,kartRotation,0f);
 

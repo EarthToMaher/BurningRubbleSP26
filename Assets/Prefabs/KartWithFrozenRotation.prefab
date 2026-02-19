@@ -416,7 +416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5415600678789079561}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7187789, z: -0, w: 0.69523877}
+  m_LocalRotation: {x: 0, y: 0.7187818, z: 0, w: 0.6952357}
   m_LocalPosition: {x: 599.8833, y: 0.19, z: 243.11124}
   m_LocalScale: {x: 1.519, y: 0.18367, z: 1.7283732}
   m_ConstrainProportionsScale: 0
@@ -425,7 +425,7 @@ Transform:
   - {fileID: 8660819441474861948}
   - {fileID: 5292495949498006697}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 91.908, z: 0}
 --- !u!33 &2205305371029892732
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -441,7 +441,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5415600678789079561}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -517,12 +517,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarControl
   motorTorque: 1000
-  brakeTorque: 250
+  brakeTorque: 750
   maxSpeed: 100
   steeringRange: 20
   steeringRangeAtMaxSpeed: 10
   centreOfGravityOffset: -2
-  maxTurnSpeed: 0.05
+  maxTurnSpeed: 0
 --- !u!54 &1269077025797960726
 Rigidbody:
   m_ObjectHideFlags: 0
