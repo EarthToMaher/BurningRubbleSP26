@@ -4,6 +4,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerCamControl : MonoBehaviour
 {
+    // TODO
+    /*
+     * General Camera movement: Needs to follow the player slightly lagging behind the player.
+     * Speed Value passthrough: Utilizing the kart's movement, this should determine how far behind the Camera should be.
+     * Consensus: These two can honestly be linked together. In order for the camera to follow behind the player, it needs to also *catch up*
+     * with the player. I can easily do this when the kart is actually finished for more smooth testing.
+     */
 
     [SerializeField] private Camera _playerCam;
     [SerializeField] private float _maxFOV;
@@ -22,13 +29,8 @@ public class PlayerCamControl : MonoBehaviour
     }
     void Start()
     {
+        // Debug start test
         CamSpeedBoostEngage();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        _currentFOV = this.GetComponent<Camera>().fieldOfView;  
     }
 
     // Fully functional
