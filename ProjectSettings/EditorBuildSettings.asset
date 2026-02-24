@@ -6,11 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/LoadScene.unity
-    guid: f0227d21390d9cc49b3b0367b25f2b63
-  - enabled: 1
-    path: Assets/Scenes/Track1Ver1.unity
-    guid: 80d9827156f48c04c8af4073f45f1169
+    path: Assets/Skatepark.unity
+    guid: b59a81cc34cc69f498b241092cb01f37
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 02c6af2bebbd9f24f963a77c52416abd, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

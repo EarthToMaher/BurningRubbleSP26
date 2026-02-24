@@ -16,6 +16,7 @@ public class InputManager : MonoBehaviour
     private InputAction accelerateAction;
     private InputAction brakeAction;
     private InputAction driftAction;
+    private InputAction reload;
 
     void Start()
     {
@@ -25,6 +26,13 @@ public class InputManager : MonoBehaviour
         accelerateAction = playerInput.actions["Accelerate"];
         brakeAction = playerInput.actions["Brake"];
         driftAction = playerInput.actions["Drift"];
+        reload = playerInput.actions["Reload"];
+    }
+
+    public float GetReload()
+    {
+        float reloadVal = reload.ReadValue<float>();
+        return reloadVal;
     }
 
     /* 
@@ -33,17 +41,10 @@ public class InputManager : MonoBehaviour
     * parameter is FALSE otherwise, and returns the movement direction unmodified.
     * This returns left/right movement. Left = -1 | Right = 1. (Flipped if isReversing is true)
     */
-    public float GetMoveDirectionX(bool isReversing)
+    public float GetMoveDirectionX()
     {
         Vector2 moveDirection;
-        if (!isReversing)
-        {
-            moveDirection = moveAction.ReadValue<Vector2>().normalized;
-        }
-        else
-        {
-            moveDirection = -moveAction.ReadValue<Vector2>().normalized;
-        }
+        moveDirection = moveAction.ReadValue<Vector2>().normalized;
         return moveDirection.x;
     }
 
@@ -51,17 +52,11 @@ public class InputManager : MonoBehaviour
      * same as the above method, but returns forward/backward direction of joystick instead of left/right.
      * 1 for forward, 0 for backward.
      */
-    public float GetMoveDirectionY(bool isReversing)
+    public float GetMoveDirectionY()
     {
         Vector2 moveDirection;
-        if (!isReversing)
-        {
             moveDirection = moveAction.ReadValue<Vector2>().normalized;
-        }
-        else
-        {
             moveDirection = -moveAction.ReadValue<Vector2>().normalized;
-        }
         return moveDirection.y;
     }
     

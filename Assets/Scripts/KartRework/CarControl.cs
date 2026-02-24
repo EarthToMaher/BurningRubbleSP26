@@ -1,6 +1,7 @@
 
 
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 
 public class CarControl : MonoBehaviour
@@ -27,10 +28,12 @@ public class CarControl : MonoBehaviour
     private WheelControl[] wheels; //Array of wheels
     private Rigidbody rb; //Kart RB
     private CarInputActions carControls; //Our current control mapping, will be replaced with our new InputActions
+    private InputManager im;
 
     void Awake()
     {
         carControls = new CarInputActions(); //Get our controls
+        im = GetComponent<InputManager>();
     }
 
     void OnEnable()
@@ -57,13 +60,13 @@ public class CarControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        
-        //Read our input
-        Vector2 inputVector = carControls.Car.Movement.ReadValue<Vector2>();
+        if(im.GetReload()>0) FindFirstObjectByType<SceneReload>().Reload();
 
         //Assign each one to a float for acceleration and steering
-        float vInput = inputVector.y;
-        float hInput = inputVector.x;
+        float vInput = im.GetMoveDirectionY();
+        float hInput = im.GetMoveDirectionX();
+        float acceleration = im.GetAcceleration()-im.GetReverse();
+        Debug.LogWarning(acceleration);
 
         //Caculate speed
         float forwardSpeed = Vector3.Dot(transform.forward, rb.linearVelocity);
@@ -74,12 +77,12 @@ public class CarControl : MonoBehaviour
         float currentSteerRange = Mathf.Lerp(steeringRange,steeringRangeAtMaxSpeed, speedFactor);
 
         //Determine if player is accelerating or reversing
-        bool isAccelerating = Mathf.Sign(vInput) == Mathf.Sign(forwardSpeed);
+        bool isAccelerating = Mathf.Sign(acceleration) == Mathf.Sign(forwardSpeed);
 
         if (drifting)
         {
             Drift();
-            WheelMovement(hInput, vInput, currentSteerRange,currentMotorTorque,isAccelerating);
+            WheelMovement(hInput, acceleration, currentSteerRange,currentMotorTorque,isAccelerating);
         }
         else
         {
@@ -87,7 +90,7 @@ public class CarControl : MonoBehaviour
             {
                 StartDrift(hInput,speedFactor);
             }
-            else WheelMovement(hInput, vInput, currentSteerRange,currentMotorTorque,isAccelerating);
+            else WheelMovement(hInput, acceleration, currentSteerRange,currentMotorTorque,isAccelerating);
         }
 
 
@@ -105,6 +108,7 @@ public class CarControl : MonoBehaviour
 
     public void WheelMovement(float hInput, float vInput, float currentSteerRange, float currentMotorTorque, bool isAccelerating)
     {
+        bool grounded = false;
         //Define our array of normals for alignment and an index for which spot of the array we are in
         Vector3[] normals = new Vector3[4];
         int index = 0;
@@ -142,13 +146,16 @@ public class CarControl : MonoBehaviour
             {
                 normals[index]=hit.normal;//Store our normal
             }
+            RaycastHit groundHit;
+            if(Physics.Raycast(wheel.transform.position, -wheel.transform.up, out groundHit, 1)) grounded = true;
             index++; //Update index
         }
 
-         //Ground alignment logic
+        if(!grounded) return;
+        //Ground alignment logic
         Vector3 groundNormal = Vector3.Normalize(normals[0]+ normals[1] + normals[2] + normals[3]);//Add our normals and normalize them to get our ground normal
         Quaternion targetRotation = Quaternion.FromToRotation(transform.up,groundNormal) * transform.rotation; //Gets our target rotation by getting the difference between our ground and up normal, then multiplying it by our current rotation
-        transform.rotation =  Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 3); //Smoothly interps between them
+        rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, Time.fixedDeltaTime * 10f));
     }
 
     public void StartDrift(float hInput, float speedFactor)
