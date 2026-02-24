@@ -495,10 +495,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Segment#1(Straight) (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 4439518706477938221, guid: abb500139df358a4bab4e911181c55d5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1930,10 +1926,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Segment#5(Dented_Var#2) (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 8306502127297283687, guid: bcbd44e527900614da9ad6e20ed1a5b5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8650657322095647965, guid: bcbd44e527900614da9ad6e20ed1a5b5, type: 3}
       propertyPath: m_LocalScale.x
       value: 1000
@@ -3098,10 +3090,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Segment#1(Straight) (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 4439518706477938221, guid: abb500139df358a4bab4e911181c55d5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3384,10 +3372,6 @@ PrefabInstance:
     - target: {fileID: 8306502127297283687, guid: bcbd44e527900614da9ad6e20ed1a5b5, type: 3}
       propertyPath: m_Name
       value: Segment#5(Dented_Var#2) (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8306502127297283687, guid: bcbd44e527900614da9ad6e20ed1a5b5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8650657322095647965, guid: bcbd44e527900614da9ad6e20ed1a5b5, type: 3}
       propertyPath: m_LocalScale.x
@@ -3796,10 +3780,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Segment#2(CournerOutWard) (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 7514741128893048817, guid: bf112fc7eebc2e044a66462adc3833eb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3946,10 +3926,6 @@ PrefabInstance:
     - target: {fileID: 7514741128893048817, guid: bf112fc7eebc2e044a66462adc3833eb, type: 3}
       propertyPath: m_Name
       value: Segment#2(CournerOutWard) (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7514741128893048817, guid: bf112fc7eebc2e044a66462adc3833eb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5963,10 +5939,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Segment#5(Dented_Var#2) (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8306502127297283687, guid: bcbd44e527900614da9ad6e20ed1a5b5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8650657322095647965, guid: bcbd44e527900614da9ad6e20ed1a5b5, type: 3}
       propertyPath: m_LocalScale.x
       value: 500
@@ -6093,10 +6065,6 @@ PrefabInstance:
     - target: {fileID: 4439518706477938221, guid: abb500139df358a4bab4e911181c55d5, type: 3}
       propertyPath: m_Name
       value: Segment#1(Straight) (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4439518706477938221, guid: abb500139df358a4bab4e911181c55d5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21477,10 +21445,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Segment#5(Dented_Var#2) (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 8306502127297283687, guid: bcbd44e527900614da9ad6e20ed1a5b5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8650657322095647965, guid: bcbd44e527900614da9ad6e20ed1a5b5, type: 3}
       propertyPath: m_LocalScale.x
       value: 500
@@ -23120,10 +23084,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Segment#1(Straight) (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 4439518706477938221, guid: abb500139df358a4bab4e911181c55d5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23198,10 +23158,6 @@ PrefabInstance:
     - target: {fileID: 4439518706477938221, guid: abb500139df358a4bab4e911181c55d5, type: 3}
       propertyPath: m_Name
       value: Segment#1(Straight) (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4439518706477938221, guid: abb500139df358a4bab4e911181c55d5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23361,10 +23317,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Segment#5(Dented_Var#2) (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 8306502127297283687, guid: bcbd44e527900614da9ad6e20ed1a5b5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8650657322095647965, guid: bcbd44e527900614da9ad6e20ed1a5b5, type: 3}
       propertyPath: m_LocalScale.x
       value: 500
@@ -23491,10 +23443,6 @@ PrefabInstance:
     - target: {fileID: 4439518706477938221, guid: abb500139df358a4bab4e911181c55d5, type: 3}
       propertyPath: m_Name
       value: Segment#1(Straight) (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4439518706477938221, guid: abb500139df358a4bab4e911181c55d5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25117,10 +25065,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Segment#1(Straight) (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 4439518706477938221, guid: abb500139df358a4bab4e911181c55d5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25775,10 +25719,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Segment#1(Straight) (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 4439518706477938221, guid: abb500139df358a4bab4e911181c55d5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26003,10 +25943,6 @@ PrefabInstance:
     - target: {fileID: 8306502127297283687, guid: bcbd44e527900614da9ad6e20ed1a5b5, type: 3}
       propertyPath: m_Name
       value: Segment#5(Dented_Var#2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8306502127297283687, guid: bcbd44e527900614da9ad6e20ed1a5b5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8650657322095647965, guid: bcbd44e527900614da9ad6e20ed1a5b5, type: 3}
       propertyPath: m_LocalScale.x
@@ -26736,10 +26672,6 @@ PrefabInstance:
     - target: {fileID: 4439518706477938221, guid: abb500139df358a4bab4e911181c55d5, type: 3}
       propertyPath: m_Name
       value: Segment#1(Straight) (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4439518706477938221, guid: abb500139df358a4bab4e911181c55d5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29627,28 +29559,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3186998240103893437, guid: 6e998770c478d8b4f9f0d3ada80530e0, type: 3}
-      propertyPath: jumpStrength
-      value: 10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3186998240103893437, guid: 6e998770c478d8b4f9f0d3ada80530e0, type: 3}
       propertyPath: maxTurnSpeed
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3186998240103893437, guid: 6e998770c478d8b4f9f0d3ada80530e0, type: 3}
-      propertyPath: rotationTime
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3186998240103893437, guid: 6e998770c478d8b4f9f0d3ada80530e0, type: 3}
-      propertyPath: steeringRange
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3186998240103893437, guid: 6e998770c478d8b4f9f0d3ada80530e0, type: 3}
-      propertyPath: initialRoatateAmount
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 3186998240103893437, guid: 6e998770c478d8b4f9f0d3ada80530e0, type: 3}
-      propertyPath: steeringRangeAtMaxSpeed
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5415600678789079561, guid: 6e998770c478d8b4f9f0d3ada80530e0, type: 3}
       propertyPath: m_Name
