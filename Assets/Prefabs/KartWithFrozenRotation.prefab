@@ -47,7 +47,7 @@ WheelCollider:
     spring: 35000
     damper: 4500
     targetPosition: 0.5
-  m_SuspensionDistance: 0.3
+  m_SuspensionDistance: 0.6
   m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 1
@@ -135,7 +135,7 @@ WheelCollider:
     spring: 35000
     damper: 4500
     targetPosition: 0.5
-  m_SuspensionDistance: 0.3
+  m_SuspensionDistance: 0.6
   m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 1
@@ -223,7 +223,7 @@ WheelCollider:
     spring: 35000
     damper: 4500
     targetPosition: 0.5
-  m_SuspensionDistance: 0.3
+  m_SuspensionDistance: 0.6
   m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 1
@@ -346,7 +346,7 @@ WheelCollider:
     spring: 35000
     damper: 4500
     targetPosition: 0.5
-  m_SuspensionDistance: 0.3
+  m_SuspensionDistance: 0.6
   m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 1
@@ -401,6 +401,8 @@ GameObject:
   - component: {fileID: 3802882319540029752}
   - component: {fileID: 3186998240103893437}
   - component: {fileID: 1269077025797960726}
+  - component: {fileID: 3347653615133048237}
+  - component: {fileID: 7740924198225348902}
   m_Layer: 0
   m_Name: KartWithFrozenRotation
   m_TagString: Untagged
@@ -517,12 +519,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarControl
   motorTorque: 1000
-  brakeTorque: 750
-  maxSpeed: 100
+  brakeTorque: 3500
+  maxSpeed: 50
   steeringRange: 20
   steeringRangeAtMaxSpeed: 10
   centreOfGravityOffset: -2
   maxTurnSpeed: 0.5
+  maxDriftSpeed: 0
+  jumpStrength: 0
+  rotationTime: 3
+  initialRoatateAmount: 0
 --- !u!54 &1269077025797960726
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -549,7 +555,49 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
+--- !u!114 &3347653615133048237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5415600678789079561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d18deab26181246af2a4a0ba1db5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputManager
+--- !u!114 &7740924198225348902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5415600678789079561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &8305598821110600022
 GameObject:
   m_ObjectHideFlags: 0
