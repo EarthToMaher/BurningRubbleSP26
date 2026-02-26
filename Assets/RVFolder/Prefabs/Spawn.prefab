@@ -659,13 +659,17 @@ MonoBehaviour:
   brakeTorque: 750
   maxSpeed: 100
   steeringRange: 20
-  steeringRangeAtMaxSpeed: 10
+  steeringRangeAtMaxSpeed: 15
   centreOfGravityOffset: -2
   maxTurnSpeed: 0.5
-  maxDriftSpeed: 0
-  jumpStrength: 0
-  rotationTime: 3
-  initialRoatateAmount: 0
+  maxDriftSpeed: 0.75
+  jumpStrength: 6250
+  rotationTime: 1
+  initialRoatateAmount: 40
+  drifting: 0
+  driftDirection: 0
+  driftSteeringRange: 30
+  driftSteeringRangeAtMaxSpeed: 22.5
 --- !u!54 &9208291222011131208
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -777,7 +781,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8970877045213511789}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.000000059604638, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 399.44, y: 0.29, z: 399.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
