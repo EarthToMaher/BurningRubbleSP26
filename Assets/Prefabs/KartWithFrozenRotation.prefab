@@ -47,7 +47,7 @@ WheelCollider:
     spring: 35000
     damper: 4500
     targetPosition: 0.5
-  m_SuspensionDistance: 0.3
+  m_SuspensionDistance: 0.6
   m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 1
@@ -135,7 +135,7 @@ WheelCollider:
     spring: 35000
     damper: 4500
     targetPosition: 0.5
-  m_SuspensionDistance: 0.3
+  m_SuspensionDistance: 0.6
   m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 1
@@ -176,37 +176,6 @@ MonoBehaviour:
   wheelCollider: {fileID: 0}
   steerable: 1
   motorized: 1
---- !u!1 &1708600897062595406
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3039276590791532806}
-  m_Layer: 0
-  m_Name: Center
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3039276590791532806
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1708600897062595406}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 327559192319207388}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3809011366017355662
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +223,7 @@ WheelCollider:
     spring: 35000
     damper: 4500
     targetPosition: 0.5
-  m_SuspensionDistance: 0.3
+  m_SuspensionDistance: 0.6
   m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 1
@@ -377,7 +346,7 @@ WheelCollider:
     spring: 35000
     damper: 4500
     targetPosition: 0.5
-  m_SuspensionDistance: 0.3
+  m_SuspensionDistance: 0.6
   m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 1
@@ -432,8 +401,8 @@ GameObject:
   - component: {fileID: 3802882319540029752}
   - component: {fileID: 3186998240103893437}
   - component: {fileID: 1269077025797960726}
-  - component: {fileID: 5760615011056519171}
-  - component: {fileID: 7592762821038296106}
+  - component: {fileID: 3347653615133048237}
+  - component: {fileID: 7740924198225348902}
   m_Layer: 0
   m_Name: KartWithFrozenRotation
   m_TagString: Untagged
@@ -454,7 +423,6 @@ Transform:
   m_LocalScale: {x: 1.519, y: 0.18367, z: 1.7283732}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3039276590791532806}
   - {fileID: 6461573331427244754}
   - {fileID: 8660819441474861948}
   - {fileID: 5292495949498006697}
@@ -551,8 +519,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarControl
   motorTorque: 1000
-  brakeTorque: 750
-  maxSpeed: 100
+  brakeTorque: 3500
+  maxSpeed: 50
   steeringRange: 20
   steeringRangeAtMaxSpeed: 10
   centreOfGravityOffset: -2
@@ -587,8 +555,8 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
---- !u!114 &5760615011056519171
+  m_CollisionDetection: 2
+--- !u!114 &3347653615133048237
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -600,7 +568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d18deab26181246af2a4a0ba1db5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputManager
---- !u!114 &7592762821038296106
+--- !u!114 &7740924198225348902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -657,9 +625,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8305598821110600022}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.18181749, y: -0.000000029802326, z: -0, w: 0.98333234}
-  m_LocalPosition: {x: -0.09414143, y: 10.017968, z: -2.090385}
-  m_LocalScale: {x: 0.6583279, y: 2.6234705, z: 0.65322375}
+  m_LocalRotation: {x: 0.18181746, y: -0.000000029802319, z: 0.0000000074505797, w: 0.9833323}
+  m_LocalPosition: {x: -0.09414149, y: 10.017968, z: -2.0903838}
+  m_LocalScale: {x: 0.6583279, y: 2.6234708, z: 0.65322375}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 327559192319207388}
