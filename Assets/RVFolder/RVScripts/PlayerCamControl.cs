@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,10 +7,9 @@ public class PlayerCamControl : MonoBehaviour
 {
     // TODO
     /*
-     * General Camera movement: Needs to follow the player slightly lagging behind the player.
-     * Speed Value passthrough: Utilizing the kart's movement, this should determine how far behind the Camera should be.
-     * Consensus: These two can honestly be linked together. In order for the camera to follow behind the player, it needs to also *catch up*
-     * with the player. I can easily do this when the kart is actually finished for more smooth testing.
+     * Fix Camera starting at world origin
+     * Fix Camera Kart jitter
+     * Link speed to FOV
      */
 
     // Core objects
@@ -19,12 +19,19 @@ public class PlayerCamControl : MonoBehaviour
     [SerializeField] private float _maxFOV;
     [SerializeField] private float _currentFOV;
     [SerializeField] private float _boostPauseMiliseconds = 30f;
-    // Logic variables for player tracking
+    // Logic variables for player tracking & Camera
     private Vector3 _centerPoint;
-    private float radius = 5f;
+    private float _radius = 5f;
     private float _speed = 2f;
-    private float maxAngle = 45f;
-    
+    private float _maxAngle = 45f;
+    [SerializeField] private float _maxDistance = 2f;
+
+    // Input action to get acceleration
+    private PlayerInput playerInput;
+    private InputAction accelerateAction;
+    private float currAcceleration;
+    private float defaultFOV = 60f;
+    private float targetSpeedPOV = 70f;
     private InputManager _inputManager;
 
     private bool _isBoosting = true;
@@ -36,17 +43,47 @@ public class PlayerCamControl : MonoBehaviour
         _kart = this.gameObject;
         _currentFOV = transform.parent.GetComponentInChildren<Camera>().fieldOfView;
         _inputManager = this.GetComponent<InputManager>();
+
+       // Initialize Camera position
+       Vector3 startOffset = -_kart.transform.forward * _radius + Vector3.up * 2f;
+       _centerPoint = GetComponentInChildren<Transform>().position;
+       _playerCam.transform.position = _centerPoint + startOffset;
+        PlayerCamFollowEngage();
+
+        //
+        playerInput = GetComponentInChildren<PlayerInput>();
+        accelerateAction = playerInput.actions["Accelerate"];
     }
     void Start()
     {
-        PlayerCamFollowEngage();  
+
     }
 
     void Update()
     {
         _centerPoint = GetComponentInChildren<Transform>().position;
-        _playerCam.transform.LookAt(_centerPoint);
+
         PlayerCamFollowEngage();
+    }
+
+    private void LateUpdate()
+    {
+        // Get the direction from the camera to the kart
+        Vector3 direction = _centerPoint - _playerCam.transform.position;
+
+        // Avoid zero-length vectors (just in case)
+        if (direction.sqrMagnitude > 0.0001f)
+        {
+            // Get the target rotation
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+
+            // Smoothly rotate the camera toward the target rotation
+            _playerCam.transform.rotation = Quaternion.Slerp(
+            _playerCam.transform.rotation,
+            targetRotation,
+            Time.deltaTime * 10f
+            );
+        }
     }
 
     public void PlayerCamFollowEngage()
@@ -56,41 +93,67 @@ public class PlayerCamControl : MonoBehaviour
 
     IEnumerator CamPlayerFollow()
     {
+        //currAcceleration = accelerateAction.ReadValue<float>();
+        //Debug.Log("Current Acceleration: " + currAcceleration);
+        Rigidbody rb = _kart.GetComponent<Rigidbody>();
+        float currAcceleration = rb.linearVelocity.magnitude;
+        Debug.Log(currAcceleration);
+        float forwardSpeed = Vector3.Dot(rb.linearVelocity, _kart.transform.forward);
+        if (forwardSpeed > 0f)
+        {
+            _playerCam.fieldOfView = Mathf.Lerp(defaultFOV, targetSpeedPOV, currAcceleration);
+        }
         while (true)
         {
-            //float acceleration = _inputManager.GetAcceleration() - _inputManager.GetReverse();
-
-            // Create an offset Vector between the Camera's position and the center point.
-            Vector3 offset = _playerCam.transform.position - _centerPoint;
-            
             // Camera relative to the kart
             Vector3 kartForward = _kart.transform.forward;
-            Vector3 toCamera = _playerCam.transform.position - _kart.transform.position;
-            
-            // Smoothly move toward center point
             Vector3 desiredPosition = Vector3.Lerp(_playerCam.transform.position, _centerPoint, _speed * Time.deltaTime);
+
             Vector3 newOffset = desiredPosition - _centerPoint;
 
             // Clamp radius if camera is too close
-            if (newOffset.magnitude < radius)
+            if (newOffset.magnitude < _radius)
             {
-                newOffset = newOffset.normalized * radius;
+                newOffset = newOffset.normalized * _radius;
             }
 
             // Clamp cone behind kart
             float angle = Vector3.Angle(-kartForward, newOffset);
 
-            if (angle > maxAngle)
+            if (angle > _maxAngle)
             {
-                // Only rotate direction, keep magnitude (distance)
-                Vector3 dir = newOffset.normalized; // current direction
-                Vector3 clampedDir = Vector3.RotateTowards(-kartForward, dir, Mathf.Deg2Rad * maxAngle, 0f);
-                newOffset = clampedDir * newOffset.magnitude; // preserve distance
+                // Get the direction from the kart to the camera
+                Vector3 currentDir = newOffset.normalized;
+
+                // Desired maximum allowed direction (on cone edge)
+                Vector3 maxDir = Vector3.RotateTowards(
+                    -kartForward,
+                    currentDir,
+                    Mathf.Deg2Rad * _maxAngle,
+                    0f
+                );
+
+                newOffset = maxDir * newOffset.magnitude;
             }
 
-            // New position set
-            _playerCam.transform.position = _centerPoint + newOffset;
+            // Final target
+            Vector3 finalPosition = _centerPoint + newOffset;
 
+            // Keep camera min distance from ground
+            RaycastHit hit;
+            if (Physics.Raycast(finalPosition, _playerCam.transform.position = Vector3.down, out hit, 100f))
+            {
+                float minAllowedY = hit.point.y + _maxDistance;
+
+                if (finalPosition.y < minAllowedY)
+                {
+                    finalPosition.y = minAllowedY;
+                }
+            }
+
+            // Set final destination
+            _playerCam.transform.position = finalPosition;
+            
             // End of IEnumerator
             yield return null;
         }

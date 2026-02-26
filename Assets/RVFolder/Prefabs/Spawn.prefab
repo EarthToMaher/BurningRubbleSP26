@@ -752,6 +752,7 @@ MonoBehaviour:
   _maxFOV: 0
   _currentFOV: 0
   _boostPauseMiliseconds: 30
+  _maxDistance: 2
 --- !u!1 &8970877045213511789
 GameObject:
   m_ObjectHideFlags: 0
