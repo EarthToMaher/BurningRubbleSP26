@@ -211,8 +211,7 @@ public class CarControl : MonoBehaviour
 
     public void Drift()
     {
-        float forwardSpeed = Vector3.Dot(transform.forward, rb.linearVelocity);
-        if (!im.GetDrifting()||forwardSpeed<driftSpeedThreshold||driftDirection==0)
+        if (!im.GetDrifting()||rb.linearVelocity.magnitude<driftSpeedThreshold||driftDirection==0)
         {
             exitDrift();
             return;
@@ -224,13 +223,15 @@ public class CarControl : MonoBehaviour
         // Signed difference from starting angle (-180 to 180)
         float deltaFromStart = Mathf.DeltaAngle(driftInitialYaw, currentYaw);
 
+        LockWheels(driftDirection);
+
         // If drifting right, prevent rotating back left past start
-        if (driftDirection == 1 && deltaFromStart < 0f)
+        /*if (driftDirection == 1 && deltaFromStart < 0f)
         {
+            Debug.LogWarning("Tried to prevent fuckery");
             float clampedYaw = driftInitialYaw;
             rb.MoveRotation(Quaternion.Euler(0f, clampedYaw, 0f));
             rb.angularVelocity = Vector3.zero;
-            LockWheels();
 
         }
 
@@ -240,15 +241,14 @@ public class CarControl : MonoBehaviour
             float clampedYaw = driftInitialYaw;
             rb.MoveRotation(Quaternion.Euler(0f, clampedYaw, 0f));
             rb.angularVelocity = Vector3.zero;
-            LockWheels();
-        }
+        }*/
     }
 
-    public void LockWheels()
+    public void LockWheels(int direction)
     {
         foreach(var wheel in wheels)
         {
-            if (wheel.steerable)
+            if (wheel.steerable && Mathf.Sign(direction)!=Mathf.Sign(wheel.wheelCollider.steerAngle))
             {
                 wheel.wheelCollider.steerAngle = 0f;
             }

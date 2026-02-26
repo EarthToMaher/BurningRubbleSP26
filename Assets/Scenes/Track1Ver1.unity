@@ -25437,7 +25437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: driftSpeedThreshold
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: driftSteeringRangeAtMaxSpeed
