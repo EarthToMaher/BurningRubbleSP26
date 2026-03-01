@@ -25,6 +25,8 @@ public class CarControl : MonoBehaviour
     public bool drifting = false;
     private float driftInitialYaw;
     public int driftDirection;
+    public Vector3 driftBoostRequirements;
+    public Vector3 driftBoostLengths;
     [Tooltip("How far the front wheels turn")] public float driftSteeringRange = 30f;
     [Tooltip("How far the front wheels turn at max speed")] public float driftSteeringRangeAtMaxSpeed = 10f;
     private float boostVal = 0;
@@ -37,10 +39,13 @@ public class CarControl : MonoBehaviour
     private InputManager im;
     public bool grounded = false;
 
+    private PlayerCamControl pcc;
+
     void Awake()
     {
         carControls = new CarInputActions(); //Get our controls
         im = GetComponent<InputManager>();
+        pcc = transform.parent.GetComponentInChildren<PlayerCamControl>();
     }
 
     void OnEnable()
@@ -85,7 +90,6 @@ public class CarControl : MonoBehaviour
         float vInput = im.GetMoveDirectionY();
         float hInput = im.GetMoveDirectionX();
         float acceleration = im.GetAcceleration() - im.GetReverse();
-        Debug.LogWarning(acceleration);
 
         //Caculate speed
         float forwardSpeed = Vector3.Dot(transform.forward, rb.linearVelocity);
@@ -115,17 +119,33 @@ public class CarControl : MonoBehaviour
 
             rb.angularVelocity = new Vector3(0f,kartRotation,0f);
         }
-
-
-
-
     }
 
-    public void Boost()
+    public IEnumerator Boost(float length, float damageResistPercentage)
     {
-
+        pcc.StartCoroutine(pcc.CamSpeedBoostRoutine());
+        Debug.LogWarning("Got called with lenght " + length);
+        //TODO: Logic for damage resist
+        float elapsedTime = 0;
+        while (length < elapsedTime)
+        {
+            rb.linearVelocity = new Vector3(0,0,maxSpeed);
+            yield return new WaitForFixedUpdate();
+            elapsedTime += elapsedTime;
+        }
     }
 
+    public IEnumerator Boost(float intensity, float length, float damageResistPercentage)
+    {
+        //TODO: Logic for damage resist
+        float elapsedTime = 0;
+        while (length < elapsedTime)
+        {
+            rb.AddForce(transform.forward*intensity,ForceMode.Acceleration);
+            yield return new WaitForFixedUpdate();
+            elapsedTime += elapsedTime;
+        }
+    }
     public void GroundedCheck()
     {
         grounded = false;
@@ -184,7 +204,6 @@ public class CarControl : MonoBehaviour
 
         if (!grounded) return;
         //Ground alignment logic
-        Debug.LogWarning("Aligning");
         Vector3 groundNormal = Vector3.Normalize(normals[0] + normals[1] + normals[2] + normals[3]);//Add our normals and normalize them to get our ground normal
         Quaternion targetRotation = Quaternion.FromToRotation(transform.up, groundNormal) * transform.rotation; //Gets our target rotation by getting the difference between our ground and up normal, then multiplying it by our current rotation
         rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, Time.fixedDeltaTime * 10f));
@@ -218,12 +237,13 @@ public class CarControl : MonoBehaviour
         }
         
 
-        float currentYaw = transform.eulerAngles.y;
+        //float currentYaw = transform.eulerAngles.y;
 
         // Signed difference from starting angle (-180 to 180)
-        float deltaFromStart = Mathf.DeltaAngle(driftInitialYaw, currentYaw);
+       // float deltaFromStart = Mathf.DeltaAngle(driftInitialYaw, currentYaw);
 
         LockWheels(driftDirection);
+        boostVal += Time.fixedDeltaTime;
 
         // If drifting right, prevent rotating back left past start
         /*if (driftDirection == 1 && deltaFromStart < 0f)
@@ -258,6 +278,19 @@ public class CarControl : MonoBehaviour
     public void exitDrift()
     {
         drifting = false;
+        if (boostVal > driftBoostRequirements.z)
+        {
+            StartCoroutine(Boost(driftBoostLengths.z,0));
+        }
+        else if (boostVal > driftBoostRequirements.y)
+        {
+            StartCoroutine(Boost(driftBoostLengths.y,0));
+        }
+        else if (boostVal > driftBoostRequirements.x)
+        {
+            StartCoroutine(Boost(driftBoostLengths.x,0));
+        }
+        boostVal = 0;
     }
 
     public IEnumerator DriftHopFallSpeed(float slerpLength)

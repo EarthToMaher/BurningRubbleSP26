@@ -62,8 +62,6 @@ public class PlayerCamControl : MonoBehaviour
     void Update()
     {
         _centerPoint = GetComponentInChildren<Transform>().position;
-
-        PlayerCamFollowEngage();
     }
 
     private void LateUpdate()
@@ -173,8 +171,9 @@ public class PlayerCamControl : MonoBehaviour
 
 
     // Fully functional
-    IEnumerator CamSpeedBoostRoutine()
+    public IEnumerator CamSpeedBoostRoutine()
     {
+        StopCoroutine(CamPlayerFollow());
         //Debug.Log("called");
         float defaultFOV = _playerCam.fieldOfView;
         float targetFOV = Mathf.Clamp(defaultFOV * 1.35f, 60f, 90f);
@@ -192,7 +191,7 @@ public class PlayerCamControl : MonoBehaviour
             _playerCam.fieldOfView = Mathf.Lerp(defaultFOV, targetFOV, time / duration);
             time += Time.deltaTime;
             Debug.Log("Time = " + time);
-            yield return null;
+            yield return new WaitForEndOfFrame();
         }
 
         yield return new WaitForSeconds(_boostPauseMiliseconds * Time.deltaTime);
@@ -206,10 +205,11 @@ public class PlayerCamControl : MonoBehaviour
         {
             _playerCam.fieldOfView = Mathf.Lerp(targetFOV, defaultFOV, time / duration);
             time += Time.deltaTime;
-            yield return null;
+            yield return new WaitForEndOfFrame();
         }
 
         _isBoosting = false;
+        PlayerCamFollowEngage();
         
       }
 }
