@@ -40,22 +40,22 @@ public class CarControl : MonoBehaviour
     public bool grounded = false;
 
     private PlayerCamControl pcc;
+    private bool receivingInput;
 
     void Awake()
     {
-        carControls = new CarInputActions(); //Get our controls
         im = GetComponent<InputManager>();
         pcc = transform.parent.GetComponentInChildren<PlayerCamControl>();
     }
 
     void OnEnable()
     {
-        carControls.Enable(); //enables them if car is active
+        receivingInput = true;
     }
 
     void OnDisable()
     {
-        carControls.Disable(); //Disables them if not
+        receivingInput = false;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -72,6 +72,7 @@ public class CarControl : MonoBehaviour
 
     public void Update()
     {
+        if(!receivingInput) return;
         float hInput = im.GetMoveDirectionX();
         float forwardSpeed = Vector3.Dot(transform.forward, rb.linearVelocity);
         float speedFactor = Mathf.InverseLerp(0, maxSpeed, Mathf.Abs(forwardSpeed)); //Normalize speed factor
@@ -84,6 +85,7 @@ public class CarControl : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(!receivingInput) return;
         if (im.GetReload() > 0) FindFirstObjectByType<SceneReload>().Reload();
 
         //Assign each one to a float for acceleration and steering
@@ -263,6 +265,24 @@ public class CarControl : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
         }*/
     }
+
+
+    public void StopKart()
+    {
+        foreach (var wheel in wheels)
+        {
+            wheel.wheelCollider.motorTorque=0;
+            wheel.wheelCollider.brakeTorque = Mathf.Infinity;
+        }
+        rb.linearVelocity = Vector3.zero;
+    }
+
+    public void SetReceivingInput(bool state)
+    {
+        receivingInput = state;
+    }
+
+
 
     public void LockWheels(int direction)
     {
