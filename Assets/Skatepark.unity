@@ -869,6 +869,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 977702865069313672, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: hPSettings.hp
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 977702865069313672, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: rubbleSettings.rubbleAngle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 977702865069313672, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: rubbleSettings.rubbleChargeAmt
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 977702865069313672, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: rubbleSettings.rubbleBoostLength
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalPosition.x
       value: 399.44
@@ -912,6 +928,22 @@ PrefabInstance:
     - target: {fileID: 8970877045213511789, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_Name
       value: Spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: grounded
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: maxSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: boostForce
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: maxDriftSpeed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
