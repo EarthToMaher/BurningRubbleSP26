@@ -1,8 +1,4 @@
-
-
 using System.Collections;
-using UltimateProceduralPrimitivesFREE;
-using UnityEditor;
 using UnityEngine;
 
 public class CarControl : MonoBehaviour

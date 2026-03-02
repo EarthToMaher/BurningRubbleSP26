@@ -34,8 +34,8 @@ public class Kart : MonoBehaviour, I_Damageable
         }
         public void UpdateHPUI()
         {
-            hpText.text = "Health: " + hp;
-            hpImage.fillAmount = hp* 1.0f / MAX_HP * 1.0f;
+            if(hpText != null) hpText.text = "Health: " + hp;
+            if(hpImage!= null)hpImage.fillAmount = hp* 1.0f / MAX_HP * 1.0f;
         }
 
         public void ResetHP()
@@ -91,11 +91,12 @@ public class Kart : MonoBehaviour, I_Damageable
 
         public void UpdateUI()
         {
+            if (rubbleBar == null || rubbleText == null) Debug.LogWarning("Rubble: " + currRubbleAmt);
             if (currRubbleAmt == MAX_AMT||rubbleChargeAmt==0)
-        {
-            rubbleBar.fillAmount = 1;
-            rubbleText.text = "MAX";
-        }
+            {
+                rubbleBar.fillAmount = 1;
+                rubbleText.text = "MAX";
+            }
         else
         {
             int rubbleCharges = currRubbleAmt / rubbleChargeAmt;
@@ -106,7 +107,7 @@ public class Kart : MonoBehaviour, I_Damageable
         }
     }
 
-    [SerializeField] private Rubble rubbleSettings;
+    [SerializeField] public Rubble rubbleSettings;
     
     public class Respawn
     {
@@ -121,8 +122,8 @@ public class Kart : MonoBehaviour, I_Damageable
 
     void Awake()
     {
-        if (gameObject.GetComponent<KartMovement>() != null) kartControls = gameObject.GetComponent<CarControl>();
-        else if (gameObject.GetComponentInChildren<KartMovement>() != null) kartControls = gameObject.GetComponentInChildren<CarControl>();
+        if (gameObject.GetComponent<CarControl>() != null) kartControls = gameObject.GetComponent<CarControl>();
+        else if (gameObject.GetComponentInChildren<CarControl>() != null) kartControls = gameObject.GetComponentInChildren<CarControl>();
         else Debug.LogError("NO CAR CONTROL FOUND");
 
         hPSettings.SetMaxHP();

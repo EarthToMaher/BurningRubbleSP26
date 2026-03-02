@@ -541,6 +541,7 @@ GameObject:
   - component: {fileID: 5831342783590850285}
   - component: {fileID: 575947667905687704}
   - component: {fileID: 203822437948892908}
+  - component: {fileID: 977702865069313672}
   m_Layer: 0
   m_Name: KartWithFrozenRotation
   m_TagString: Untagged
@@ -657,19 +658,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CarControl
   motorTorque: 1000
   brakeTorque: 750
-  maxSpeed: 100
+  maxSpeed: 50
   steeringRange: 20
   steeringRangeAtMaxSpeed: 15
   centreOfGravityOffset: -2
   maxTurnSpeed: 0.5
-  maxDriftSpeed: 0.75
+  maxDriftSpeed: 0.6
   jumpStrength: 6250
   rotationTime: 1
   initialRoatateAmount: 40
+  driftSpeedThreshold: 0
   drifting: 0
   driftDirection: 0
+  driftBoostRequirements: {x: 1, y: 2, z: 4}
+  driftBoostLengths: {x: 1, y: 2, z: 4}
   driftSteeringRange: 30
   driftSteeringRangeAtMaxSpeed: 22.5
+  grounded: 0
 --- !u!54 &9208291222011131208
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -757,6 +762,28 @@ MonoBehaviour:
   _currentFOV: 0
   _boostPauseMiliseconds: 30
   _maxDistance: 2
+--- !u!114 &977702865069313672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7180503158302714169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c85ffe730f63154aa9f728cae21c837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Kart
+  hPSettings:
+    hp: 0
+    hpImage: {fileID: 0}
+    hpText: {fileID: 0}
+  rubbleSettings:
+    MAX_AMT: 0
+    rubbleBar: {fileID: 0}
+    rubbleText: {fileID: 0}
+    rubbleChargeAmt: 100
+  iFrameLength: 0
 --- !u!1 &8970877045213511789
 GameObject:
   m_ObjectHideFlags: 0

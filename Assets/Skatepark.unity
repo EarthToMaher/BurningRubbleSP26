@@ -212,29 +212,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &462552698 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7180503158302714169, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-  m_PrefabInstance: {fileID: 3824142265490968989}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &462552708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462552698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c85ffe730f63154aa9f728cae21c837, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Kart
-  hPSettings:
-    hp: 0
-    hpImage: {fileID: 0}
-    hpText: {fileID: 0}
-  rubbleBoostIntensity: 0
-  kartControls: {fileID: 0}
 --- !u!1 &1134214335
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,45 +913,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawn
       objectReference: {fileID: 0}
-    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      propertyPath: maxSpeed
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      propertyPath: maxDriftSpeed
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      propertyPath: driftBoostLengths.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      propertyPath: driftBoostLengths.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      propertyPath: driftBoostLengths.z
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      propertyPath: driftBoostRequirements.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      propertyPath: driftBoostRequirements.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      propertyPath: driftBoostRequirements.z
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7180503158302714169, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 462552708}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
