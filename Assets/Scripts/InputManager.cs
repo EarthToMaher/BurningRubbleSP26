@@ -28,7 +28,6 @@ public class InputManager : MonoBehaviour
         driftAction = playerInput.actions["Drift"];
         reload = playerInput.actions["Reload"];
     }
-
     public float GetReload()
     {
         float reloadVal = reload.ReadValue<float>();
