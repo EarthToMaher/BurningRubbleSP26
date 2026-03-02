@@ -8,7 +8,7 @@ public class GridPiece : MonoBehaviour
     private int maxSmallGridSize = 32;
     private int edgeCases = 0; //numbers 1-9 representing which edges are touching other grids via crafting table example
     private ReenableManager reenableManager;
-    private int positionIn2DArrayGridX, positionIn2DArrayGridZ; //X is left to right, Z is top to bottom
+    public int positionIn2DArrayGridX, positionIn2DArrayGridZ; //X is left to right, Z is top to bottom
 
     public GridPiece(){}
 
@@ -35,6 +35,11 @@ public class GridPiece : MonoBehaviour
     public int GetEdgeCases()
     {
         return edgeCases;
+    }
+
+    public override string ToString()
+    {
+        return $"GridPiece Chunk ({positionIn2DArrayGridX}, {positionIn2DArrayGridZ}) EdgeCase={edgeCases}";
     }
     
 }
