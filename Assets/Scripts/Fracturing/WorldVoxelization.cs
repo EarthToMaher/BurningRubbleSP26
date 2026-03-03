@@ -2,14 +2,14 @@ using UnityEngine;
 using System.Collections.Generic;
 using MarchingCubesProject;
 using System;
+using System.Collections;
+
+#if UNITY_EDITOR
 using UnityEditor;
 
 
-#if UNITY_EDITOR
 [ExecuteInEditMode]
-#endif
 public class WorldVoxelization : MonoBehaviour
-
 {
     [Header("Grid Settings")]
     public float cellSize = 1f;
@@ -20,6 +20,7 @@ public class WorldVoxelization : MonoBehaviour
     Vector3 start;
     Vector3 end;
     public GridPiece[,] arrayOfGridPieces;
+    public GridPiece[] listofGridPieces = new GridPiece[10];
 
     [Header("Layer Settings")]
     public string targetLayerName = "Voxelize";
@@ -43,24 +44,23 @@ public class WorldVoxelization : MonoBehaviour
 
     public ReenableManager reenableManager;
 
-    #if UNITY_EDITOR
-
     void Start(){
+        if (!Application.isPlaying)
+            return;
+
+        resetSmallGrids();
         GenerateVoxelGrid();
+        CutUpLargeGrid();
         foreach(GameObject singleObjectInList in listOfObjectsToVoxelize){
             singleObjectInList.SetActive(false); //turns off the objects after using them to make voxelized mesh
         }
     }
 
-    // void OnApplicationQuit()
-    // {
-    //     GetMeshCollidersInLayer();
-    //     Debug.Log("Play mode is ending. Performing cleanup tasks...");
-    //     foreach(GameObject singleObjectInList in listOfObjectsToVoxelize){
-    //         Debug.Log("Setting Game Object");
-    //         singleObjectInList.SetActive(true); //turns pn the objects after using them to make voxelized mesh
-    //     }
-    // }
+    void OnApplicationQuit()
+    {
+        DestroyImmediate(parent);
+        Debug.Log("Destroyed parent object on application quit.");
+    }
 
     [ContextMenu("Generate Voxel Grid")]
 
@@ -131,7 +131,7 @@ public class WorldVoxelization : MonoBehaviour
                             if (IsPointInsideMesh(cellCenter, mcList))
                             {
                                 GameObject cube;
-                                ///*
+                                /*
                                 if (cubePrefab != null)
                                     cube = (GameObject)PrefabUtility.InstantiatePrefab(cubePrefab);
                                 else
@@ -160,15 +160,19 @@ public class WorldVoxelization : MonoBehaviour
                     a++;
                 }
 
-                //marchingCubesScript.GenerateMarchingCubesMeshBig(voxelData, gridLocations);
+                marchingCubesScript.GenerateMarchingCubesMeshBig(voxelData, gridLocations);
 
                 Debug.Log($"Generated {count} cubes inside grid fitting \"{targetLayerName}\" objects.");
             }
         }else{
+            //int x=0;
             for(int i=0; i<arrayOfGridPieces.GetLength(0); i++){
                 for(int j=0; j<arrayOfGridPieces.GetLength(1); j++){
                     Debug.Log("Generating mesh for small grid piece at: " + i + ", " + j);
                     Debug.Log("Edge Case: " + arrayOfGridPieces[i,j].GetEdgeCases());
+                    Debug.Log("Grid Piece: " + arrayOfGridPieces[i,j]);
+                    //listofGridPieces[x] = arrayOfGridPieces[i,j];
+                    //x++;
                     marchingCubesScript.GenerateMarchingCubesMesh(arrayOfGridPieces[i,j]);
                 }
             }
@@ -258,33 +262,6 @@ public class WorldVoxelization : MonoBehaviour
         return mcList;
     }
 
-    /*void OnDrawGizmos()
-    {
-        // Draw only if grid has been generated
-        if (gridLocations == null || gridLocations.Length == 0)
-            return;
-
-        Gizmos.color = gridColor;
-
-        for (int x = 0; x < gridLocations.GetLength(0); x++)
-        {
-            for (int y = 0; y < gridLocations.GetLength(1); y++)
-            {
-                for (int z = 0; z < gridLocations.GetLength(2); z++)
-                {
-                    Vector3 pos = gridLocations[x, y, z];
-
-                    // Skip unused boundary cells
-                    //if (float.IsNaN(pos.x))
-                        //continue;
-
-                    // Draw cube outline for each valid grid cell
-                    Gizmos.DrawWireCube(pos, Vector3.one * cellSize);
-                }
-            }
-        }
-    }*/
-
     public void recheckVoxels(){
         /*int a=0, b=0, c=0;
         voxelData = new byte[gridLocations.GetLength(0), gridLocations.GetLength(1), gridLocations.GetLength(2)];
@@ -327,7 +304,7 @@ public class WorldVoxelization : MonoBehaviour
     [ContextMenu("Cut Up Large Grid")]
 
     public void CutUpLargeGrid(){
-        int maxSmallGridSize = 32;
+        int maxSmallGridSize = 16;
         int totalX = gridLocations.GetLength(0);
         int totalY = gridLocations.GetLength(1);
         int totalZ = gridLocations.GetLength(2);
@@ -345,26 +322,24 @@ public class WorldVoxelization : MonoBehaviour
                 int chunkSizeX = Mathf.Min(maxSmallGridSize, totalX - x * maxSmallGridSize);
                 int chunkSizeZ = Mathf.Min(maxSmallGridSize, totalZ - z * maxSmallGridSize);
 
-                // allocate per-chunk arrays (this is the important fix)
-                byte[,,] smallData = new byte[chunkSizeX, totalY, chunkSizeZ];
-                Vector3[,,] smallPositions = new Vector3[chunkSizeX, totalY, chunkSizeZ];
+                int paddedSizeX = chunkSizeX + 1;
+                int paddedSizeZ = chunkSizeZ + 1;
 
-                // copy from global arrays into chunk arrays
-                for(int a = 0; a < chunkSizeX; a++){
-                    int sourceX = a + x * maxSmallGridSize; // global x index
-                    for(int b = 0; b < totalY; b++){
-                        for(int c = 0; c < chunkSizeZ; c++){
-                            int sourceZ = c + z * maxSmallGridSize; // global z index
+                byte[,,] smallData = new byte[paddedSizeX, totalY, paddedSizeZ];
+                Vector3[,,] smallPositions = new Vector3[paddedSizeX, totalY, paddedSizeZ];
 
-                            // extra safety: bounds check (shouldn't be needed if chunkSize computed correctly)
-                            if(sourceX >= 0 && sourceX < totalX && sourceZ >= 0 && sourceZ < totalZ){
-                                smallData[a,b,c] = voxelData[sourceX,b,sourceZ];
-                                smallPositions[a,b,c] = gridLocations[sourceX,b,sourceZ];
-                            } else {
-                                // fallback: treat as empty / default
-                                smallData[a,b,c] = 0;
-                                smallPositions[a,b,c] = Vector3.zero;
-                            }
+                for(int a = 0; a < paddedSizeX; a++)
+                {
+                    int sourceX = Mathf.Min(a + x * maxSmallGridSize, totalX - 1);
+
+                    for(int b = 0; b < totalY; b++)
+                    {
+                        for(int c = 0; c < paddedSizeZ; c++)
+                        {
+                            int sourceZ = Mathf.Min(c + z * maxSmallGridSize, totalZ - 1);
+
+                            smallData[a,b,c] = voxelData[sourceX,b,sourceZ];
+                            smallPositions[a,b,c] = gridLocations[sourceX,b,sourceZ];
                         }
                     }
                 }
@@ -388,6 +363,7 @@ public class WorldVoxelization : MonoBehaviour
 
         // Now regenerate using the chunked grids (your GenerateVoxelGrid checks arrayOfGridPieces != null)
         GenerateVoxelGrid();
+        parent.transform.GetChild(0).gameObject.SetActive(false);
     }
 
 
@@ -482,5 +458,7 @@ public class WorldVoxelization : MonoBehaviour
     public void resetSmallGrids(){
         arrayOfGridPieces = null;
     }
-    #endif
+
 }
+
+#endif
