@@ -1,8 +1,4 @@
-
-
 using System.Collections;
-using UltimateProceduralPrimitivesFREE;
-using UnityEditor;
 using UnityEngine;
 
 public class CarControl : MonoBehaviour
@@ -38,14 +34,20 @@ public class CarControl : MonoBehaviour
     private CarInputActions carControls; //Our current control mapping, will be replaced with our new InputActions
     private InputManager im;
     public bool grounded = false;
+    public float boostForce = 10;
 
     private PlayerCamControl pcc;
     private bool receivingInput;
+    public Kart kartResources;
+
+    private bool expendingRubble = false;
+    public IEnumerator activeBoost;
 
     void Awake()
     {
         im = GetComponent<InputManager>();
         pcc = transform.parent.GetComponentInChildren<PlayerCamControl>();
+        kartResources = GetComponent<Kart>();
     }
 
     void OnEnable()
@@ -81,6 +83,10 @@ public class CarControl : MonoBehaviour
         {
             StartDrift(hInput, speedFactor);
         }
+        if (im.GetRubbleInitialPress()&&kartResources.rubbleSettings.CanPerformRubbleAction())
+        {
+            expendingRubble = true;
+        }
     }
 
     void FixedUpdate()
@@ -106,15 +112,18 @@ public class CarControl : MonoBehaviour
 
         if (drifting)
         {
+            //if (expendingRubble) RubbleSpinOut(); Not implemented, here for future use
             currentSteerRange = Mathf.Lerp(driftSteeringRange, driftSteeringRangeAtMaxSpeed, speedFactor);
             WheelMovement(hInput, acceleration, currentSteerRange, currentMotorTorque, isAccelerating);
             Drift();
-                        //Logic for clamping our Kart rotation to avoid unnecessary rotations or spin outs
-            float kartRotation = Mathf.Clamp(rb.angularVelocity.y, -maxDriftSpeed, maxDriftSpeed);
-            rb.angularVelocity = new Vector3(0f,kartRotation,0f);
+            //Logic for clamping our Kart rotation to avoid unnecessary rotations or spin outs
+            //float kartRotation = Mathf.Clamp(rb.angularVelocity.y, -maxDriftSpeed, maxDriftSpeed);
+            //rb.angularVelocity = new Vector3(0f,kartRotation,0f);
+            rb.maxAngularVelocity=maxDriftSpeed;
         }
         else
         {
+            if(expendingRubble) kartResources.RubbleBoost(vInput,hInput);
             WheelMovement(hInput, acceleration, currentSteerRange, currentMotorTorque, isAccelerating);
             //Logic for clamping our Kart rotation to avoid unnecessary rotations or spin outs
             float kartRotation = Mathf.Clamp(rb.angularVelocity.y, -maxTurnSpeed, maxTurnSpeed);
@@ -125,28 +134,27 @@ public class CarControl : MonoBehaviour
 
     public IEnumerator Boost(float length, float damageResistPercentage)
     {
+        if(activeBoost!=null)StopCoroutine(activeBoost);
         pcc.StartCoroutine(pcc.CamSpeedBoostRoutine());
-        Debug.LogWarning("Got called with lenght " + length);
+        rb.linearVelocity = transform.forward*maxSpeed;
         //TODO: Logic for damage resist
         float elapsedTime = 0;
-        while (length < elapsedTime)
+        while (elapsedTime < length)
         {
-            rb.linearVelocity = new Vector3(0,0,maxSpeed);
+            rb.AddForce(transform.forward*boostForce,ForceMode.Acceleration);
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x,rb.linearVelocity.y,Mathf.Clamp(rb.linearVelocity.z,-maxSpeed,maxSpeed));
             yield return new WaitForFixedUpdate();
             elapsedTime += elapsedTime;
         }
+        activeBoost = null;
     }
 
-    public IEnumerator Boost(float intensity, float length, float damageResistPercentage)
+    public void RubbleBoost(float duration)
     {
-        //TODO: Logic for damage resist
-        float elapsedTime = 0;
-        while (length < elapsedTime)
-        {
-            rb.AddForce(transform.forward*intensity,ForceMode.Acceleration);
-            yield return new WaitForFixedUpdate();
-            elapsedTime += elapsedTime;
-        }
+        Debug.LogWarning("CC: RubbleBoost");
+
+        StartCoroutine( activeBoost = Boost(duration,0f));
+        expendingRubble = false;
     }
     public void GroundedCheck()
     {
@@ -170,6 +178,7 @@ public class CarControl : MonoBehaviour
         //Go through logic applied to each wheel
         foreach (var wheel in wheels)
         {
+            wheel.wheelCollider.brakeTorque = 0f;
             //Apply steering to wheels
             if (wheel.steerable)
             {
@@ -300,15 +309,15 @@ public class CarControl : MonoBehaviour
         drifting = false;
         if (boostVal > driftBoostRequirements.z)
         {
-            StartCoroutine(Boost(driftBoostLengths.z,0));
+            StartCoroutine(activeBoost = Boost(driftBoostLengths.z,0));
         }
         else if (boostVal > driftBoostRequirements.y)
         {
-            StartCoroutine(Boost(driftBoostLengths.y,0));
+            StartCoroutine(activeBoost = Boost(driftBoostLengths.y,0));
         }
         else if (boostVal > driftBoostRequirements.x)
         {
-            StartCoroutine(Boost(driftBoostLengths.x,0));
+            StartCoroutine(activeBoost = Boost(driftBoostLengths.x,0));
         }
         boostVal = 0;
     }

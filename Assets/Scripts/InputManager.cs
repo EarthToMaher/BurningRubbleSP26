@@ -17,6 +17,7 @@ public class InputManager : MonoBehaviour
     private InputAction brakeAction;
     private InputAction driftAction;
     private InputAction reload;
+    private InputAction rubbleAction;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class InputManager : MonoBehaviour
         brakeAction = playerInput.actions["Brake"];
         driftAction = playerInput.actions["Drift"];
         reload = playerInput.actions["Reload"];
+        rubbleAction = playerInput.actions["Rubble"];
     }
     public float GetReload()
     {
@@ -114,6 +116,11 @@ public class InputManager : MonoBehaviour
     public bool GetStartedDrifting()
     {
         return driftAction.WasPressedThisFrame();
+    }
+
+    public bool GetRubbleInitialPress()
+    {
+        return rubbleAction.WasPressedThisFrame();
     }
 
     /*
