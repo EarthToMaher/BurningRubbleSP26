@@ -23,11 +23,12 @@ public class CheckpointDetection : MonoBehaviour
     void Start()
     {
         ResetArray();
+        UpdateUI();
     }
 
     public void enterCheckpoint(int checkPointPlacement)
     {
-        Debug.LogWarning("I already hit that checkpoint!");
+        
         if (CheckArrayFor(checkPointPlacement))
         {
             Debug.LogWarning("Hit a new checkpoint!");
@@ -36,13 +37,17 @@ public class CheckpointDetection : MonoBehaviour
             if (_checkpointRemaining < _lapManager.RequirementReturn())
             {
                 _checkpointRemaining++;
+                checkPointsHit[arrayIndex] = checkPointPlacement;
+                arrayIndex++;
             }
+            UpdateUI();
         }
+        else Debug.LogWarning("I already hit that checkpoint!");
     }
 
     public void CompleteLap()
     {
-        Debug.LogWarning("I didn't have enough checkpoints!");
+        
         if (_checkpointRemaining >= _lapManager.RequirementReturn())
         {
             Debug.LogWarning("I completed my " + _lapCount +" lap!");
@@ -50,7 +55,9 @@ public class CheckpointDetection : MonoBehaviour
             _checkpointCount = 0;
             _checkpointRemaining = 0;
             ResetArray();
+            UpdateUI();
         }
+        else Debug.LogWarning("I didn't have enough checkpoints!");
     }
 
     public void UpdateUI()
@@ -76,6 +83,7 @@ public class CheckpointDetection : MonoBehaviour
     {
         checkPointsHit = new int[_lapManager.RequirementReturn()];
         for(int i = 0; i < checkPointsHit.Length; i++) checkPointsHit[i] = -1;
+        arrayIndex = 0;
     }
 
     
