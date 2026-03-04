@@ -79,4 +79,19 @@ public class MPManager : MonoBehaviour
             }
         }
     }
+
+    /* this can be called whenever we need to know which specific player did something
+       right now it is being used to check which player finished the race and put the correct player number on the end screen */
+    public int FindPlayer(GameObject player)
+    {
+        for(int p=1; p<players.Length; p++)
+        {
+            if(player = players[p])
+            {
+                return p;
+            }
+        }
+
+        return 0;
+    }
 }
