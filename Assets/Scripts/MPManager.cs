@@ -86,7 +86,7 @@ public class MPManager : MonoBehaviour
     {
         for(int p=1; p<players.Length; p++)
         {
-            if(player = players[p])
+            if(player = players[p-1])
             {
                 return p;
             }
