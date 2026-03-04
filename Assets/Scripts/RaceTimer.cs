@@ -42,7 +42,7 @@ public class RaceTimer : MonoBehaviour
         }
 
         //Don't update timer if the race is complete
-        if (gm._lapCount > 3)
+        if (gm!=null && gm._lapCount > 3)
         {
             if (time < bestTime) SaveBestTime();
             return;
