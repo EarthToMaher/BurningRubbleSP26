@@ -1468,13 +1468,13 @@ MonoBehaviour:
   jumpStrength: 6250
   rotationTime: 1
   initialRoatateAmount: 40
-  driftSpeedThreshold: 0
+  driftSpeedThreshold: 5
   drifting: 0
   driftDirection: 0
   driftBoostRequirements: {x: 1, y: 2, z: 4}
   driftBoostLengths: {x: 1, y: 2, z: 4}
-  driftSteeringRange: 30
-  driftSteeringRangeAtMaxSpeed: 22.5
+  driftSteeringRange: 40
+  driftSteeringRangeAtMaxSpeed: 30
   grounded: 0
   boostForce: 1000
   kartResources: {fileID: 0}
@@ -1579,13 +1579,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Kart
   hPSettings:
     hp: 10
-    hpImage: {fileID: 0}
-    hpText: {fileID: 0}
+    hpImage: {fileID: 8797489473467945585}
+    hpText: {fileID: 6795596116544215023}
   rubbleSettings:
-    MAX_AMT: 0
-    rubbleBar: {fileID: 0}
-    rubbleText: {fileID: 0}
-    rubbleChargeAmt: 0
+    MAX_AMT: 200
+    rubbleBar: {fileID: 2759267795833868079}
+    rubbleText: {fileID: 1550397240284071322}
+    rubbleChargeAmt: 100
     rubbleAngle: 0
     rubbleBoostLength: 3
   iFrameLength: 0
