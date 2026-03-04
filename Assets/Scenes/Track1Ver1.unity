@@ -23214,11 +23214,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 475826149}
   m_SourcePrefab: {fileID: 100100000, guid: abb500139df358a4bab4e911181c55d5, type: 3}
---- !u!1 &1053602729 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 883121758872972760, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-  m_PrefabInstance: {fileID: 1411671864}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1057974594
 GameObject:
   m_ObjectHideFlags: 0
@@ -25392,14 +25387,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 883121758872972760, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2673229768841981932, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalPosition.x
       value: 496.3
@@ -25440,25 +25427,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7180503158302714169, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
+    - target: {fileID: 5464023844513391318, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: _lapManager
+      value: 
+      objectReference: {fileID: 877529748}
     - target: {fileID: 8970877045213511789, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_Name
       value: Spawn
       objectReference: {fileID: 0}
-    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      propertyPath: maxSpeed
-      value: 35
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7180503158302714169, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1580460801}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
 --- !u!1001 &1417339805
 PrefabInstance:
@@ -26968,36 +26948,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1567980503 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7245194425893143582, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-  m_PrefabInstance: {fileID: 1411671864}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1580460790 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7180503158302714169, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-  m_PrefabInstance: {fileID: 1411671864}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1580460801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580460790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28d661e6e709f0646ab732423fa3533f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CheckpointDetection
-  _lapCount: 1
-  _checkpointCount: 0
-  _currCheckpoint: 0
-  _checkpointRemaining: 0
-  _lapManager: {fileID: 877529748}
-  _txtCheckpoint: {fileID: 1805423097}
-  _checkpointsRemaining: {fileID: 1053602729}
-  _txtLapCount: {fileID: 1567980503}
 --- !u!1 &1633914057 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4216394760929166205, guid: 4c4247852deca4b429e4fd50697349d9, type: 3}
@@ -28017,11 +27967,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 65156514}
   m_SourcePrefab: {fileID: 100100000, guid: e32c88b322d50504a890051e7360505d, type: 3}
---- !u!1 &1805423097 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2673229768841981932, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-  m_PrefabInstance: {fileID: 1411671864}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1809555679 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4439518706477938221, guid: abb500139df358a4bab4e911181c55d5, type: 3}
