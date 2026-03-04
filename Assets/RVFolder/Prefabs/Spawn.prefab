@@ -1343,9 +1343,10 @@ GameObject:
   - component: {fileID: 575947667905687704}
   - component: {fileID: 203822437948892908}
   - component: {fileID: 977702865069313672}
+  - component: {fileID: 5464023844513391318}
   m_Layer: 0
   m_Name: KartWithFrozenRotation
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1459,7 +1460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CarControl
   motorTorque: 1000
   brakeTorque: 750
-  maxSpeed: 20
+  maxSpeed: 35
   steeringRange: 20
   steeringRangeAtMaxSpeed: 15
   centreOfGravityOffset: -2
@@ -1589,6 +1590,26 @@ MonoBehaviour:
     rubbleAngle: 0
     rubbleBoostLength: 3
   iFrameLength: 0
+--- !u!114 &5464023844513391318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7180503158302714169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28d661e6e709f0646ab732423fa3533f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckpointDetection
+  _lapCount: 1
+  _checkpointCount: 0
+  _currCheckpoint: 0
+  _checkpointRemaining: 0
+  _lapManager: {fileID: 0}
+  _txtCheckpoint: {fileID: 2673229768841981932}
+  _checkpointsRemaining: {fileID: 883121758872972760}
+  _txtLapCount: {fileID: 7245194425893143582}
 --- !u!1 &7245194425893143582
 GameObject:
   m_ObjectHideFlags: 0
