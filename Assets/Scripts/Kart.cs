@@ -107,6 +107,7 @@ public class Kart : MonoBehaviour, I_Damageable
             if (rubbleBar == null || rubbleText == null) Debug.LogWarning("Rubble: " + currRubbleAmt);
             if (currRubbleAmt == MAX_AMT||rubbleChargeAmt==0)
             {
+                Debug.LogWarning("Update UI Got Called");
                 rubbleBar.fillAmount = 1;
                 rubbleText.text = "MAX";
             }
@@ -244,7 +245,9 @@ public class Kart : MonoBehaviour, I_Damageable
         //Vector3 clampedDirection = Vector3.RotateTowards(transform.forward, worldDirection, Mathf.Deg2Rad * rubbleSettings.GetRubbleAngle(), 0f).normalized; //Clamp it to our angle
         //rb.MoveRotation(Quaternion.Euler(clampedDirection));
         }
+        rubbleSettings.UseRubble();
         kartControls.RubbleBoost(rubbleSettings.GetRubbleBoostLength());
+
 
 
     }

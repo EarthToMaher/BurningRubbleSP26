@@ -63,7 +63,7 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
         if (damageable == null) cause.GetComponent<I_Damageable>();
         if (damageable != null) damageable.TakeDamage(hp*numDestroyed);
         Kart kart = instigator.GetComponent<Kart>();
-        if (kart != null) kart.rubbleSettings.GainRubble(rubble);
+        if (kart != null) kart.rubbleSettings.GainRubble(rubble*numDestroyed);
     }
 
     /*int ApplyHit(Vector3 worldPoint)
