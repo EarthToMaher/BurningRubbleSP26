@@ -6,6 +6,7 @@ using System.Collections;
 
 #if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 
 [ExecuteInEditMode]
@@ -460,5 +461,3 @@ public class WorldVoxelization : MonoBehaviour
     }
 
 }
-
-#endif
