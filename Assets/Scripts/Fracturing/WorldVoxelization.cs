@@ -46,7 +46,7 @@ public class WorldVoxelization : MonoBehaviour
     public ReenableManager reenableManager;
 
     void Start(){
-        /*if (!Application.isPlaying)
+        if (!Application.isPlaying)
             return;
 
         resetSmallGrids();
@@ -54,36 +54,16 @@ public class WorldVoxelization : MonoBehaviour
         CutUpLargeGrid();
         foreach(GameObject singleObjectInList in listOfObjectsToVoxelize){
             singleObjectInList.SetActive(false); //turns off the objects after using them to make voxelized mesh
-        }*/
+        }
     }
 
     void OnApplicationQuit()
     {
-        /*DestroyImmediate(parent);
-        Debug.Log("Destroyed parent object on application quit.");*/
+        DestroyImmediate(parent);
+        Debug.Log("Destroyed parent object on application quit.");
     }
 
     [ContextMenu("Generate Voxel Grid")]
-
-    public void SetUpVoxelGrid(){
-        resetSmallGrids();
-        GenerateVoxelGrid();
-        CutUpLargeGrid();
-        foreach(GameObject singleObjectInList in listOfObjectsToVoxelize){
-            singleObjectInList.SetActive(false); //turns off the objects after using them to make voxelized mesh
-        }
-    }
-
-    [ContextMenu("Destroy Voxel Grid")]
-
-    public void DestroyVoxelGrid(){
-        DestroyImmediate(parent);
-        foreach(GameObject singleObjectInList in listOfObjectsToVoxelize){
-            singleObjectInList.SetActive(true); //turns off the objects after using them to make voxelized mesh
-        }
-    }
-
-    //[ContextMenu("Generate Voxel Grid")]
 
     public void GenerateVoxelGrid()
     {
@@ -322,7 +302,7 @@ public class WorldVoxelization : MonoBehaviour
         voxels.Clear();
     }
 
-    //[ContextMenu("Cut Up Large Grid")]
+    [ContextMenu("Cut Up Large Grid")]
 
     public void CutUpLargeGrid(){
         int maxSmallGridSize = 16;
@@ -474,7 +454,7 @@ public class WorldVoxelization : MonoBehaviour
         GenerateVoxelGrid();
     }*/
 
-    //[ContextMenu("Reset Small Grids")]
+    [ContextMenu("Reset Small Grids")]
 
     public void resetSmallGrids(){
         arrayOfGridPieces = null;
