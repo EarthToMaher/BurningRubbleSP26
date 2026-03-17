@@ -26,6 +26,8 @@ public class CarControl : MonoBehaviour
     [Tooltip("How far the front wheels turn")] public float driftSteeringRange = 30f;
     [Tooltip("How far the front wheels turn at max speed")] public float driftSteeringRangeAtMaxSpeed = 10f;
     private float boostVal = 0;
+    public float maxAgainstVal = 10f;
+    private bool jumping = false;
 
 
 
@@ -136,7 +138,7 @@ public class CarControl : MonoBehaviour
     {
         if(activeBoost!=null)StopCoroutine(activeBoost);
         pcc.StartCoroutine(pcc.CamSpeedBoostRoutine());
-        rb.linearVelocity = transform.forward*maxSpeed;
+        if(rb.linearVelocity.magnitude < maxSpeed*0.6f) rb.linearVelocity = transform.forward*maxSpeed*0.6f;
         //TODO: Logic for damage resist
         float elapsedTime = 0;
         while (elapsedTime < length)
@@ -162,9 +164,10 @@ public class CarControl : MonoBehaviour
         foreach (var wheel in wheels)
         {
             RaycastHit groundHit;
-            if (Physics.Raycast(wheel.transform.position, -wheel.transform.up, out groundHit, wheel.GetComponent<WheelCollider>().radius*2.5f))
+            if (Physics.Raycast(wheel.transform.position, -wheel.transform.up, out groundHit, wheel.GetComponent<WheelCollider>().radius*5f))
             {
-                grounded = true;
+                
+                if(!jumping)grounded = true;
                 return;
             } 
         }
@@ -227,6 +230,8 @@ public class CarControl : MonoBehaviour
         drifting = true;
 
         rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+        jumping = true;
+        StartCoroutine(JumpDetect());
 
         driftDirection = Mathf.Sign(hInput) > 0 ? 1 : -1;
         if(hInput==0) driftDirection = 0;
@@ -241,10 +246,18 @@ public class CarControl : MonoBehaviour
 
     public void Drift()
     {
-        if (!im.GetDrifting()||rb.linearVelocity.magnitude<driftSpeedThreshold||driftDirection==0)
+        if (!im.GetDrifting()||rb.linearVelocity.magnitude<driftSpeedThreshold||driftDirection==0||(!grounded&&!jumping))
         {
-            exitDrift();
+            if (!im.GetDrifting())
+            {
+                            exitDrift();
+                            return;
+            }
+            drifting = false;
+            boostVal=0;
             return;
+
+            
         }
         
 
@@ -299,7 +312,8 @@ public class CarControl : MonoBehaviour
         {
             if (wheel.steerable && Mathf.Sign(direction)!=Mathf.Sign(wheel.wheelCollider.steerAngle))
             {
-                wheel.wheelCollider.steerAngle = 0f;
+                wheel.wheelCollider.steerAngle = maxAgainstVal*-direction;
+                rb.angularVelocity = new Vector3(0f, maxAgainstVal*-direction, 0f);
             }
         }
     }
@@ -320,6 +334,13 @@ public class CarControl : MonoBehaviour
             StartCoroutine(activeBoost = Boost(driftBoostLengths.x,0));
         }
         boostVal = 0;
+    }
+
+    public IEnumerator JumpDetect()
+    {
+
+           yield return new WaitUntil(()=>rb.linearVelocity.y<=0);
+           jumping = false;
     }
 
     public IEnumerator DriftHopFallSpeed(float slerpLength)

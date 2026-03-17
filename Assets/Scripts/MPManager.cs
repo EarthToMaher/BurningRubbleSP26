@@ -52,6 +52,7 @@ public class MPManager : MonoBehaviour
 
     public void StartGame()
     {
+        Debug.LogWarning("Attempted to start");
         //removes the join screen UI
         joinScreen.ClearJoinScreen();
 
@@ -73,9 +74,10 @@ public class MPManager : MonoBehaviour
                     cam.gameObject.SetActive(true);
                     Debug.Log(cam.gameObject.name);
                 }
+                player.GetComponentInChildren<CarControl>().enabled = true;
 
                 //trigger countdown & race start
-                playerPrefab.GetComponentInChildren<Countdown>().SetGameStarted(true);
+                //playerPrefab.GetComponentInChildren<Countdown>().SetGameStarted(true);
             }
         }
     }
