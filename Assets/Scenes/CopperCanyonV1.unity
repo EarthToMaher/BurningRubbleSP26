@@ -927,6 +927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JoinScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 7881415630225444673, guid: 81212170a36d2a14f9f51b9e1d216c8b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
