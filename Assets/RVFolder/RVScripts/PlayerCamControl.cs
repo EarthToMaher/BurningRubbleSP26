@@ -40,7 +40,7 @@ public class PlayerCamControl : MonoBehaviour
     void Awake()
     {
         _playerCam = transform.parent.GetComponentInChildren<Camera>();
-        _kart = this.gameObject;
+        if(_kart==null) _kart = this.gameObject;
         _currentFOV = transform.parent.GetComponentInChildren<Camera>().fieldOfView;
         _inputManager = this.GetComponent<InputManager>();
 
