@@ -13,6 +13,9 @@ public class RaceTimer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI raceTime;
     [SerializeField] private TextMeshProUGUI bestTimeText;
 
+    private EndScreenManager endScreenMgr;
+    private MPManager multiplayer;
+
     //Bool to check if the race is complete. Hidden in inspector as it shouldn't be modified from there
     [HideInInspector] public bool raceComplete = false;
     private float time = 0;
@@ -23,6 +26,9 @@ public class RaceTimer : MonoBehaviour
 
     private bool raceStarted = false;
 
+    private string playerName;
+
+    private bool addedToResults = false;
 
     void Start()
     {
@@ -31,6 +37,13 @@ public class RaceTimer : MonoBehaviour
         if (raceTime == null) raceTime = GetComponent<TextMeshProUGUI>();
         gm = FindFirstObjectByType<CheckpointDetection>();
         LoadBestTime();
+
+        // assign multiplayer/end screen managers
+        multiplayer = FindFirstObjectByType<MPManager>();
+        endScreenMgr = FindFirstObjectByType<EndScreenManager>();
+
+        // finds the player that this raceTimer is attached to. changing the structure of the player prefab will break this!!!!
+        playerName = "Player " + multiplayer.FindPlayer(transform.parent.parent.gameObject);
     }
 
     // Update is called once per frame
@@ -44,6 +57,12 @@ public class RaceTimer : MonoBehaviour
         //Don't update timer if the race is complete
         if (gm!=null && gm._lapCount > 3)
         {
+            if(!addedToResults)
+            {
+                endScreenMgr.PlayerFinish(time, playerName);
+                addedToResults = true;
+            }
+
             if (time < bestTime) SaveBestTime();
             return;
         }
