@@ -38,6 +38,10 @@ public class RaceTimer : MonoBehaviour
         gm = FindFirstObjectByType<CheckpointDetection>();
         LoadBestTime();
 
+        // assign multiplayer/end screen managers
+        multiplayer = FindFirstObjectByType<MPManager>();
+        endScreenMgr = FindFirstObjectByType<EndScreenManager>();
+
         // finds the player that this raceTimer is attached to. changing the structure of the player prefab will break this!!!!
         playerName = "Player " + multiplayer.FindPlayer(transform.parent.parent.gameObject);
     }

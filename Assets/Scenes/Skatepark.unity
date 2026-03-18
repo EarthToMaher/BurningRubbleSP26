@@ -457,6 +457,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57bf97a51391e904bad3beb775d8b47c, type: 3}
+--- !u!114 &339166769 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6442677492270139758, guid: 57bf97a51391e904bad3beb775d8b47c, type: 3}
+  m_PrefabInstance: {fileID: 339166768}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c557e15ba3ebf324783d225a30ae1ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndScreenManager
 --- !u!1 &1134214335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,6 +1273,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 8026302484571228728, guid: 8407d49a6267913428868d1f3aba7dfe, type: 3}
+      propertyPath: endScreen
+      value: 
+      objectReference: {fileID: 339166769}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
