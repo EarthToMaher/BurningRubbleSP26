@@ -239,7 +239,7 @@ public class CarControl : MonoBehaviour
         float startYaw = transform.eulerAngles.y;
         driftInitialYaw = startYaw + (initialRoatateAmount * driftDirection)*1.1f;
 
-        Quaternion targetRot = Quaternion.Euler(0f, driftInitialYaw, 0f);
+        Quaternion targetRot = Quaternion.Euler(transform.eulerAngles.x, driftInitialYaw, transform.eulerAngles.z);
 
         rb.MoveRotation(targetRot);
     }
