@@ -12,6 +12,7 @@ public class EndScreenManager : MonoBehaviour
     private List<float> finishTimes = new List<float>();
     private List<string> playerNames = new List<string>();
     private int totalPlayers = 1;
+    private bool singlePlayer = true;
 
     public void PlayerFinish(float time, string name)
     {
@@ -39,6 +40,15 @@ public class EndScreenManager : MonoBehaviour
     public void SetTotalPlayers(int players)
     {
         totalPlayers = players;
+        if(totalPlayers > 1)
+        {
+            singlePlayer = false;
+        }
+    }
+
+    public bool GetSinglePlayerMode()
+    {
+        return singlePlayer;
     }
 
     public void ClearTimes()
