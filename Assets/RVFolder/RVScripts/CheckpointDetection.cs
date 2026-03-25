@@ -20,8 +20,11 @@ public class CheckpointDetection : MonoBehaviour
     public GameObject _checkpointsRemaining;
     public GameObject _txtLapCount;
 
+    public GameObject lastCheckpoint;
+
     void Start()
     {
+        _lapManager = FindFirstObjectByType<LapManager>();
         ResetArray();
         UpdateUI();
     }
@@ -32,7 +35,6 @@ public class CheckpointDetection : MonoBehaviour
         if (CheckArrayFor(checkPointPlacement))
         {
             Debug.LogWarning("Hit a new checkpoint!");
-            _currCheckpoint = checkPointPlacement;
             _checkpointCount++;
             if (_checkpointRemaining < _lapManager.RequirementReturn())
             {
@@ -43,6 +45,7 @@ public class CheckpointDetection : MonoBehaviour
             UpdateUI();
         }
         else Debug.LogWarning("I already hit that checkpoint!");
+        _currCheckpoint = checkPointPlacement;
     }
 
     public void CompleteLap()
@@ -58,6 +61,7 @@ public class CheckpointDetection : MonoBehaviour
             UpdateUI();
         }
         else Debug.LogWarning("I didn't have enough checkpoints!");
+        _currCheckpoint = 0;
     }
 
     public void UpdateUI()
