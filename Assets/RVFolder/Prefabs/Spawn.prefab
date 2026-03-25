@@ -1480,6 +1480,7 @@ MonoBehaviour:
   maxAgainstVal: 10
   grounded: 0
   boostForce: 1000
+  maxVerticalSpeed: 1
   kartResources: {fileID: 0}
 --- !u!54 &9208291222011131208
 Rigidbody:
@@ -1612,6 +1613,7 @@ MonoBehaviour:
   _txtCheckpoint: {fileID: 2673229768841981932}
   _checkpointsRemaining: {fileID: 883121758872972760}
   _txtLapCount: {fileID: 7245194425893143582}
+  lastCheckpoint: {fileID: 0}
 --- !u!114 &809075516868870212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2238,10 +2240,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6348520868405238175}
-  - {fileID: 6992376987370625602}
   - {fileID: 2913663618121746616}
   - {fileID: 1700121451070190816}
+  - {fileID: 6348520868405238175}
+  - {fileID: 6992376987370625602}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9079574089700993357
