@@ -34,8 +34,8 @@ public class Kart : MonoBehaviour, I_Damageable
         }
         public void UpdateHPUI()
         {
-            hpText.text = "Health: " + hp;
-            hpImage.fillAmount = hp* 1.0f / MAX_HP * 1.0f;
+            if(hpText != null) hpText.text = "Health: " + hp;
+            if(hpImage!= null)hpImage.fillAmount = hp* 1.0f / MAX_HP * 1.0f;
         }
 
         public void ResetHP()
@@ -66,11 +66,24 @@ public class Kart : MonoBehaviour, I_Damageable
 
         [Tooltip("Amount needed to perform a rubble charge action")]
         [SerializeField] private int rubbleChargeAmt = 100;
+        [Tooltip("Amount needed to perform a rubble charge action")]
+        [SerializeField] private float rubbleAngle = 100;
+        [Tooltip("Amount needed to perform a rubble charge action")]
+        [SerializeField] private float rubbleBoostLength = 100;
 
         public void GainRubble(int amt)
         {
             currRubbleAmt = Mathf.Clamp(currRubbleAmt+amt, 0, MAX_AMT);
             UpdateUI();
+        }
+        public float GetRubbleBoostLength()
+        {
+            return rubbleBoostLength;
+        }
+
+        public float GetRubbleAngle()
+        {
+            return rubbleAngle;
         }
 
         public bool CanPerformRubbleAction()
@@ -91,11 +104,13 @@ public class Kart : MonoBehaviour, I_Damageable
 
         public void UpdateUI()
         {
+            if (rubbleBar == null || rubbleText == null) Debug.LogWarning("Rubble: " + currRubbleAmt);
             if (currRubbleAmt == MAX_AMT||rubbleChargeAmt==0)
-        {
-            rubbleBar.fillAmount = 1;
-            rubbleText.text = "MAX";
-        }
+            {
+                Debug.LogWarning("Update UI Got Called");
+                rubbleBar.fillAmount = 1;
+                rubbleText.text = "MAX";
+            }
         else
         {
             int rubbleCharges = currRubbleAmt / rubbleChargeAmt;
@@ -106,7 +121,7 @@ public class Kart : MonoBehaviour, I_Damageable
         }
     }
 
-    [SerializeField] private Rubble rubbleSettings;
+    [SerializeField] public Rubble rubbleSettings;
     
     public class Respawn
     {
@@ -118,15 +133,17 @@ public class Kart : MonoBehaviour, I_Damageable
     private CarControl kartControls;
 
     private InputAction rubbleAction;
+    private Rigidbody rb;
 
     void Awake()
     {
-        if (gameObject.GetComponent<KartMovement>() != null) kartControls = gameObject.GetComponent<CarControl>();
-        else if (gameObject.GetComponentInChildren<KartMovement>() != null) kartControls = gameObject.GetComponentInChildren<CarControl>();
+        if (gameObject.GetComponent<CarControl>() != null) kartControls = gameObject.GetComponent<CarControl>();
+        else if (gameObject.GetComponentInChildren<CarControl>() != null) kartControls = gameObject.GetComponentInChildren<CarControl>();
         else Debug.LogError("NO CAR CONTROL FOUND");
 
         hPSettings.SetMaxHP();
 
+        rb = GetComponent<Rigidbody>();
 
 
         rubbleAction = GetComponent<PlayerInput>().actions["Rubble"];
@@ -168,10 +185,10 @@ public class Kart : MonoBehaviour, I_Damageable
         kartControls.StopKart();
         kartControls.SetReceivingInput(false);
         StartCoroutine(HealUponDeath());
-            CheckpointDetection _checkDetect = FindFirstObjectByType<CheckpointDetection>();
+            CheckpointDetection _checkDetect = GetComponent<CheckpointDetection>();
             Vector3 _respawnPoint = FindFirstObjectByType<LapManager>().SetCheckpointPos(_checkDetect._currCheckpoint);
-            Quaternion _respawnRotation = FindAnyObjectByType<LapManager>().SetCheckpointRot(_checkDetect._currCheckpoint);
-            this.transform.position = _respawnPoint;
+            Quaternion _respawnRotation = FindFirstObjectByType<LapManager>().SetCheckpointRot(_checkDetect._currCheckpoint);
+            this.transform.position = _respawnPoint+new Vector3(0f, 10f, 0f);
             this.transform.rotation = _respawnRotation;
     }
 
@@ -210,7 +227,7 @@ public class Kart : MonoBehaviour, I_Damageable
         }
     }
 
-    public void RubbleBoost()
+    public void RubbleBoost(float hInput, float vInput)
     {
         /*
         if (rubbleMeter.CanPerformRubbleAction() && kartMovement.CanMove())
@@ -219,6 +236,22 @@ public class Kart : MonoBehaviour, I_Damageable
             StartCoroutine(kartMovement.RubbleBoost(rubbleBoostIntensity));
             rubbleMeter.UseRubble();
         }*/
+
+        StartCoroutine(BecomeInvincible(2f));
+
+        Vector2 boostDirection = new Vector2(hInput, vInput); //Get our input direction
+        if (boostDirection == Vector2.zero) boostDirection = new Vector2(0, 1f); //If 0, just go forward
+        else{
+        //Vector3 localDirection = new Vector3(boostDirection.x, 0f, boostDirection.y); //Covert to a vector 3
+        //Vector3 worldDirection = transform.TransformDirection(localDirection).normalized; //Do it in world space
+        //Vector3 clampedDirection = Vector3.RotateTowards(transform.forward, worldDirection, Mathf.Deg2Rad * rubbleSettings.GetRubbleAngle(), 0f).normalized; //Clamp it to our angle
+        //rb.MoveRotation(Quaternion.Euler(clampedDirection));
+        }
+        rubbleSettings.UseRubble();
+        kartControls.RubbleBoost(rubbleSettings.GetRubbleBoostLength());
+
+
+
     }
 
     public IEnumerator BecomeInvincible(float seconds)
