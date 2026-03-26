@@ -37,6 +37,7 @@ public class CarControl : MonoBehaviour
     private InputManager im;
     public bool grounded = false;
     public float boostForce = 10;
+    public float maxVerticalSpeed = 1;
 
     private PlayerCamControl pcc;
     private bool receivingInput;
@@ -80,7 +81,6 @@ public class CarControl : MonoBehaviour
         float hInput = im.GetMoveDirectionX();
         float forwardSpeed = Vector3.Dot(transform.forward, rb.linearVelocity);
         float speedFactor = Mathf.InverseLerp(0, maxSpeed, Mathf.Abs(forwardSpeed)); //Normalize speed factor
-        GroundedCheck();
         if (im.GetStartedDrifting())
         {
             StartDrift(hInput, speedFactor);
@@ -94,6 +94,7 @@ public class CarControl : MonoBehaviour
     void FixedUpdate()
     {
         if(!receivingInput) return;
+        GroundedCheck();
         if (im.GetReload() > 0) FindFirstObjectByType<SceneReload>().Reload();
 
         //Assign each one to a float for acceleration and steering
@@ -132,6 +133,8 @@ public class CarControl : MonoBehaviour
 
             rb.angularVelocity = new Vector3(0f,kartRotation,0f);
         }
+
+        if(!grounded)rb.linearVelocity = new Vector3(rb.linearVelocity.x,Mathf.Clamp(rb.linearVelocity.y,Mathf.NegativeInfinity,maxVerticalSpeed),Mathf.Clamp(rb.linearVelocity.z,-maxSpeed,maxSpeed));
     }
 
     public IEnumerator Boost(float length, float damageResistPercentage)
@@ -144,7 +147,6 @@ public class CarControl : MonoBehaviour
         while (elapsedTime < length)
         {
             rb.AddForce(transform.forward*boostForce,ForceMode.Acceleration);
-            rb.linearVelocity = new Vector3(rb.linearVelocity.x,rb.linearVelocity.y,Mathf.Clamp(rb.linearVelocity.z,-maxSpeed,maxSpeed));
             yield return new WaitForFixedUpdate();
             elapsedTime += elapsedTime;
         }
@@ -239,7 +241,7 @@ public class CarControl : MonoBehaviour
         float startYaw = transform.eulerAngles.y;
         driftInitialYaw = startYaw + (initialRoatateAmount * driftDirection)*1.1f;
 
-        Quaternion targetRot = Quaternion.Euler(0f, driftInitialYaw, 0f);
+        Quaternion targetRot = Quaternion.Euler(transform.eulerAngles.x, driftInitialYaw, transform.eulerAngles.z);
 
         rb.MoveRotation(targetRot);
     }
