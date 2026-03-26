@@ -9230,6 +9230,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4538089486025026043, guid: f9d0c7a27a1ab4f468067c0a552ede29, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538089486025026043, guid: f9d0c7a27a1ab4f468067c0a552ede29, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538089486025026043, guid: f9d0c7a27a1ab4f468067c0a552ede29, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 8377816203264005296, guid: f9d0c7a27a1ab4f468067c0a552ede29, type: 3}
       propertyPath: m_Name
       value: StartScreen
