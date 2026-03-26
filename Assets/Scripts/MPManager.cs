@@ -5,7 +5,7 @@ using TMPro;
 public class MPManager : MonoBehaviour
 {
     //join screen text
-    [SerializeField] private JoinScreenManager joinScreen;
+    private JoinScreenManager joinScreen;
 
     //array of player prefabs
     [SerializeField] private GameObject[] players;
@@ -95,5 +95,10 @@ public class MPManager : MonoBehaviour
         }
 
         return 0;
+    }
+
+    public void SetJoinScreen()
+    {
+        joinScreen = FindFirstObjectByType<JoinScreenManager>();
     }
 }
