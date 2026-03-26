@@ -1,4 +1,8 @@
+
+
 using System.Collections;
+using UltimateProceduralPrimitivesFREE;
+using UnityEditor;
 using UnityEngine;
 
 public class CarControl : MonoBehaviour
@@ -26,8 +30,6 @@ public class CarControl : MonoBehaviour
     [Tooltip("How far the front wheels turn")] public float driftSteeringRange = 30f;
     [Tooltip("How far the front wheels turn at max speed")] public float driftSteeringRangeAtMaxSpeed = 10f;
     private float boostVal = 0;
-    public float maxAgainstVal = 10f;
-    private bool jumping = false;
 
 
 
@@ -36,21 +38,14 @@ public class CarControl : MonoBehaviour
     private CarInputActions carControls; //Our current control mapping, will be replaced with our new InputActions
     private InputManager im;
     public bool grounded = false;
-    public float boostForce = 10;
-    public float maxVerticalSpeed = 1;
 
     private PlayerCamControl pcc;
     private bool receivingInput;
-    public Kart kartResources;
-
-    private bool expendingRubble = false;
-    public IEnumerator activeBoost;
 
     void Awake()
     {
         im = GetComponent<InputManager>();
         pcc = transform.parent.GetComponentInChildren<PlayerCamControl>();
-        kartResources = GetComponent<Kart>();
     }
 
     void OnEnable()
@@ -81,20 +76,16 @@ public class CarControl : MonoBehaviour
         float hInput = im.GetMoveDirectionX();
         float forwardSpeed = Vector3.Dot(transform.forward, rb.linearVelocity);
         float speedFactor = Mathf.InverseLerp(0, maxSpeed, Mathf.Abs(forwardSpeed)); //Normalize speed factor
+        GroundedCheck();
         if (im.GetStartedDrifting())
         {
             StartDrift(hInput, speedFactor);
-        }
-        if (im.GetRubbleInitialPress()&&kartResources.rubbleSettings.CanPerformRubbleAction())
-        {
-            expendingRubble = true;
         }
     }
 
     void FixedUpdate()
     {
         if(!receivingInput) return;
-        GroundedCheck();
         if (im.GetReload() > 0) FindFirstObjectByType<SceneReload>().Reload();
 
         //Assign each one to a float for acceleration and steering
@@ -115,50 +106,47 @@ public class CarControl : MonoBehaviour
 
         if (drifting)
         {
-            //if (expendingRubble) RubbleSpinOut(); Not implemented, here for future use
             currentSteerRange = Mathf.Lerp(driftSteeringRange, driftSteeringRangeAtMaxSpeed, speedFactor);
             WheelMovement(hInput, acceleration, currentSteerRange, currentMotorTorque, isAccelerating);
             Drift();
-            //Logic for clamping our Kart rotation to avoid unnecessary rotations or spin outs
-            //float kartRotation = Mathf.Clamp(rb.angularVelocity.y, -maxDriftSpeed, maxDriftSpeed);
-            //rb.angularVelocity = new Vector3(0f,kartRotation,0f);
-            rb.maxAngularVelocity=maxDriftSpeed;
+                        //Logic for clamping our Kart rotation to avoid unnecessary rotations or spin outs
+            float kartRotation = Mathf.Clamp(rb.angularVelocity.y, -maxDriftSpeed, maxDriftSpeed);
+            rb.angularVelocity = new Vector3(0f,kartRotation,0f);
         }
         else
         {
-            if(expendingRubble) kartResources.RubbleBoost(vInput,hInput);
             WheelMovement(hInput, acceleration, currentSteerRange, currentMotorTorque, isAccelerating);
             //Logic for clamping our Kart rotation to avoid unnecessary rotations or spin outs
             float kartRotation = Mathf.Clamp(rb.angularVelocity.y, -maxTurnSpeed, maxTurnSpeed);
 
             rb.angularVelocity = new Vector3(0f,kartRotation,0f);
         }
-
-        if(!grounded)rb.linearVelocity = new Vector3(rb.linearVelocity.x,Mathf.Clamp(rb.linearVelocity.y,Mathf.NegativeInfinity,maxVerticalSpeed),Mathf.Clamp(rb.linearVelocity.z,-maxSpeed,maxSpeed));
     }
 
     public IEnumerator Boost(float length, float damageResistPercentage)
     {
-        if(activeBoost!=null)StopCoroutine(activeBoost);
         pcc.StartCoroutine(pcc.CamSpeedBoostRoutine());
-        if(rb.linearVelocity.magnitude < maxSpeed*0.6f) rb.linearVelocity = transform.forward*maxSpeed*0.6f;
+        Debug.LogWarning("Got called with lenght " + length);
         //TODO: Logic for damage resist
         float elapsedTime = 0;
-        while (elapsedTime < length)
+        while (length < elapsedTime)
         {
-            rb.AddForce(transform.forward*boostForce,ForceMode.Acceleration);
+            rb.linearVelocity = new Vector3(0,0,maxSpeed);
             yield return new WaitForFixedUpdate();
             elapsedTime += elapsedTime;
         }
-        activeBoost = null;
     }
 
-    public void RubbleBoost(float duration)
+    public IEnumerator Boost(float intensity, float length, float damageResistPercentage)
     {
-        Debug.LogWarning("CC: RubbleBoost");
-
-        StartCoroutine( activeBoost = Boost(duration,0f));
-        expendingRubble = false;
+        //TODO: Logic for damage resist
+        float elapsedTime = 0;
+        while (length < elapsedTime)
+        {
+            rb.AddForce(transform.forward*intensity,ForceMode.Acceleration);
+            yield return new WaitForFixedUpdate();
+            elapsedTime += elapsedTime;
+        }
     }
     public void GroundedCheck()
     {
@@ -166,10 +154,9 @@ public class CarControl : MonoBehaviour
         foreach (var wheel in wheels)
         {
             RaycastHit groundHit;
-            if (Physics.Raycast(wheel.transform.position, -wheel.transform.up, out groundHit, wheel.GetComponent<WheelCollider>().radius*5f))
+            if (Physics.Raycast(wheel.transform.position, -wheel.transform.up, out groundHit, wheel.GetComponent<WheelCollider>().radius*2.5f))
             {
-                
-                if(!jumping)grounded = true;
+                grounded = true;
                 return;
             } 
         }
@@ -183,7 +170,6 @@ public class CarControl : MonoBehaviour
         //Go through logic applied to each wheel
         foreach (var wheel in wheels)
         {
-            wheel.wheelCollider.brakeTorque = 0f;
             //Apply steering to wheels
             if (wheel.steerable)
             {
@@ -232,8 +218,6 @@ public class CarControl : MonoBehaviour
         drifting = true;
 
         rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
-        jumping = true;
-        StartCoroutine(JumpDetect());
 
         driftDirection = Mathf.Sign(hInput) > 0 ? 1 : -1;
         if(hInput==0) driftDirection = 0;
@@ -241,25 +225,17 @@ public class CarControl : MonoBehaviour
         float startYaw = transform.eulerAngles.y;
         driftInitialYaw = startYaw + (initialRoatateAmount * driftDirection)*1.1f;
 
-        Quaternion targetRot = Quaternion.Euler(transform.eulerAngles.x, driftInitialYaw, transform.eulerAngles.z);
+        Quaternion targetRot = Quaternion.Euler(0f, driftInitialYaw, 0f);
 
         rb.MoveRotation(targetRot);
     }
 
     public void Drift()
     {
-        if (!im.GetDrifting()||rb.linearVelocity.magnitude<driftSpeedThreshold||driftDirection==0||(!grounded&&!jumping))
+        if (!im.GetDrifting()||rb.linearVelocity.magnitude<driftSpeedThreshold||driftDirection==0)
         {
-            if (!im.GetDrifting())
-            {
-                            exitDrift();
-                            return;
-            }
-            drifting = false;
-            boostVal=0;
+            exitDrift();
             return;
-
-            
         }
         
 
@@ -314,8 +290,7 @@ public class CarControl : MonoBehaviour
         {
             if (wheel.steerable && Mathf.Sign(direction)!=Mathf.Sign(wheel.wheelCollider.steerAngle))
             {
-                wheel.wheelCollider.steerAngle = maxAgainstVal*-direction;
-                rb.angularVelocity = new Vector3(0f, maxAgainstVal*-direction, 0f);
+                wheel.wheelCollider.steerAngle = 0f;
             }
         }
     }
@@ -325,24 +300,17 @@ public class CarControl : MonoBehaviour
         drifting = false;
         if (boostVal > driftBoostRequirements.z)
         {
-            StartCoroutine(activeBoost = Boost(driftBoostLengths.z,0));
+            StartCoroutine(Boost(driftBoostLengths.z,0));
         }
         else if (boostVal > driftBoostRequirements.y)
         {
-            StartCoroutine(activeBoost = Boost(driftBoostLengths.y,0));
+            StartCoroutine(Boost(driftBoostLengths.y,0));
         }
         else if (boostVal > driftBoostRequirements.x)
         {
-            StartCoroutine(activeBoost = Boost(driftBoostLengths.x,0));
+            StartCoroutine(Boost(driftBoostLengths.x,0));
         }
         boostVal = 0;
-    }
-
-    public IEnumerator JumpDetect()
-    {
-
-           yield return new WaitUntil(()=>rb.linearVelocity.y<=0);
-           jumping = false;
     }
 
     public IEnumerator DriftHopFallSpeed(float slerpLength)

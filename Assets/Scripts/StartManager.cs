@@ -19,7 +19,6 @@ public class StartManager : MonoBehaviour
         if (!gameStarted && playerInput.playerIndex == 0)
         {
             multiplayer.StartGame();
-            GetComponent<CarControl>().enabled = true;
             gameStarted = true;
         }
     }

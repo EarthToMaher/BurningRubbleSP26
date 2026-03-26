@@ -60,10 +60,9 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
         Debug.Log("Hitpoint: " + hitpoint); //does run this code
         int numDestroyed = ApplyHit(hitpoint);
         I_Damageable damageable = cause.GetComponent<I_Damageable>();
-        if (damageable == null) cause.GetComponent<I_Damageable>();
         if (damageable != null) damageable.TakeDamage(hp*numDestroyed);
-        Kart kart = instigator.GetComponent<Kart>();
-        if (kart != null) kart.rubbleSettings.GainRubble(rubble*numDestroyed);
+        RubbleMeter rm = instigator.GetComponent<RubbleMeter>();
+        if (rm != null) rm.GainRubble(rubble*numDestroyed);
     }
 
     /*int ApplyHit(Vector3 worldPoint)

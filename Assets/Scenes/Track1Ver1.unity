@@ -25389,7 +25389,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 496.3
+      value: 397.2651
       objectReference: {fileID: 0}
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25397,11 +25397,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 700
+      value: 406.94778
       objectReference: {fileID: 0}
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalRotation.x
@@ -25409,7 +25409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalRotation.z
@@ -25421,19 +25421,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5464023844513391318, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      propertyPath: _lapManager
-      value: 
-      objectReference: {fileID: 877529748}
     - target: {fileID: 8970877045213511789, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_Name
       value: Spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: driftSteeringRange
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: driftSpeedThreshold
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: driftSteeringRangeAtMaxSpeed
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
