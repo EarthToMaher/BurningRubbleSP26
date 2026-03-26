@@ -1344,6 +1344,7 @@ GameObject:
   - component: {fileID: 203822437948892908}
   - component: {fileID: 977702865069313672}
   - component: {fileID: 5464023844513391318}
+  - component: {fileID: 809075516868870212}
   m_Layer: 0
   m_Name: KartWithFrozenRotation
   m_TagString: Player
@@ -1453,7 +1454,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7180503158302714169}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38efdee8b52ee234d8a7274436c1d5f1, type: 3}
   m_Name: 
@@ -1476,6 +1477,7 @@ MonoBehaviour:
   driftBoostLengths: {x: 1, y: 2, z: 4}
   driftSteeringRange: 40
   driftSteeringRangeAtMaxSpeed: 30
+  maxAgainstVal: 10
   grounded: 0
   boostForce: 1000
   kartResources: {fileID: 0}
@@ -1545,9 +1547,9 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 3691010382364671159}
 --- !u!114 &203822437948892908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1579,7 +1581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Kart
   hPSettings:
-    hp: 10
+    hp: 500
     hpImage: {fileID: 8797489473467945585}
     hpText: {fileID: 6795596116544215023}
   rubbleSettings:
@@ -1589,7 +1591,7 @@ MonoBehaviour:
     rubbleChargeAmt: 100
     rubbleAngle: 0
     rubbleBoostLength: 3
-  iFrameLength: 0
+  iFrameLength: 0.1
 --- !u!114 &5464023844513391318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1610,6 +1612,20 @@ MonoBehaviour:
   _txtCheckpoint: {fileID: 2673229768841981932}
   _checkpointsRemaining: {fileID: 883121758872972760}
   _txtLapCount: {fileID: 7245194425893143582}
+--- !u!114 &809075516868870212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7180503158302714169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb2d802c401198b4cabd5770f59e0f29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StartManager
+  multiplayer: {fileID: 0}
+  playerInput: {fileID: 0}
 --- !u!1 &7245194425893143582
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,7 +46,7 @@ public class WorldVoxelization : MonoBehaviour
     public ReenableManager reenableManager;
 
     void Start(){
-        /*if (!Application.isPlaying)
+        if (!Application.isPlaying)
             return;
 
         resetSmallGrids();
@@ -54,7 +54,7 @@ public class WorldVoxelization : MonoBehaviour
         CutUpLargeGrid();
         foreach(GameObject singleObjectInList in listOfObjectsToVoxelize){
             singleObjectInList.SetActive(false); //turns off the objects after using them to make voxelized mesh
-        }*/
+        }
     }
 
     void OnApplicationQuit()

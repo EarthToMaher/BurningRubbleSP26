@@ -185,10 +185,10 @@ public class Kart : MonoBehaviour, I_Damageable
         kartControls.StopKart();
         kartControls.SetReceivingInput(false);
         StartCoroutine(HealUponDeath());
-            CheckpointDetection _checkDetect = FindFirstObjectByType<CheckpointDetection>();
+            CheckpointDetection _checkDetect = GetComponent<CheckpointDetection>();
             Vector3 _respawnPoint = FindFirstObjectByType<LapManager>().SetCheckpointPos(_checkDetect._currCheckpoint);
-            Quaternion _respawnRotation = FindAnyObjectByType<LapManager>().SetCheckpointRot(_checkDetect._currCheckpoint);
-            this.transform.position = _respawnPoint;
+            Quaternion _respawnRotation = FindFirstObjectByType<LapManager>().SetCheckpointRot(_checkDetect._currCheckpoint);
+            this.transform.position = _respawnPoint+new Vector3(0f, 10f, 0f);
             this.transform.rotation = _respawnRotation;
     }
 
@@ -236,6 +236,8 @@ public class Kart : MonoBehaviour, I_Damageable
             StartCoroutine(kartMovement.RubbleBoost(rubbleBoostIntensity));
             rubbleMeter.UseRubble();
         }*/
+
+        StartCoroutine(BecomeInvincible(2f));
 
         Vector2 boostDirection = new Vector2(hInput, vInput); //Get our input direction
         if (boostDirection == Vector2.zero) boostDirection = new Vector2(0, 1f); //If 0, just go forward

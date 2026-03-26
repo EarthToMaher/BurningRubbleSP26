@@ -52,6 +52,7 @@ public class MPManager : MonoBehaviour
 
     public void StartGame()
     {
+        Debug.LogWarning("Attempted to start");
         //removes the join screen UI
         joinScreen.ClearJoinScreen();
 
@@ -73,10 +74,26 @@ public class MPManager : MonoBehaviour
                     cam.gameObject.SetActive(true);
                     Debug.Log(cam.gameObject.name);
                 }
+                player.GetComponentInChildren<CarControl>().enabled = true;
 
                 //trigger countdown & race start
-                playerPrefab.GetComponentInChildren<Countdown>().SetGameStarted(true);
+                //playerPrefab.GetComponentInChildren<Countdown>().SetGameStarted(true);
             }
         }
+    }
+
+    /* this can be called whenever we need to know which specific player did something
+       right now it is being used to check which player finished the race and put the correct player number on the end screen */
+    public int FindPlayer(GameObject player)
+    {
+        for(int p=1; p<players.Length; p++)
+        {
+            if(player = players[p-1])
+            {
+                return p;
+            }
+        }
+
+        return 0;
     }
 }
