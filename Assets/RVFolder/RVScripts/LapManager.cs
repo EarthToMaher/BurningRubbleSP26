@@ -42,15 +42,4 @@ public class LapManager : MonoBehaviour
     {
         return _checkpointReqNum;
     }
-
-    public void DisableHasPassed()
-    {
-        foreach (var _hasPassede in _checkpointArray) 
-        {
-            for (int i = 0; i < _checkpointArray.Length; i++)
-            {
-                _checkpointArray[i]._hasPassed = false;
-            }
-        }
-    }
 }

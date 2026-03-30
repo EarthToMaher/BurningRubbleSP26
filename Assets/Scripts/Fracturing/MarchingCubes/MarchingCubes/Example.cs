@@ -152,7 +152,10 @@ namespace MarchingCubesProject
             collider.convex = true; //Importaint for proper collision detection with rigidbodies
             collider.isTrigger = true;
             DestructibleMesh dm = go.AddComponent<DestructibleMesh>();
-            //dm.parentGridPiece = gridPiece; //Need to set this properly later
+            dm.idX = gridPiece.positionIn2DArrayGridX;
+            dm.idZ = gridPiece.positionIn2DArrayGridZ;
+            Debug.Log("Setting dm parent grid piece to: " + worldVoxelization.arrayOfGridPieces[dm.idX, dm.idZ]);
+            dm.gridPiece = worldVoxelization.arrayOfGridPieces[dm.idX,dm.idZ]; //Need to set this properly later //need to bring this back to WorldVOxelization
             dm.voxelData = gridPiece.GetVoxelData();
             dm.voxelPositions = gridPiece.GetVoxelPositions();
             go.transform.localPosition = position;
@@ -495,6 +498,22 @@ namespace MarchingCubesProject
             //Generate new mesh
             //newByteArray; //Need to update this function to accept the new structure of data I am going with
             GenerateMarchingCubesMeshBig(newByteArray, gridLocations);
+        }
+
+        public void RegenerateMarchingCubesMeshSmall(DestructibleMesh dm, GridPiece gridPiece)
+        {
+            //Delete old meshes
+            
+            
+            //meshes.Clear();
+            Destroy(dm.gameObject);
+
+            meshes.Remove(dm.gameObject);
+            //worldVoxelization.recheckVoxels();
+
+            //Generate new mesh
+            //newByteArray; //Need to update this function to accept the new structure of data I am going with
+            GenerateMarchingCubesMesh(gridPiece);
         }
 
         public void ReenableMeshRegeneration()

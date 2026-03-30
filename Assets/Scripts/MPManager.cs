@@ -5,10 +5,11 @@ using TMPro;
 public class MPManager : MonoBehaviour
 {
     //join screen text
-    [SerializeField] private JoinScreenManager joinScreen;
+    private JoinScreenManager joinScreen;
 
     //array of player prefabs
     [SerializeField] private GameObject[] players;
+    [SerializeField] private EndScreenManager endScreen;
 
     //start positions
     [SerializeField] private Vector3 player1Start;
@@ -51,8 +52,12 @@ public class MPManager : MonoBehaviour
 
     public void StartGame()
     {
+        Debug.LogWarning("Attempted to start");
         //removes the join screen UI
         joinScreen.ClearJoinScreen();
+
+        //end screen set up
+        endScreen.SetTotalPlayers(numPlayers);
 
         //loop looks at every player
         foreach(GameObject player in players)
@@ -69,10 +74,31 @@ public class MPManager : MonoBehaviour
                     cam.gameObject.SetActive(true);
                     Debug.Log(cam.gameObject.name);
                 }
+                player.GetComponentInChildren<CarControl>().enabled = true;
 
                 //trigger countdown & race start
-                playerPrefab.GetComponentInChildren<Countdown>().SetGameStarted(true);
+                //playerPrefab.GetComponentInChildren<Countdown>().SetGameStarted(true);
             }
         }
+    }
+
+    /* this can be called whenever we need to know which specific player did something
+       right now it is being used to check which player finished the race and put the correct player number on the end screen */
+    public int FindPlayer(GameObject player)
+    {
+        for(int p=1; p<players.Length; p++)
+        {
+            if(player = players[p-1])
+            {
+                return p;
+            }
+        }
+
+        return 0;
+    }
+
+    public void SetJoinScreen()
+    {
+        joinScreen = FindFirstObjectByType<JoinScreenManager>();
     }
 }

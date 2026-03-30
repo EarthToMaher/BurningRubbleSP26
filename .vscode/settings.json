@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "Burning Rubble.slnx"
+    "dotnet.defaultSolution": "BurningRubble.slnx"
 }
