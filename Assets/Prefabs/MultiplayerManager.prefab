@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInputManager
   m_NotificationBehavior: 0
   m_MaxPlayerCount: 4
-  m_AllowJoining: 1
+  m_AllowJoining: 0
   m_JoinBehavior: 1
   m_PlayerJoinedEvent:
     m_PersistentCalls:
@@ -74,8 +74,8 @@ MonoBehaviour:
         m_Action: Join
         m_Flags: 0
       m_Flags: 0
-    m_Reference: {fileID: 6170193564146302309, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  m_PlayerPrefab: {fileID: 6470137175446354684, guid: be7b88acf3226f949a1815e19176fa93, type: 3}
+    m_Reference: {fileID: -4519343498287211027, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_PlayerPrefab: {fileID: 8970877045213511789, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
   m_SplitScreen: 1
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1
@@ -97,12 +97,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b8f85d73523e34abca6d676d40da8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MPManager
-  joinScreen: {fileID: 0}
   players:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  endScreen: {fileID: 0}
   player1Start: {x: 499.9, y: 0, z: 700}
   player2Start: {x: 499.9, y: 0, z: 698}
   player3Start: {x: 499.9, y: 0, z: 702}
