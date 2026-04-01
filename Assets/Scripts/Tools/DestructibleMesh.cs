@@ -166,14 +166,15 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
         if (modified)
         {
             Debug.Log("Rebuilding mesh after destruction");
-            marchingCubesScript.RegenerateMarchingCubesMesh(voxelData, voxelPositions);
+            marchingCubesScript.GenerateMarchingCubesMesh(parentGridPiece);
+            Destroy(this.gameObject);
         }
 
         return count;
     }
 
 
-    public void RebuildMesh()
+    /*public void RebuildMesh()
     {
         Debug.Log("Attempted to rebuild mesh");
         List<Vector3> verts = new List<Vector3>();
@@ -250,10 +251,10 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
             meshCollider.sharedMesh = null;
             meshCollider.sharedMesh = newMesh;
         }
-    }
+    }*/
 
     public void RepairMe()
     {
-        marchingCubesScript.RegenerateMarchingCubesMesh(voxelData, voxelPositions);
+        marchingCubesScript.GenerateMarchingCubesMesh(parentGridPiece);
     }
 }
