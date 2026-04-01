@@ -461,6 +461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowSpline
   _currentFollowingSpline: {fileID: 0}
+  _cancelAction: {fileID: -4925825617451188429, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   _speed: 1
   _duration: 5
 --- !u!1 &385868031

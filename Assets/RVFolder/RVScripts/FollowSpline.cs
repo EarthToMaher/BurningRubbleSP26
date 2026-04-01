@@ -1,12 +1,14 @@
 using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Splines;
 
 public class FollowSpline : MonoBehaviour
 {
     // Components
     [SerializeField] private SplineContainer _currentFollowingSpline;
+    [SerializeField] private InputActionReference _cancelAction;
 
     // Variables
     [SerializeField] private float _speed = 0.01f;
@@ -40,6 +42,11 @@ public class FollowSpline : MonoBehaviour
             // Properly aligns the player along the splines curve
             float3 tangent = _currentFollowingSpline.EvaluateTangent(_time);
             transform.rotation = Quaternion.LookRotation(tangent);
+
+            if (_time >= .5f && _cancelAction.action.triggered)
+            {
+                yield break;
+            }
 
             yield return null;
         }
