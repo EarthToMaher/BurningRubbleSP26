@@ -372,7 +372,7 @@ Transform:
   m_GameObject: {fileID: 217795373}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000000002031188, y: -0.09950373, z: 0.000000040725066, w: 0.9950372}
-  m_LocalPosition: {x: 12.37, y: 1, z: -13.95}
+  m_LocalPosition: {x: 12.37, y: 0.75, z: -13.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -389,7 +389,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7572015
+      value: 15.2
       objectReference: {fileID: 0}
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalPosition.y
@@ -397,7 +397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -32.01581
+      value: -19.8
       objectReference: {fileID: 0}
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalRotation.w
@@ -431,6 +431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawn
       objectReference: {fileID: 0}
+    - target: {fileID: 9016272956900388224, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -438,38 +442,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7180503158302714169, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       insertIndex: -1
       addedObject: {fileID: 356609893}
-    - targetCorrespondingSourceObject: {fileID: 7180503158302714169, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 356609892}
   m_SourcePrefab: {fileID: 100100000, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
 --- !u!1 &356609891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7180503158302714169, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
   m_PrefabInstance: {fileID: 356609890}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &356609892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356609891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
-  m_Target: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_LoopMode: 0
-  m_Method: 0
-  m_Duration: 3
-  m_MaxSpeed: 10
-  m_EasingMode: 0
-  m_AlignmentMode: 1
-  m_ObjectForwardAxis: 2
-  m_ObjectUpAxis: 1
-  m_StartOffset: 0
 --- !u!114 &356609893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,6 +460,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934b88b5299ffc24cbdbf3e4db9d4f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowSpline
+  _currentFollowingSpline: {fileID: 0}
+  _speed: 1
+  _duration: 5
 --- !u!1 &385868031
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,10 +736,11 @@ Transform:
   m_GameObject: {fileID: 634992933}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000000040111544, y: 0.9995124, z: -0.0000000073294872, w: -0.031225633}
-  m_LocalPosition: {x: -11, y: 0, z: -3.2}
+  m_LocalPosition: {x: -11, y: 0.75, z: -3.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1086287574}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 183.579, z: 0}
 --- !u!1 &704386626
@@ -873,6 +855,73 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704386626}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1086287573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1086287574}
+  - component: {fileID: 1086287576}
+  - component: {fileID: 1086287575}
+  m_Layer: 0
+  m_Name: Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1086287574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086287573}
+  serializedVersion: 2
+  m_LocalRotation: {x: -5.3290705e-15, y: -0.25881925, z: 5.684342e-14, w: 0.9659258}
+  m_LocalPosition: {x: -0.1, y: 0, z: -0.42}
+  m_LocalScale: {x: 10, y: 6, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 634992935}
+  m_LocalEulerAnglesHint: {x: 0, y: -30, z: 0}
+--- !u!114 &1086287575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086287573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5beaed3946abae3499253cdea9aa43f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineTriggerZone
+  _splineToFollow: {fileID: 0}
+--- !u!65 &1086287576
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086287573}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1213235310
 GameObject:
   m_ObjectHideFlags: 0
