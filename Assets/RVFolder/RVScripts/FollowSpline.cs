@@ -14,7 +14,7 @@ public class FollowSpline : MonoBehaviour
     // Variables
     [SerializeField] private float _speed = 0.01f;
     [SerializeField] private float _rubbleBoostDuration = 1f;
-    private float _duration = 3f;
+    private float _duration;
     private float _time;
 
     private void Awake()
@@ -37,6 +37,29 @@ public class FollowSpline : MonoBehaviour
 
     IEnumerator AnimateAlongPath()
     {
+        // Smoothly lerp onto the Spline animation path
+        float3 _startPosition = transform.position;
+        float3 _splineStart = _currentFollowingSpline.EvaluatePosition(0f);
+
+        float enterDuration = .5f; // Seconds to lerp
+        float elapsed = 0f;
+
+        while (elapsed < enterDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / enterDuration;
+
+            // Lerp
+            transform.position = math.lerp(_startPosition, _splineStart, t);
+
+            // Rotate toward the Spline
+            float3 tangent = _currentFollowingSpline.EvaluateTangent(0f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(tangent), t);
+
+            yield return null;
+        }
+
+        // Begin spline animation
         _time = 0f; // Reset timer
 
         while (_time < 1f)
