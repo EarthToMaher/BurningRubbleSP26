@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarControl : MonoBehaviour
 {
@@ -77,7 +78,10 @@ public class CarControl : MonoBehaviour
 
     public void Update()
     {
+        //Debug That Reloads Scene. Overrides Receiving Input.
+        if (im.GetReload() > 0) SceneManager.LoadScene(0);
         if(!receivingInput) return;
+        if(im.GetRespawnDebug() > 0) kartResources.KartDeath();
         float hInput = im.GetMoveDirectionX();
         float forwardSpeed = Vector3.Dot(transform.forward, rb.linearVelocity);
         float speedFactor = Mathf.InverseLerp(0, maxSpeed, Mathf.Abs(forwardSpeed)); //Normalize speed factor
@@ -95,7 +99,6 @@ public class CarControl : MonoBehaviour
     {
         if(!receivingInput) return;
         GroundedCheck();
-        if (im.GetReload() > 0) FindFirstObjectByType<SceneReload>().Reload();
 
         //Assign each one to a float for acceleration and steering
         float vInput = im.GetMoveDirectionY();
