@@ -18,6 +18,7 @@ public class InputManager : MonoBehaviour
     private InputAction driftAction;
     private InputAction reload;
     private InputAction rubbleAction;
+    private InputAction respawnDebug;
 
     void Start()
     {
@@ -29,7 +30,15 @@ public class InputManager : MonoBehaviour
         driftAction = playerInput.actions["Drift"];
         reload = playerInput.actions["Reload"];
         rubbleAction = playerInput.actions["Rubble"];
+        respawnDebug = playerInput.actions["RespawnDebug"];
+        
     }
+    public float GetRespawnDebug()
+    {
+        float reloadVal = respawnDebug.ReadValue<float>();
+        return reloadVal;
+    }
+    
     public float GetReload()
     {
         float reloadVal = reload.ReadValue<float>();

@@ -149,6 +149,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "RespawnDebug",
+                    "type": "Button",
+                    "id": "a419a6a6-ce80-448a-a7ab-fc61791abf6e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -649,8 +658,8 @@
                 },
                 {
                     "name": "",
-                    "id": "21bdf461-82a8-4b47-86a0-f04060e95681",
-                    "path": "",
+                    "id": "9d1faf5e-006b-4f3d-9365-1503a16ee5dc",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -660,12 +669,23 @@
                 },
                 {
                     "name": "",
-                    "id": "9d1faf5e-006b-4f3d-9365-1503a16ee5dc",
-                    "path": "<Keyboard>/r",
+                    "id": "fb1301d0-ba52-4d94-9c13-ab8c152fe9ba",
+                    "path": "<Gamepad>/dpad/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8cace05b-bfd1-419c-bb2e-d6701c7c6adf",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RespawnDebug",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
