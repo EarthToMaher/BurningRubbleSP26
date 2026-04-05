@@ -178,7 +178,7 @@ public class Kart : MonoBehaviour, I_Damageable
         return hPSettings.AtMax();
     }
 
-    private void KartDeath()
+    public void KartDeath()
     {
         invincible = true;
         //GameObject _lapManager = GameObject.Find("LapManager");
