@@ -1537,7 +1537,7 @@ MonoBehaviour:
   maxSpeed: 35
   steeringRange: 20
   steeringRangeAtMaxSpeed: 15
-  centreOfGravityOffset: -2
+  centreOfGravityOffset: -10
   maxTurnSpeed: 0.5
   maxDriftSpeed: 2
   jumpStrength: 6250
