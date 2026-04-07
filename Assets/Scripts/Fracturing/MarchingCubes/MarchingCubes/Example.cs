@@ -37,103 +37,43 @@ namespace MarchingCubesProject
         //New Variables, goes from World Voxelization
         public WorldVoxelization worldVoxelization;
 
-        /*void Start()
+        public Texture2D texture; //Only used in creation of the mesh
+        private Vector2[] uvs;
+
+        public Material outlineMat;
+
+        void Start()
         {
+            
+        }
 
-            INoise perlin = new PerlinNoise(seed, 1.0f);
-            FractalNoise fractal = new FractalNoise(perlin, 3, 1.0f);
+        Vector2[] GenerateUVs(List<Vector3> verts)
+        {
+            Vector2[] uvs = new Vector2[verts.Count];
 
-            //Set the mode used to create the mesh.
-            //Cubes is faster and creates less verts, tetrahedrons is slower and creates more verts but better represents the mesh surface.
-            Marching marching = null;
-            if (mode == MARCHING_MODE.TETRAHEDRON)
-                marching = new MarchingTertrahedron();
-            else
-                marching = new MarchingCubes();
-
-            //Surface is the value that represents the surface of mesh
-            //For example the perlin noise has a range of -1 to 1 so the mid point is where we want the surface to cut through.
-            //The target value does not have to be the mid point it can be any value with in the range.
-            marching.Surface = 0.0f;
-
-            //The size of voxel array.
-            int width;
-            int height;
-            int depth;
-            if (worldVoxelization.gridLocations != null)
+            for (int i = 0; i < verts.Count; i++)
             {
-                width = worldVoxelization.gridLocations.GetLength(0);
-                height = worldVoxelization.gridLocations.GetLength(1);
-                depth = worldVoxelization.gridLocations.GetLength(2);
-            } else {
-                width = 32;
-                height = 32;
-                depth = 32;
+                Vector3 v = verts[i];
+
+                // SIMPLE planar projection (good starting point)
+                float scale = 1f; // tweak this
+                uvs[i] = new Vector2(v.x * scale, v.z * scale);
+
+                // Alternative options:
+                // uvs[i] = new Vector2(v.x, v.y);
+                // uvs[i] = new Vector2(v.y, v.z);
             }
 
-            var voxels = new VoxelArray(width, height, depth);
-
-            //Fill voxels with values. Im using perlin noise but any method to create voxels will work.
-            for (int x = 0; x < width; x++)
-            {
-                for (int y = 0; y < height; y++)
-                {
-                    for (int z = 0; z < depth; z++)
-                    {
-                        float u = x / (width - 1.0f);
-                        float v = y / (height - 1.0f);
-                        float w = z / (depth - 1.0f);
-
-                        voxels[x, y, z] = fractal.Sample3D(u, v, w);
-                    }
-                }
-            }
-
-            List<Vector3> verts = new List<Vector3>();
-            List<Vector3> normals = new List<Vector3>();
-            List<int> indices = new List<int>();
-
-            //The mesh produced is not optimal. There is one vert for each index.
-            //Would need to weld vertices for better quality mesh.
-            marching.Generate(voxels.Voxels, verts, indices);
-
-            //Create the normals from the voxel.
-
-            if (smoothNormals)
-            {
-                for (int i = 0; i < verts.Count; i++)
-                {
-                    //Presumes the vertex is in local space where
-                    //the min value is 0 and max is width/height/depth.
-                    Vector3 p = verts[i];
-
-                    float u = p.x / (width - 1.0f);
-                    float v = p.y / (height - 1.0f);
-                    float w = p.z / (depth - 1.0f);
-
-                    Vector3 n = voxels.GetNormal(u, v, w);
-
-                    normals.Add(n);
-                }
-
-                normalRenderer = new NormalRenderer();
-                normalRenderer.DefaultColor = Color.red;
-                normalRenderer.Length = 0.25f;
-                normalRenderer.Load(verts, normals);
-            }
-
-            var position = new Vector3(-width / 2, -height / 2, -depth / 2);
-
-            CreateMesh32(verts, normals, indices, position);
-
-        }*/
+            return uvs;
+        }
 
         private void CreateMesh32(List<Vector3> verts, List<Vector3> normals, List<int> indices, Vector3 position, GridPiece gridPiece)
-        {
+        { //This function, as with its name, creates the mesh that is seen, it is also where we apply additional functions to the gameobject and textures
             Mesh mesh = new Mesh();
             mesh.indexFormat = IndexFormat.UInt32;
             mesh.SetVertices(verts);
             mesh.SetTriangles(indices, 0);
+            mesh.uv = GenerateUVs(verts);
 
             if (normals.Count > 0)
                 mesh.SetNormals(normals);
@@ -145,8 +85,29 @@ namespace MarchingCubesProject
             GameObject go = new GameObject("Mesh");
             go.transform.parent = worldVoxelization.parent.transform;
             go.AddComponent<MeshFilter>();
-            go.AddComponent<MeshRenderer>();
-            go.GetComponent<Renderer>().material = material;
+            MeshRenderer renderer = go.AddComponent<MeshRenderer>();
+
+            Material matInstance;
+
+            if (material != null)
+            {
+                matInstance = new Material(material);
+            }
+            else
+            {
+                matInstance = new Material(Shader.Find("Standard"));
+            }
+
+            if (texture != null)
+            {
+                matInstance.mainTexture = texture;
+            }
+
+            List<Material> materials = new List<Material>();
+            materials.Add(matInstance);
+            materials.Add(outlineMat);
+            //renderer.material = matInstance;
+            renderer.SetMaterials(materials);
             go.GetComponent<MeshFilter>().mesh = mesh;
             MeshCollider collider = go.AddComponent<MeshCollider>();
             collider.convex = true; //Importaint for proper collision detection with rigidbodies
