@@ -127,9 +127,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4246183567076831437, guid: bff27b98921676f4cbc41636076de471, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 341376324007381610, guid: bff27b98921676f4cbc41636076de471, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 186738380}
+    - target: {fileID: 341376324007381610, guid: bff27b98921676f4cbc41636076de471, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982781698457713486, guid: bff27b98921676f4cbc41636076de471, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 186738380}
+    - target: {fileID: 4982781698457713486, guid: bff27b98921676f4cbc41636076de471, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
       objectReference: {fileID: 0}
     - target: {fileID: 7361474029536327079, guid: bff27b98921676f4cbc41636076de471, type: 3}
       propertyPath: m_LocalPosition.x
@@ -171,72 +183,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8707984884205470846, guid: bff27b98921676f4cbc41636076de471, type: 3}
-      propertyPath: menuButtons.Array.size
-      value: 2
+    - target: {fileID: 7544114954907353520, guid: bff27b98921676f4cbc41636076de471, type: 3}
+      propertyPath: MultiplayerManager
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8707984884205470846, guid: bff27b98921676f4cbc41636076de471, type: 3}
-      propertyPath: menuSelection.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8707984884205470846, guid: bff27b98921676f4cbc41636076de471, type: 3}
-      propertyPath: 'menuButtons.Array.data[0]'
-      value: 
-      objectReference: {fileID: 186738382}
-    - target: {fileID: 8707984884205470846, guid: bff27b98921676f4cbc41636076de471, type: 3}
-      propertyPath: 'menuButtons.Array.data[1]'
-      value: 
-      objectReference: {fileID: 186738380}
-    - target: {fileID: 8707984884205470846, guid: bff27b98921676f4cbc41636076de471, type: 3}
-      propertyPath: 'menuSelection.Array.data[0]'
-      value: 
-      objectReference: {fileID: 186738383}
-    - target: {fileID: 8707984884205470846, guid: bff27b98921676f4cbc41636076de471, type: 3}
-      propertyPath: 'menuSelection.Array.data[1]'
-      value: 
-      objectReference: {fileID: 186738381}
     - target: {fileID: 8750451826873962324, guid: bff27b98921676f4cbc41636076de471, type: 3}
       propertyPath: m_Name
       value: ===CopperCanyonNoDestruction===
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 656958386728757510, guid: bff27b98921676f4cbc41636076de471, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bff27b98921676f4cbc41636076de471, type: 3}
 --- !u!114 &186738380 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 341376324007381610, guid: bff27b98921676f4cbc41636076de471, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3567625449771789281, guid: bff27b98921676f4cbc41636076de471, type: 3}
   m_PrefabInstance: {fileID: 186738379}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a190f8f83510484ea68494bcaba0227, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
---- !u!1 &186738381 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6320819136305025232, guid: bff27b98921676f4cbc41636076de471, type: 3}
-  m_PrefabInstance: {fileID: 186738379}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &186738382 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4982781698457713486, guid: bff27b98921676f4cbc41636076de471, type: 3}
-  m_PrefabInstance: {fileID: 186738379}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
---- !u!1 &186738383 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 923058740775172619, guid: bff27b98921676f4cbc41636076de471, type: 3}
-  m_PrefabInstance: {fileID: 186738379}
-  m_PrefabAsset: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::SceneController
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
