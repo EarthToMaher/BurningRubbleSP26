@@ -39,7 +39,7 @@ public class PlayerCamControl : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        _playerCam = transform.parent.GetComponentInChildren<Camera>();
+        if(_playerCam==null)_playerCam = transform.parent.GetComponentInChildren<Camera>();
         if(_kart==null) _kart = this.gameObject;
         _currentFOV = transform.parent.GetComponentInChildren<Camera>().fieldOfView;
         _inputManager = this.GetComponent<InputManager>();
