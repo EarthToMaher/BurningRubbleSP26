@@ -526,6 +526,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7361474029536327079}
     m_Modifications:
+    - target: {fileID: 2912464551716640331, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
+      propertyPath: endScreen
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946815082880664677, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7696849525010559190, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
       propertyPath: endScreen
       value: 
@@ -638,8 +646,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8843483434603885848, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
+      propertyPath: EndScreenManager
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4304229462792641158, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
