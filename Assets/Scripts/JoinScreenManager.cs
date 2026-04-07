@@ -20,10 +20,13 @@ public class JoinScreenManager : MonoBehaviour
     [SerializeField] private RawImage p4Joined;
 
     private PlayerInputManager playerInputMgr;
-    private int maxPlayers = 0;
+    private int maxPlayers;
+    private bool isFull;
 
     void Awake()
     {
+        maxPlayers = 0;
+        isFull = false;
         playerInputMgr = FindFirstObjectByType<PlayerInputManager>();
         Debug.Log("Player input manager: " + playerInputMgr == null);
     }
@@ -34,6 +37,8 @@ public class JoinScreenManager : MonoBehaviour
         if (playerInputMgr.joiningEnabled && playerInputMgr.playerCount == maxPlayers)
         {
             playerInputMgr.DisableJoining();
+            startText.gameObject.SetActive(true);
+            isFull = true;
             Debug.Log("Game is full");
         }
     }
@@ -51,7 +56,6 @@ public class JoinScreenManager : MonoBehaviour
                 {
                     p1Text.SetText("PLAYER 1:\nREADY");
                 }
-                startText.gameObject.SetActive(true);
                 p1NotJoined.gameObject.SetActive(false);
                 p1Joined.gameObject.SetActive(true);
                 break;
@@ -82,5 +86,10 @@ public class JoinScreenManager : MonoBehaviour
     {
         maxPlayers = players;
         playerInputMgr.EnableJoining();
+    }
+
+    public bool GetIsFull()
+    {
+        return isFull;
     }
 }

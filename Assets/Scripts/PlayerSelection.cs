@@ -1,18 +1,13 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
-using System.Collections;
 
 public class PlayerSelection : MonoBehaviour
 {
     [SerializeField] private GameObject[] playerIndicators;
     [SerializeField] private GameObject[] joinScreens;
-    [SerializeField] float delay;
 
     private MPManager mp;
-    private InputAction playerSelectAction;
-    private InputAction confirmAction;
-    private bool delayComplete;
-    private int numPlayers = 1;
+    private UI_InputManager ui;
+    private int numPlayers;
     private GameObject currIndicator;
     private GameObject joinScreen;
 
@@ -20,22 +15,20 @@ public class PlayerSelection : MonoBehaviour
     void Start()
     {
         mp = FindFirstObjectByType<MPManager>();
-        playerSelectAction = InputSystem.actions.FindAction("PlayerSelect");
-        confirmAction = InputSystem.actions.FindAction("Confirm");
-        delayComplete = true;
+        ui = FindFirstObjectByType<UI_InputManager>();
+        numPlayers = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 direction = playerSelectAction.ReadValue<Vector2>().normalized;
-        //Debug.Log("Direction.x: " + direction.x);
+        float scrollX = ui.GetJoystickScroll('x');
 
-        if(direction.x != 0 && delayComplete)
+        if(scrollX != 0 && ui.GetDelayComplete())
         {
-            numPlayers += (int)Mathf.Round(direction.x);
+            numPlayers += (int)Mathf.Round(scrollX);
             numPlayers = Mathf.Clamp(numPlayers, 1, 4);
-            if (direction.x > 0 && numPlayers > 1)
+            if (scrollX > 0 && numPlayers > 1)
             {
                 currIndicator = playerIndicators[numPlayers - 1];
                 currIndicator.SetActive(true);
@@ -49,22 +42,15 @@ public class PlayerSelection : MonoBehaviour
                 playerIndicators[numPlayers - 1].transform.GetChild(0).gameObject.SetActive(true); // get the text object that shows the numPlayers selected and set it to active
             }
 
-            StartCoroutine(JoystickCooldown());
+            StartCoroutine(ui.JoystickCooldown());
         }
 
-        if(confirmAction.WasPressedThisFrame())
+        if(ui.GetConfirmPressed())
         {
             GoToJoinScreen();
         }
 
         //Debug.Log("NumPlayers: " + numPlayers);
-    }
-
-    private IEnumerator JoystickCooldown()
-    {
-        delayComplete = false;
-        yield return new WaitForSeconds(delay);
-        delayComplete = true;
     }
 
     private void GoToJoinScreen()

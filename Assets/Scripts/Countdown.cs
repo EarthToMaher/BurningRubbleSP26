@@ -13,7 +13,7 @@ public class Countdown : MonoBehaviour
     private float count;
     private bool hasBoosted;
     private bool isCounting;
-    private bool levelLoaded = false;
+    private bool levelLoaded;
     [SerializeField] public KartMovement move;
     [SerializeField] private TextMeshProUGUI countText;
     [SerializeField] private RaceTimer raceTimer;
@@ -22,6 +22,7 @@ public class Countdown : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        levelLoaded = false;
         levelStarter = FindAnyObjectByType<AddCollidersToChildren>();
         levelStarter.StartCountdown(this);
         isActive = true;
