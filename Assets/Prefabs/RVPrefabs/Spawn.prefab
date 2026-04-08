@@ -1537,7 +1537,7 @@ MonoBehaviour:
   maxSpeed: 35
   steeringRange: 20
   steeringRangeAtMaxSpeed: 15
-  centreOfGravityOffset: -2
+  centreOfGravityOffset: -10
   maxTurnSpeed: 0.5
   maxDriftSpeed: 2
   jumpStrength: 6250
@@ -1566,7 +1566,7 @@ Rigidbody:
   m_Mass: 1500
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_CenterOfMass: {x: 0, y: 0, z: -0.25}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
@@ -1575,7 +1575,7 @@ Rigidbody:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
+  m_ImplicitCom: 0
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1655,14 +1655,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Kart
   hPSettings:
-    hp: 500
+    hp: 750
     hpImage: {fileID: 8797489473467945585}
     hpText: {fileID: 6795596116544215023}
   rubbleSettings:
-    MAX_AMT: 200
+    MAX_AMT: 600
     rubbleBar: {fileID: 2759267795833868079}
     rubbleText: {fileID: 1550397240284071322}
-    rubbleChargeAmt: 100
+    rubbleChargeAmt: 300
     rubbleAngle: 0
     rubbleBoostLength: 3
   iFrameLength: 0.1
