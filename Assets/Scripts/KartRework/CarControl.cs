@@ -79,7 +79,7 @@ public class CarControl : MonoBehaviour
     public void Update()
     {
         //Debug That Reloads Scene. Overrides Receiving Input.
-        if (im.GetReload() > 0) SceneManager.LoadScene(0);
+        if (im.GetReload() > 0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         if(!receivingInput) return;
         if(im.GetRespawnDebug() > 0) kartResources.KartDeath();
         float hInput = im.GetMoveDirectionX();
