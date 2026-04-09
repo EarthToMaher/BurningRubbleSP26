@@ -23,6 +23,7 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
     private MeshFilter meshFilter;
     private MeshCollider meshCollider;
     private Example marchingCubesScript;
+    [SerializeField] private ParticleSystem destructionParticleSystem; //for voxel destruction
 
     void Awake()
     {
@@ -41,11 +42,11 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
             voxelData = marchingCubesScript.worldVoxelization.voxelData;
             voxelPositions = marchingCubesScript.worldVoxelization.gridLocations;
         }
-        
     }
 
     void OnTriggerEnter(Collider other)
     {
+        destructionParticleSystem = GameObject.Find("Rock Particles").GetComponent<ParticleSystem>(); //gets the game object the particle system is on.
         //Debug.Log("Collision detected with " + other.gameObject.name);
         DestroyMe(other.gameObject, other.gameObject);
     }
@@ -58,6 +59,7 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
 
     public void DestroyMe(GameObject instigator, GameObject cause)
     {
+        destructionParticleSystem.Play(); // runs particle system here
         Vector3 hitpoint = meshCollider.ClosestPoint(cause.transform.position);
         Debug.Log("Hitpoint: " + hitpoint);
         int numDestroyed = ApplyHit(hitpoint);
