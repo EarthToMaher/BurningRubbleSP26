@@ -1655,14 +1655,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Kart
   hPSettings:
-    hp: 500
+    hp: 750
     hpImage: {fileID: 8797489473467945585}
     hpText: {fileID: 6795596116544215023}
   rubbleSettings:
-    MAX_AMT: 200
+    MAX_AMT: 600
     rubbleBar: {fileID: 2759267795833868079}
     rubbleText: {fileID: 1550397240284071322}
-    rubbleChargeAmt: 100
+    rubbleChargeAmt: 300
     rubbleAngle: 0
     rubbleBoostLength: 3
   iFrameLength: 0.1
