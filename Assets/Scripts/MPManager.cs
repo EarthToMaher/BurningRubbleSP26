@@ -18,7 +18,12 @@ public class MPManager : MonoBehaviour
     [SerializeField] private Vector3 player4Start;
 
     //number of players who have joined
-    private int numPlayers = 0;
+    private int numPlayers;
+
+    private void Start()
+    {
+        numPlayers = 0;
+    }
 
     //called by PlayerInputManager component when join action is triggered
     public void OnPlayerJoined(PlayerInput playerInput)

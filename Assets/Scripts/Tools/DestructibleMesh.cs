@@ -16,7 +16,7 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
     public int size = 16;       // number of voxels per axis
     public float voxelSize = 1f;
     public int hp = 5;
-    public int rubble = 5;
+    public int rubble = 1;
 
     public Vector3 hitRadius = new Vector3(1.1f,1,1.5f); // x,y,z radius for destruction
 

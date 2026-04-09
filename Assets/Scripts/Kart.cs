@@ -148,6 +148,7 @@ public class Kart : MonoBehaviour, I_Damageable
 
         rubbleAction = GetComponent<PlayerInput>().actions["Rubble"];
         //restart = InputSystem.actions.FindAction("Reset");
+        hPSettings.UpdateHPUI();
     }
     void Update()
     {

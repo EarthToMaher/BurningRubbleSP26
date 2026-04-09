@@ -1265,6 +1265,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2647199495313773129, guid: 8407d49a6267913428868d1f3aba7dfe, type: 3}
+      propertyPath: m_PlayerPrefab
+      value: 
+      objectReference: {fileID: 8970877045213511789, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
     - target: {fileID: 6637660906023813597, guid: 8407d49a6267913428868d1f3aba7dfe, type: 3}
       propertyPath: m_Name
       value: MultiplayerManager

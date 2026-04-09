@@ -17,22 +17,26 @@ public class RaceTimer : MonoBehaviour
     private MPManager multiplayer;
 
     //Bool to check if the race is complete. Hidden in inspector as it shouldn't be modified from there
-    [HideInInspector] public bool raceComplete = false;
-    private float time = 0;
+    [HideInInspector] public bool raceComplete;
+    private float time;
 
-    private float bestTime = 0;
+    private float bestTime;
 
     private CheckpointDetection gm;
 
-    private bool raceStarted = false;
+    private bool raceStarted;
 
     private string playerName;
 
-    private bool addedToResults = false;
+    private bool addedToResults;
 
     void Start()
     {
-
+        raceComplete = false;
+        time = 0;
+        bestTime = 0;
+        raceStarted = false;
+        addedToResults = false;
         //If we do not have a race timer, try to get one on this object
         if (raceTime == null) raceTime = GetComponent<TextMeshProUGUI>();
         gm = FindFirstObjectByType<CheckpointDetection>();
@@ -40,7 +44,7 @@ public class RaceTimer : MonoBehaviour
 
         // assign multiplayer/end screen managers
         multiplayer = FindFirstObjectByType<MPManager>();
-        endScreenMgr = FindFirstObjectByType<EndScreenManager>();
+        endScreenMgr = FindFirstObjectByType<EndScreenManager>(FindObjectsInactive.Include);
 
         // finds the player that this raceTimer is attached to. changing the structure of the player prefab will break this!!!!
         playerName = "Player " + multiplayer.FindPlayer(transform.parent.parent.gameObject);
