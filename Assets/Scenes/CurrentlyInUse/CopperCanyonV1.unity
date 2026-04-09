@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ===DeSTRUCTION===
       objectReference: {fileID: 0}
+    - target: {fileID: 1954005227485368986, guid: 6d439d5fbaf72ac46bf7eaddc308d150, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8900899977744296288, guid: 6d439d5fbaf72ac46bf7eaddc308d150, type: 3}
       propertyPath: m_LocalPosition.x
       value: 373.4916
@@ -184,6 +188,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2732080389342807090, guid: bff27b98921676f4cbc41636076de471, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.06506348
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732080389342807090, guid: bff27b98921676f4cbc41636076de471, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.664978
+      objectReference: {fileID: 0}
     - target: {fileID: 4207328336769606371, guid: bff27b98921676f4cbc41636076de471, type: 3}
       propertyPath: endScreen
       value: 
