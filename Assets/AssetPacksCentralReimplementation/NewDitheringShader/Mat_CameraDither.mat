@@ -33,9 +33,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ColorSteps: 58
+    - _ColorSteps: 53.2
     - _Contrast: 1.002
-    - _DitherScale: 5.55
+    - _DitherScale: 8
     - _DitherSpread: 1.197
     - _DitherStrength: 2
     m_Colors: []
