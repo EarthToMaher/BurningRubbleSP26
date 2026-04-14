@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class CarControl : MonoBehaviour
 {
@@ -47,11 +48,35 @@ public class CarControl : MonoBehaviour
     private bool expendingRubble = false;
     public IEnumerator activeBoost;
 
+    //Added Stuff for VFX while drifting or boosting
+    public string searchTag1, searchTag2;
+
+    public List<GameObject> boostFires = new List<GameObject>();
+    public List<GameObject> driftFires = new List<GameObject>();
+
     void Awake()
     {
         im = GetComponent<InputManager>();
         pcc = transform.parent.GetComponentInChildren<PlayerCamControl>();
         kartResources = GetComponent<Kart>();
+        GetChildObject(this.gameObject.transform.GetChild(1),searchTag1, boostFires);
+        GetChildObject(this.gameObject.transform.GetChild(1),searchTag2, driftFires);
+    }
+
+    public void GetChildObject(Transform parent, string _tag, List<GameObject> fires)
+    {
+        for (int i = 0; i < parent.childCount; i++)
+        {
+            Transform child = parent.GetChild(i);
+            if (child.tag == _tag)
+            {
+                fires.Add(child.gameObject);
+            }
+            if (child.childCount > 0)
+            {
+                GetChildObject(child, _tag, fires);
+            }
+        }
     }
 
     void OnEnable()
@@ -142,7 +167,15 @@ public class CarControl : MonoBehaviour
 
     public IEnumerator Boost(float length, float damageResistPercentage)
     {
-        if(activeBoost!=null)StopCoroutine(activeBoost);
+        //turnOnTurnOff(boostFires); //When only one, turns off or on per boost
+        if(activeBoost!=null){
+            StopCoroutine(activeBoost);
+            //turnOnTurnOff(boostFires); //When only one, turns off or on per boost
+        }
+        else
+        {
+           //turnOnTurnOff(boostFires); ///When only one, does nothing
+        }
         pcc.StartCoroutine(pcc.CamSpeedBoostRoutine());
         if(rb.linearVelocity.magnitude < maxSpeed*0.6f) rb.linearVelocity = transform.forward*maxSpeed*0.6f;
         //TODO: Logic for damage resist
@@ -154,6 +187,7 @@ public class CarControl : MonoBehaviour
             elapsedTime += elapsedTime;
         }
         activeBoost = null;
+        //turnOnTurnOff(boostFires); //When only one, does nothing
     }
 
     public void RubbleBoost(float duration)
@@ -162,6 +196,7 @@ public class CarControl : MonoBehaviour
 
         StartCoroutine( activeBoost = Boost(duration,0f));
         expendingRubble = false;
+        //turnOnTurnOff(boostFires);
     }
     public void GroundedCheck()
     {
@@ -247,6 +282,7 @@ public class CarControl : MonoBehaviour
         Quaternion targetRot = Quaternion.Euler(transform.eulerAngles.x, driftInitialYaw, transform.eulerAngles.z);
 
         rb.MoveRotation(targetRot);
+        turnOnTurnOff(driftFires);
     }
 
     public void Drift()
@@ -339,6 +375,7 @@ public class CarControl : MonoBehaviour
             StartCoroutine(activeBoost = Boost(driftBoostLengths.x,0));
         }
         boostVal = 0;
+        turnOnTurnOff(driftFires);
     }
 
     public IEnumerator JumpDetect()
@@ -367,6 +404,13 @@ public class CarControl : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, elapsedTime / slerpLength);
             yield return new WaitForFixedUpdate();
             elapsedTime += Time.fixedDeltaTime;
+        }
+    }
+
+    public void turnOnTurnOff(List<GameObject> FlameVFX){
+        foreach(GameObject flame in FlameVFX)
+        {
+            flame.SetActive(!flame.activeSelf);
         }
     }
 }
