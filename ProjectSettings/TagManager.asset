@@ -8,8 +8,6 @@ TagManager:
   - Lap
   - Ground
   - UICamera
-  - BoostFire
-  - DriftFire
   layers:
   - Default
   - TransparentFX
