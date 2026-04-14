@@ -336,7 +336,6 @@ public class WorldVoxelization : MonoBehaviour
         Debug.Log($"Num Grids X: {numGridsX}  Z: {numGridsZ}  Total: {totalX}x{totalY}x{totalZ}");
 
         arrayOfGridPieces = new GridPiece[numGridsX, numGridsZ];
-        Debug.Log(arrayOfGridPieces);
 
         for(int x = 0; x < numGridsX; x++){
             for(int z = 0; z < numGridsZ; z++){
