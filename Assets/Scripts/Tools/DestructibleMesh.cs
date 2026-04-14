@@ -11,39 +11,42 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
     public Vector3[,,] voxelPositions;
     public ReenableManager rm;
     public byte[,,] voxelData;
-    public GridPiece gridPiece;
-    public int idX = -1, idZ = -1; //The ID of this chunk in the 2D array of chunks
+    public GridPiece parentGridPiece;
 
     public int size = 16;       // number of voxels per axis
     public float voxelSize = 1f;
     public int hp = 5;
-    public int rubble = 5;
+    public int rubble = 1;
 
     public Vector3 hitRadius = new Vector3(1.1f,1,1.5f); // x,y,z radius for destruction
 
     private MeshFilter meshFilter;
     private MeshCollider meshCollider;
     private Example marchingCubesScript;
+    [SerializeField] private ParticleSystem destructionParticleSystem; //for voxel destruction
 
-    void Start()
+    void Awake()
     {
         rm = FindFirstObjectByType<ReenableManager>();
         meshFilter = GetComponent<MeshFilter>();
         meshCollider = GetComponent<MeshCollider>();
         marchingCubesScript = FindFirstObjectByType<Example>();
 
-        if (idX != -1 && idZ != -1){ //If the chunk has a valid ID
-            voxelData = marchingCubesScript.worldVoxelization.arrayOfGridPieces[idX, idZ].GetVoxelData();
-            voxelPositions = marchingCubesScript.worldVoxelization.arrayOfGridPieces[idX, idZ].GetVoxelPositions();
-        }else{ //Otherwise
+        if (parentGridPiece == null)
+            parentGridPiece = GetComponentInParent<GridPiece>();
+
+        if(parentGridPiece != null){  
+            voxelData = parentGridPiece.GetVoxelData();
+            voxelPositions = parentGridPiece.GetVoxelPositions();
+        }else{
             voxelData = marchingCubesScript.worldVoxelization.voxelData;
             voxelPositions = marchingCubesScript.worldVoxelization.gridLocations;
         }
-        
     }
 
     void OnTriggerEnter(Collider other)
     {
+        destructionParticleSystem = GameObject.Find("Rock Particles").GetComponent<ParticleSystem>(); //gets the game object the particle system is on.
         //Debug.Log("Collision detected with " + other.gameObject.name);
         DestroyMe(other.gameObject, other.gameObject);
     }
@@ -56,8 +59,9 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
 
     public void DestroyMe(GameObject instigator, GameObject cause)
     {
+        destructionParticleSystem.Play(); // runs particle system here
         Vector3 hitpoint = meshCollider.ClosestPoint(cause.transform.position);
-        Debug.Log("Hitpoint: " + hitpoint); //does run this code
+        Debug.Log("Hitpoint: " + hitpoint);
         int numDestroyed = ApplyHit(hitpoint);
         I_Damageable damageable = cause.GetComponent<I_Damageable>();
         if (damageable == null) cause.GetComponent<I_Damageable>();
@@ -123,7 +127,7 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
         return count;
     }*/
 
-    /*int ApplyHit(Vector3 worldPoint)
+    int ApplyHit(Vector3 worldPoint)
     {
         int count = 0;
 
@@ -137,16 +141,12 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
 
         bool modified = false;
 
-        Debug.Log("Going through Voxel Data");
-        Debug.Log("Voxel Data Size: " + voxelData.GetLength(0) + ", " + voxelData.GetLength(1) + ", " + voxelData.GetLength(2));
-
         for (int x = 0; x < voxelData.GetLength(0); x++)
             for (int y = 0; y < voxelData.GetLength(1); y++)
                 for (int z = 0; z < voxelData.GetLength(2); z++)
                 {
                     if (voxelData[x, y, z] == 0) continue;
 
-                    Debug.Log("VoxelData didnt = 0");
                     Vector3 voxelCenter = voxelPositions[x, y, z];
 
                     // Now in same coordinate space
@@ -155,13 +155,12 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
                         voxelCenter.z >= min.z && voxelCenter.z <= max.z)
                     {
                         rm.AddToBatchOneMesh(
-                            this.gameObject,
+                            this.transform.parent.gameObject,
                             new Vector3(x, y, z),
                             voxelData[x, y, z]);
 
                         voxelData[x, y, z] = 0;
                         modified = true;
-                        Debug.Log("Modified = true");
                         count++;
                     }
                 }
@@ -169,64 +168,15 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
         if (modified)
         {
             Debug.Log("Rebuilding mesh after destruction");
-            marchingCubesScript.RegenerateMarchingCubesMeshSmall(this, gridPiece);
-        }
-
-        return count;
-    }*/
-
-    int ApplyHit(Vector3 worldPoint){
-        int count = 0;
-
-        // Convert to local space
-        Vector3 localHit = transform.InverseTransformPoint(worldPoint);
-
-        // Convert hit bounds to local voxel index space
-        Vector3 min = localHit - hitRadius;
-        Vector3 max = localHit + hitRadius;
-
-        int sx = voxelData.GetLength(0);
-        int sy = voxelData.GetLength(1);
-        int sz = voxelData.GetLength(2);
-
-        // Convert world-space bounds to voxel index bounds
-        int minX = Mathf.Clamp(Mathf.FloorToInt(min.x / voxelSize), 0, sx - 1);
-        int minY = Mathf.Clamp(Mathf.FloorToInt(min.y / voxelSize), 0, sy - 1);
-        int minZ = Mathf.Clamp(Mathf.FloorToInt(min.z / voxelSize), 0, sz - 1);
-
-        int maxX = Mathf.Clamp(Mathf.CeilToInt(max.x / voxelSize), 0, sx - 1);
-        int maxY = Mathf.Clamp(Mathf.CeilToInt(max.y / voxelSize), 0, sy - 1);
-        int maxZ = Mathf.Clamp(Mathf.CeilToInt(max.z / voxelSize), 0, sz - 1);
-
-        bool modified = false;
-
-        // ONLY LOOP RELEVANT AREA
-        for (int x = minX; x <= maxX; x++)
-        for (int y = minY; y <= maxY; y++)
-        for (int z = minZ; z <= maxZ; z++)
-        {
-            if (voxelData[x, y, z] == 0)
-                continue;
-
-            rm.AddToBatchOneMesh(
-                this.gameObject,
-                new Vector3(x, y, z),
-                voxelData[x, y, z]);
-
-            voxelData[x, y, z] = 0;
-            modified = true;
-            count++;
-        }
-
-        if (modified)
-        {
-            marchingCubesScript.RegenerateMarchingCubesMeshSmall(this, gridPiece);
+            marchingCubesScript.GenerateMarchingCubesMesh(parentGridPiece);
+            Destroy(this.gameObject);
         }
 
         return count;
     }
 
-    public void RebuildMesh()
+
+    /*public void RebuildMesh()
     {
         Debug.Log("Attempted to rebuild mesh");
         List<Vector3> verts = new List<Vector3>();
@@ -303,10 +253,10 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
             meshCollider.sharedMesh = null;
             meshCollider.sharedMesh = newMesh;
         }
-    }
+    }*/
 
     public void RepairMe()
     {
-        marchingCubesScript.RegenerateMarchingCubesMesh(voxelData, voxelPositions);
+        marchingCubesScript.GenerateMarchingCubesMesh(parentGridPiece);
     }
 }
