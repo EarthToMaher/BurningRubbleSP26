@@ -25,12 +25,14 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _DitherScale: 2
+    - _DitherOpacity: 0.403
+    - _DitherScale: 1.27
     - _EdgeThickness: 1
     - _EdgeThreshold: 0.2
     - _Steps: 4
     m_Colors:
     - _DarkColor: {r: 0.049999982, g: 0.049999982, b: 0.049999982, a: 1}
+    - _InkColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightColor: {r: 0.9, g: 0.9, b: 0.8, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
