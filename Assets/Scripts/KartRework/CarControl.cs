@@ -167,34 +167,37 @@ public class CarControl : MonoBehaviour
 
     public IEnumerator Boost(float length, float damageResistPercentage)
     {
-        //turnOnTurnOff(boostFires); //When only one, turns off or on per boost
-        if(activeBoost!=null){
-            StopCoroutine(activeBoost);
-            //turnOnTurnOff(boostFires); //When only one, turns off or on per boost
-        }
-        else
-        {
-           //turnOnTurnOff(boostFires); ///When only one, does nothing
-        }
+        turnOnTurnOff(boostFires); //When only one, turns off or on per boost
         pcc.StartCoroutine(pcc.CamSpeedBoostRoutine());
         if(rb.linearVelocity.magnitude < maxSpeed*0.6f) rb.linearVelocity = transform.forward*maxSpeed*0.6f;
         //TODO: Logic for damage resist
         float elapsedTime = 0;
         while (elapsedTime < length)
         {
-            rb.AddForce(transform.forward*boostForce,ForceMode.Acceleration);
+            Debug.LogWarning("Im boosting!");
+            if(rb.linearVelocity.magnitude<maxSpeed) rb.AddForce(transform.forward*boostForce,ForceMode.Acceleration);
             yield return new WaitForFixedUpdate();
-            elapsedTime += elapsedTime;
+            elapsedTime += Time.fixedDeltaTime;
         }
         activeBoost = null;
-        //turnOnTurnOff(boostFires); //When only one, does nothing
+        turnOnTurnOff(boostFires); //When only one, does nothing
+    }
+
+    public void BoostCall(float length, float damageResistPercentage)
+    {
+        if (activeBoost != null)
+        {
+            StopCoroutine(activeBoost);
+            turnOnTurnOff(boostFires);
+        } 
+        StartCoroutine(activeBoost = Boost(length, damageResistPercentage));
     }
 
     public void RubbleBoost(float duration)
     {
         Debug.LogWarning("CC: RubbleBoost");
 
-        StartCoroutine( activeBoost = Boost(duration,0f));
+        BoostCall(duration,0f);
         expendingRubble = false;
         //turnOnTurnOff(boostFires);
     }
@@ -364,15 +367,15 @@ public class CarControl : MonoBehaviour
         drifting = false;
         if (boostVal > driftBoostRequirements.z)
         {
-            StartCoroutine(activeBoost = Boost(driftBoostLengths.z,0));
+            BoostCall(driftBoostLengths.z,0);
         }
         else if (boostVal > driftBoostRequirements.y)
         {
-            StartCoroutine(activeBoost = Boost(driftBoostLengths.y,0));
+            BoostCall(driftBoostLengths.y,0);
         }
         else if (boostVal > driftBoostRequirements.x)
         {
-            StartCoroutine(activeBoost = Boost(driftBoostLengths.x,0));
+            BoostCall(driftBoostLengths.x,0);
         }
         boostVal = 0;
         turnOnTurnOff(driftFires);
@@ -408,6 +411,8 @@ public class CarControl : MonoBehaviour
     }
 
     public void turnOnTurnOff(List<GameObject> FlameVFX){
+
+        Debug.Log("Am here");
         foreach(GameObject flame in FlameVFX)
         {
             flame.SetActive(!flame.activeSelf);
