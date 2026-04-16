@@ -238,6 +238,7 @@ public class CarControl : MonoBehaviour
                 if (wheel.motorized)
                 {
                     wheel.wheelCollider.motorTorque = vInput * currentMotorTorque; //Rotates the wheel to accelerate
+                    wheel.SpinWheel(wheel.wheelCollider.motorTorque);
                 }
 
                 //Release brakes when accelerating

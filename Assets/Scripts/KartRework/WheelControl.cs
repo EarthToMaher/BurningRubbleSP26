@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WheelControl : MonoBehaviour
@@ -23,6 +24,10 @@ public class WheelControl : MonoBehaviour
         //Gets the wheel's position and rotation to set the model's position and rotation
         wheelCollider.GetWorldPose(out position, out rotation);
         wheelModel.transform.position = position;
-        wheelModel.transform.rotation = rotation;
+    }
+
+    public void SpinWheel(float rotationSpeed)
+    {
+        wheelModel.transform.Rotate(Vector3.up,rotationSpeed);
     }
 }
