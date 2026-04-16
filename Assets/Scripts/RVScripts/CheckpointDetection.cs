@@ -22,11 +22,14 @@ public class CheckpointDetection : MonoBehaviour
 
     public GameObject lastCheckpoint;
 
+    public TrackPointManager trackPoints;
+
     void Start()
     {
         _lapManager = FindFirstObjectByType<LapManager>();
         ResetArray();
         UpdateUI();
+        trackPoints = FindFirstObjectByType<TrackPointManager>();
     }
 
     public void enterCheckpoint(int checkPointPlacement)
@@ -59,6 +62,7 @@ public class CheckpointDetection : MonoBehaviour
             _checkpointRemaining = 0;
             ResetArray();
             UpdateUI();
+            trackPoints.ResetTrackPoints();
         }
         else Debug.LogWarning("I didn't have enough checkpoints!");
         _currCheckpoint = 0;

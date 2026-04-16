@@ -61,7 +61,7 @@ public class RaceTimer : MonoBehaviour
         }
 
         //Don't update timer if the race is complete
-        if (gm!=null && gm._lapCount > 1)
+        if (gm!=null && gm._lapCount > 3)
         {
             if(!addedToResults)
             {
