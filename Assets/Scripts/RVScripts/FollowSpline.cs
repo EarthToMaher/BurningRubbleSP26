@@ -25,6 +25,7 @@ public class FollowSpline : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var _getSpline = other.GetComponent<SplineTriggerZone>();
+        if(_getSpline == null) return;
         _currentFollowingSpline = _getSpline.SplineInTrigger();
         _duration = _getSpline.TriggerZoneDuration();
         AnimateAlongPathEngage();
