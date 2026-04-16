@@ -254,6 +254,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1742357978579435499, guid: bff27b98921676f4cbc41636076de471, type: 3}
+      propertyPath: m_TerrainData
+      value: 
+      objectReference: {fileID: 15600000, guid: b1e2617856db48f48ac7382be784024e, type: 2}
     - target: {fileID: 2018438322077466504, guid: bff27b98921676f4cbc41636076de471, type: 3}
       propertyPath: player1Start.x
       value: 394.09
@@ -306,6 +310,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7774601107420021242, guid: bff27b98921676f4cbc41636076de471, type: 3}
+      propertyPath: m_TerrainData
+      value: 
+      objectReference: {fileID: 15600000, guid: b1e2617856db48f48ac7382be784024e, type: 2}
     - target: {fileID: 8750451826873962324, guid: bff27b98921676f4cbc41636076de471, type: 3}
       propertyPath: m_Name
       value: ===CopperCanyonNoDestruction===
@@ -842,7 +850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineTriggerZone
   _splineToFollow: {fileID: 1604439897}
-  _duration: 5
+  _duration: 10
 --- !u!1 &1904565627 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2500521943079348726, guid: bff27b98921676f4cbc41636076de471, type: 3}
