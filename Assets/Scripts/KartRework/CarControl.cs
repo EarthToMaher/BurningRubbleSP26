@@ -40,6 +40,7 @@ public class CarControl : MonoBehaviour
     public bool grounded = false;
     public float boostForce = 10;
     public float maxVerticalSpeed = 1;
+    public bool firstFrame = true;
 
     private PlayerCamControl pcc;
     private bool receivingInput;
@@ -104,6 +105,11 @@ public class CarControl : MonoBehaviour
     public void Update()
     {
         //Debug That Reloads Scene. Overrides Receiving Input.
+        if (firstFrame)
+        {
+            firstFrame = false;
+            return;
+        }
         if (im.GetReload() > 0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         if(!receivingInput) return;
         if(im.GetRespawnDebug() > 0) kartResources.KartDeath();
