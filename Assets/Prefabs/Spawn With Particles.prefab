@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 210048396177650349, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_SuspensionDistance
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830378553889771153, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.298
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830378553889771153, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.067000076
+      objectReference: {fileID: 0}
     - target: {fileID: 1874464931060219658, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: wheelModel
       value: 
@@ -16,6 +28,18 @@ PrefabInstance:
       propertyPath: wheelModel
       value: 
       objectReference: {fileID: 3596388850042888559}
+    - target: {fileID: 2819448286062964008, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.30200002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2819448286062964008, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.1470001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3768549577847276303, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_SuspensionDistance
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalPosition.x
       value: -41.9
@@ -56,6 +80,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4446131423954151704, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_SuspensionDistance
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446131423954151704, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_SuspensionSpring.damper
+      value: 4500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446131423954151704, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_SuspensionSpring.spring
+      value: 30000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4446131423954151704, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_SuspensionSpring.targetPosition
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6304251509737794659, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.289
+      objectReference: {fileID: 0}
+    - target: {fileID: 6304251509737794659, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.044000074
+      objectReference: {fileID: 0}
+    - target: {fileID: 6378725606489456926, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 7073753050171950764, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_SuspensionDistance
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 7180503158302714169, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -72,6 +128,14 @@ PrefabInstance:
       propertyPath: wheelModel
       value: 
       objectReference: {fileID: 1442738933867174006}
+    - target: {fileID: 8456424514144425998, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.298
+      objectReference: {fileID: 0}
+    - target: {fileID: 8456424514144425998, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.122
+      objectReference: {fileID: 0}
     - target: {fileID: 8970877045213511789, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_Name
       value: Spawn With Particles
