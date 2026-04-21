@@ -188,6 +188,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ===DeSTRUCTION===
       objectReference: {fileID: 0}
+    - target: {fileID: 2493496609306602912, guid: 6d439d5fbaf72ac46bf7eaddc308d150, type: 3}
+      propertyPath: texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 0cc3a9431eaf444d6909b26ffc1e2f01, type: 3}
+    - target: {fileID: 2493496609306602912, guid: 6d439d5fbaf72ac46bf7eaddc308d150, type: 3}
+      propertyPath: outlineMat
+      value: 
+      objectReference: {fileID: 2100000, guid: e01861176914b4e40a0aa868ff50734c, type: 2}
     - target: {fileID: 8900899977744296288, guid: 6d439d5fbaf72ac46bf7eaddc308d150, type: 3}
       propertyPath: m_LocalPosition.x
       value: 373.2
