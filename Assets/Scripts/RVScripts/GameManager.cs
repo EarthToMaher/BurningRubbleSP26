@@ -8,4 +8,5 @@ public class GameManager : MonoBehaviour
     public EndScreenManager EndScreenManager;
     public MPManager MultiplayerManager;
     public UI_InputManager UI_InputManager;
+    public TrackPointManager trackPointManager;
 }
