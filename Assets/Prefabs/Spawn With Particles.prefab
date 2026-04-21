@@ -44,6 +44,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.1470001
       objectReference: {fileID: 0}
+    - target: {fileID: 2842690151524621239, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 365119779982656043}
     - target: {fileID: 3768549577847276303, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_SuspensionDistance
       value: 1
@@ -157,6 +161,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+--- !u!1 &365119779982656043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7180503158302714169, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+  m_PrefabInstance: {fileID: 7401506650628156178}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1442738933867174006 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8264893115796992868, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
