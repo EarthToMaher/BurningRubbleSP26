@@ -7,11 +7,14 @@ Last Modified: 9/28/2025
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.InputSystem;
+
 public class RaceTimer : MonoBehaviour
 {
     [Tooltip("The text element we want to modify")]
     [SerializeField] private TextMeshProUGUI raceTime;
     [SerializeField] private TextMeshProUGUI bestTimeText;
+    [SerializeField] private GameObject player;
 
     private EndScreenManager endScreenMgr;
     private MPManager multiplayer;
@@ -42,12 +45,11 @@ public class RaceTimer : MonoBehaviour
         gm = FindFirstObjectByType<CheckpointDetection>();
         LoadBestTime();
 
-        // assign multiplayer/end screen managers
-        multiplayer = FindFirstObjectByType<MPManager>();
+        // assign end screen manager
         endScreenMgr = FindFirstObjectByType<EndScreenManager>(FindObjectsInactive.Include);
 
         // finds the player that this raceTimer is attached to. changing the structure of the player prefab will break this!!!!
-        playerName = "Player " + multiplayer.FindPlayer(transform.parent.parent.gameObject);
+        playerName = "Player " + (player.GetComponent<PlayerInput>().playerIndex + 1);
     }
 
     // Update is called once per frame
@@ -59,12 +61,13 @@ public class RaceTimer : MonoBehaviour
         }
 
         //Don't update timer if the race is complete
-        if (gm!=null && gm._lapCount > 3)
+        if (gm!=null && gm._lapCount > 1)
         {
             if(!addedToResults)
             {
-                endScreenMgr.PlayerFinish(time, playerName);
+                endScreenMgr.PlayerFinish(raceTime.text, playerName);
                 addedToResults = true;
+                Debug.Log("Player finished!");
             }
 
             if (time < bestTime) SaveBestTime();

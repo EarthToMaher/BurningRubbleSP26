@@ -13,7 +13,7 @@ public class EndScreenManager : MonoBehaviour
     [SerializeField] private List<Button> menuButtons = new List<Button>();
     [SerializeField] private GameObject endScreen;
 
-    private List<float> finishTimes;
+    private List<string> finishTimes;
     private List<string> playerNames;
     private UI_InputManager ui;
     private int totalPlayers;
@@ -22,10 +22,11 @@ public class EndScreenManager : MonoBehaviour
 
     private void Start()
     {
-        finishTimes = new List<float>();
+        finishTimes = new List<string>();
         playerNames = new List<string>();
         ui = FindFirstObjectByType<UI_InputManager>();
-        totalPlayers = 1; 
+        //totalPlayers = 1;
+        Debug.Log("Total players set by Start");
         singlePlayer = true;
         currButton = menuButtons[0];
     }
@@ -58,13 +59,14 @@ public class EndScreenManager : MonoBehaviour
         }
     }
 
-    public void PlayerFinish(float time, string name)
+    public void PlayerFinish(string time, string name)
     {
         finishTimes.Add(time);
         playerNames.Add(name);
 
         if(finishTimes.Count == totalPlayers)
         {
+            Debug.Log("finish times: " + finishTimes.Count + " total players: " + totalPlayers);
             EndRace();
         }
     }
@@ -78,12 +80,14 @@ public class EndScreenManager : MonoBehaviour
             playerPanels[i].SetActive(true);
         }
 
+        Debug.Log("SHOW END SCREEN");
         endScreen.SetActive(true);
     }
 
     public void SetTotalPlayers(int players)
     {
         totalPlayers = players;
+        Debug.Log("SetTotalPlayers: " + players);
         if(totalPlayers > 1)
         {
             singlePlayer = false;
