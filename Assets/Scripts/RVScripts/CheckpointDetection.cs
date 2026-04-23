@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CheckpointDetection : MonoBehaviour
 {
@@ -22,14 +23,11 @@ public class CheckpointDetection : MonoBehaviour
 
     public GameObject lastCheckpoint;
 
-    public TrackPointManager trackPoints;
-
     void Start()
     {
         _lapManager = FindFirstObjectByType<LapManager>();
         ResetArray();
         UpdateUI();
-        trackPoints = FindFirstObjectByType<TrackPointManager>();
     }
 
     public void enterCheckpoint(int checkPointPlacement)
@@ -62,7 +60,8 @@ public class CheckpointDetection : MonoBehaviour
             _checkpointRemaining = 0;
             ResetArray();
             UpdateUI();
-            trackPoints.ResetTrackPoints();
+
+            GetComponent<PlacementTracker>().ResetNextPointIndex();
         }
         else Debug.LogWarning("I didn't have enough checkpoints!");
         _currCheckpoint = 0;
