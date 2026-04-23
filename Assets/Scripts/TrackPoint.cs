@@ -3,14 +3,7 @@ using UnityEngine.InputSystem;
 
 public class TrackPoint : MonoBehaviour
 {
-    [SerializeField] private bool trackingPointHit;
     [SerializeField] private int pointIndex;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        trackingPointHit = false;
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,12 +11,17 @@ public class TrackPoint : MonoBehaviour
         if (placement != null)
         {
             Debug.Log("I detected player " + (placement.gameObject.GetComponent<PlayerInput>().playerIndex + 1));
-            trackingPointHit = true;
+
+            // determine which player hit the TrackPoint
+            int player = placement.gameObject.GetComponent<PlayerInput>().playerIndex + 1;
+
+            // handle track point hit
+            placement.HandleTrackPointHit(pointIndex);
         }
     }
 
-    public void Reset()
+    public int GetPointIndex()
     {
-        trackingPointHit = false;
+        return pointIndex;
     }
 }
