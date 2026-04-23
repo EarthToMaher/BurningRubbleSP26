@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8378775531679100674}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 534.3844, y: 23.60002, z: 559.3712}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -115,6 +115,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c557e15ba3ebf324783d225a30ae1ff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndScreenManager
+--- !u!1001 &6166952928279291233
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 609205295141815461}
+    m_Modifications:
+    - target: {fileID: 667512508909370508, guid: 52581d25749300840b5d7c1a2ce5f6e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 98.62628
+      objectReference: {fileID: 0}
+    - target: {fileID: 667512508909370508, guid: 52581d25749300840b5d7c1a2ce5f6e6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -457.26694
+      objectReference: {fileID: 0}
+    - target: {fileID: 667512508909370508, guid: 52581d25749300840b5d7c1a2ce5f6e6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -204.69629
+      objectReference: {fileID: 0}
+    - target: {fileID: 667512508909370508, guid: 52581d25749300840b5d7c1a2ce5f6e6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 667512508909370508, guid: 52581d25749300840b5d7c1a2ce5f6e6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 667512508909370508, guid: 52581d25749300840b5d7c1a2ce5f6e6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 667512508909370508, guid: 52581d25749300840b5d7c1a2ce5f6e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 667512508909370508, guid: 52581d25749300840b5d7c1a2ce5f6e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 667512508909370508, guid: 52581d25749300840b5d7c1a2ce5f6e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 667512508909370508, guid: 52581d25749300840b5d7c1a2ce5f6e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037657685767245405, guid: 52581d25749300840b5d7c1a2ce5f6e6, type: 3}
+      propertyPath: m_Name
+      value: TrackPointManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 52581d25749300840b5d7c1a2ce5f6e6, type: 3}
+--- !u!4 &6689551977611287021 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 667512508909370508, guid: 52581d25749300840b5d7c1a2ce5f6e6, type: 3}
+  m_PrefabInstance: {fileID: 6166952928279291233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8820147254644461141 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3454857063289334580, guid: 52581d25749300840b5d7c1a2ce5f6e6, type: 3}
+  m_PrefabInstance: {fileID: 6166952928279291233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d12b275c016624f47896eeb50373df9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrackPointManager
 --- !u!1001 &6921440441983934777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127,6 +200,10 @@ PrefabInstance:
       propertyPath: _checkpointArray.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1925209938509173793, guid: 113b404ae371f894dbfc65e9adf25de2, type: 3}
+      propertyPath: trackPointManager
+      value: 
+      objectReference: {fileID: 8820147254644461141}
     - target: {fileID: 5334022175469572234, guid: 113b404ae371f894dbfc65e9adf25de2, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -173,7 +250,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7528243509431543196, guid: 113b404ae371f894dbfc65e9adf25de2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6689551977611287021}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 113b404ae371f894dbfc65e9adf25de2, type: 3}
 --- !u!4 &609205295141815461 stripped
