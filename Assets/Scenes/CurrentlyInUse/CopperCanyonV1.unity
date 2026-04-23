@@ -188,6 +188,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ===DeSTRUCTION===
       objectReference: {fileID: 0}
+    - target: {fileID: 1954005227485368986, guid: 6d439d5fbaf72ac46bf7eaddc308d150, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2493496609306602912, guid: 6d439d5fbaf72ac46bf7eaddc308d150, type: 3}
       propertyPath: texture
       value: 
