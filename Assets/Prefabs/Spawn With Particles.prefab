@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 513138270209348917}
   - component: {fileID: 7654834520979263483}
   - component: {fileID: 7708410598500082638}
+  - component: {fileID: 4473453730550641906}
   m_Layer: 5
   m_Name: Base
   m_TagString: Untagged
@@ -260,6 +261,21 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &4473453730550641906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8139355508759786744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd6a04f87a01994db2ce5813e4261bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIUpdate
+  _kartScript: {fileID: 7720876779308017050}
+  _healthUI: {fileID: 6190353113864230661}
+  _rubbleUI: {fileID: 8367016553226074548}
 --- !u!1001 &1402452806075714754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -777,6 +793,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 452031021185341369, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
   m_PrefabInstance: {fileID: 7401506650628156178}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7720876779308017050 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 977702865069313672, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+  m_PrefabInstance: {fileID: 7401506650628156178}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365119779982656043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c85ffe730f63154aa9f728cae21c837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Kart
 --- !u!4 &9041016378130726015 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2003903285955237741, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
