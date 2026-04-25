@@ -4,9 +4,9 @@ using TMPro;
 
 public class PlacementTracker : MonoBehaviour
 {
-    [SerializeField] private int numTrackPointsHit;
-    [SerializeField] private int nextPointIndex;
-    [SerializeField] private int place;
+    private int numTrackPointsHit;
+    private int nextPointIndex;
+    private int place;
     [SerializeField] TextMeshProUGUI placementText;
  
     void Start()
@@ -48,33 +48,27 @@ public class PlacementTracker : MonoBehaviour
 
     public void SetPlace(int placement)
     {
-        Debug.Log("SetPlace is running! Int received: " + placement);
         place = placement;
 
         // handle ui text
         string ending;
         if(place == 1)
         {
-            Debug.Log("I am in 1st");
             ending = "ST";
         }
         else if(place == 2)
         {
-            Debug.Log("I am in 2nd");
             ending = "ND";
         }
         else if(place == 3)
         {
-            Debug.Log("I am in 3rd");
             ending = "RD";
         }
         else
         {
-            Debug.Log("I am in 4th");
             ending = "TH";
         }
 
-        Debug.Log("SET TEXT: " + place + ending);
         placementText.SetText(place + ending);
     }
 }

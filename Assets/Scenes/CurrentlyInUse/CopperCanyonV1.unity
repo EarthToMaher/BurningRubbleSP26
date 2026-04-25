@@ -257,6 +257,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ===SCReeNS===
       objectReference: {fileID: 0}
+    - target: {fileID: 5835688579013118587, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6613784636807174897, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -450,6 +454,10 @@ PrefabInstance:
     - target: {fileID: 1954005227485368986, guid: 6d439d5fbaf72ac46bf7eaddc308d150, type: 3}
       propertyPath: m_Name
       value: ===DeSTRUCTION===
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954005227485368986, guid: 6d439d5fbaf72ac46bf7eaddc308d150, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2493496609306602912, guid: 6d439d5fbaf72ac46bf7eaddc308d150, type: 3}
       propertyPath: texture

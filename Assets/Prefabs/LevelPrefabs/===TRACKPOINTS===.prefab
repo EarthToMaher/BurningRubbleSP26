@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1335158731915878715}
   - component: {fileID: 3823525410877633236}
   m_Layer: 0
-  m_Name: TrackPoint
+  m_Name: TrackPoint 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,8 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7733409d3befb0445a034492a2e9b4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrackPoint
-  trackingPointHit: 0
-  pointIndex: 0
+  pointIndex: 2
 --- !u!65 &3823525410877633236
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -80,7 +79,7 @@ GameObject:
   - component: {fileID: 621909011910462508}
   - component: {fileID: 7643216912606829400}
   m_Layer: 0
-  m_Name: TrackPoint (1)
+  m_Name: TrackPoint 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7733409d3befb0445a034492a2e9b4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrackPoint
-  trackingPointHit: 0
   pointIndex: 0
 --- !u!65 &7643216912606829400
 BoxCollider:
@@ -148,7 +146,7 @@ GameObject:
   - component: {fileID: 5191367345798680609}
   - component: {fileID: 3034438438725075301}
   m_Layer: 0
-  m_Name: TrackPoint (2)
+  m_Name: TrackPoint 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,8 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7733409d3befb0445a034492a2e9b4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrackPoint
-  trackingPointHit: 0
-  pointIndex: 0
+  pointIndex: 1
 --- !u!65 &3034438438725075301
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -233,8 +230,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5202360868448776494}
   - {fileID: 2853184400880228077}
   - {fileID: 7218088426268581928}
+  - {fileID: 5202360868448776494}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
