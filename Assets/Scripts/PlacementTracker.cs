@@ -1,25 +1,28 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
+using System.Collections.Generic;
 
 public class PlacementTracker : MonoBehaviour
 {
     private int numTrackPointsHit;
     private int nextPointIndex;
     private int place;
-    [SerializeField] TextMeshProUGUI placementText;
- 
+    [SerializeField] private List<GameObject> placementIndicators;
+    private GameObject activeIndicator;
+
     void Start()
     {
         numTrackPointsHit = 0;
 
         // player's starting placement is their number (ie. Player 1 = 1st, Player 2 = 2nd, etc)
         place = GetComponent<PlayerInput>().playerIndex + 1;
+        activeIndicator = placementIndicators[place - 1];
+        activeIndicator.SetActive(true);
     }
 
     public void HandleTrackPointHit(int point)
     {
-        if(nextPointIndex == point)
+        if (nextPointIndex == point)
         {
             numTrackPointsHit++;
             nextPointIndex++;
@@ -49,26 +52,8 @@ public class PlacementTracker : MonoBehaviour
     public void SetPlace(int placement)
     {
         place = placement;
-
-        // handle ui text
-        string ending;
-        if(place == 1)
-        {
-            ending = "ST";
-        }
-        else if(place == 2)
-        {
-            ending = "ND";
-        }
-        else if(place == 3)
-        {
-            ending = "RD";
-        }
-        else
-        {
-            ending = "TH";
-        }
-
-        placementText.SetText(place + ending);
+        activeIndicator.SetActive(false);
+        activeIndicator = placementIndicators[placement - 1];
+        activeIndicator.SetActive(true);
     }
 }
