@@ -47,8 +47,29 @@ public class Kart : MonoBehaviour, I_Damageable
         {
             MAX_HP = hp;
         }
+
+        // Return calls
+        public int GetHP()
+        {
+            return hp;
+        }
+
+        public int GetMaxHP()
+        {
+            return MAX_HP;
+        }
     }
     [SerializeField] private HP hPSettings;
+    public int GetCurrHP()
+    {
+        int hpReturn = hPSettings.GetHP();
+        return hpReturn;
+    }
+    public int GetCurrMaxHP()
+    {
+        int maxHPReturn = hPSettings.GetMaxHP();
+        return maxHPReturn;
+    }
 
     [System.Serializable]
 
@@ -119,10 +140,27 @@ public class Kart : MonoBehaviour, I_Damageable
             rubbleBar.fillAmount = barFill;
         }
         }
+        public int GetRubble()
+        {
+            return currRubbleAmt;
+        }
+        public int GetMaxRubble()
+        {
+            return MAX_AMT;
+        }
+    }
+    [SerializeField] public Rubble rubbleSettings;
+    public int GetCurrentRubble()
+    {
+        int rubbleAmt = rubbleSettings.GetRubble();
+        return rubbleAmt;
+    }
+    public int GetCurrMaxRubble()
+    {
+        int MaxAmt = rubbleSettings.GetMaxRubble();
+        return MaxAmt;
     }
 
-    [SerializeField] public Rubble rubbleSettings;
-    
     public class Respawn
     {
         

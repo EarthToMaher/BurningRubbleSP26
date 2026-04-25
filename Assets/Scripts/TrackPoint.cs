@@ -10,11 +10,6 @@ public class TrackPoint : MonoBehaviour
         PlacementTracker placement = other.gameObject.GetComponent<PlacementTracker>();
         if (placement != null)
         {
-            Debug.Log("I detected player " + (placement.gameObject.GetComponent<PlayerInput>().playerIndex + 1));
-
-            // determine which player hit the TrackPoint
-            int player = placement.gameObject.GetComponent<PlayerInput>().playerIndex + 1;
-
             // handle track point hit
             placement.HandleTrackPointHit(pointIndex);
         }

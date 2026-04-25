@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 
 public class TrackPointManager : MonoBehaviour
 {
-    [SerializeField] private List<TrackPoint> trackPoints;
-    [SerializeField] private List<PlacementTracker> racePlacements;
+    private List<TrackPoint> trackPoints;
+    private List<PlacementTracker> racePlacements;
 
     void Start()
     {
@@ -22,7 +22,7 @@ public class TrackPointManager : MonoBehaviour
     void Update()
     {
         racePlacements.Sort((a, b) => {
-            int diff = a.GetNumTrackPointsHit().CompareTo(b.GetNumTrackPointsHit());
+            int diff = b.GetNumTrackPointsHit().CompareTo(a.GetNumTrackPointsHit());
 
             // players hit the same number of TrackPoints. Use distance to the next TrackPoint instead
             if (diff == 0)
@@ -33,7 +33,8 @@ public class TrackPointManager : MonoBehaviour
 
                 float distanceA = Vector3.Distance(playerAPos, nextTrackPointPos);
                 float distanceB = Vector3.Distance(playerBPos, nextTrackPointPos);
-
+                
+                Debug.Log(distanceA + " | " + distanceB);
                 diff = distanceA.CompareTo(distanceB);
 
                 // FAIL SAFE: PLAYERS ARE THE SAME DISTANCE FROM THE TRACK POINT
