@@ -29530,7 +29530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8970877045213511789, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_Name
-      value: Spawn With Particles
+      value: SpawnWithDriftAndBoostEffects
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
