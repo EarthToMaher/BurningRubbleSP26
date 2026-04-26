@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3454857063289334580, guid: 52581d25749300840b5d7c1a2ce5f6e6, type: 3}
+      propertyPath: numCheckpoints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7037657685767245405, guid: 52581d25749300840b5d7c1a2ce5f6e6, type: 3}
       propertyPath: m_Name
       value: TrackPointManager

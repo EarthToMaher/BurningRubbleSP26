@@ -6,6 +6,8 @@ public class TrackPointManager : MonoBehaviour
 {
     private List<TrackPoint> trackPoints;
     private List<PlacementTracker> racePlacements;
+    private List<int> numTrackPointsPerCP;
+    [SerializeField] private int numCheckpoints; // number of checkpoints in the map, including the finish line
 
     void Start()
     {
@@ -17,6 +19,22 @@ public class TrackPointManager : MonoBehaviour
         racePlacements = new List<PlacementTracker>(
             FindObjectsByType<PlacementTracker>(FindObjectsSortMode.None)
         );
+
+        numTrackPointsPerCP = new List<int>();
+        for(int i=0; i<numCheckpoints; i++)
+        {
+            int numTrackPoints = 0; 
+
+            foreach(TrackPoint tp in trackPoints)
+            {
+                if(tp.GetAfterCheckPoint() == i)
+                {
+                    numTrackPoints++;
+                }
+            }
+
+            numTrackPointsPerCP.Add(numTrackPoints);
+        }
     }
 
     void Update()
@@ -65,5 +83,23 @@ public class TrackPointManager : MonoBehaviour
 
         Debug.Log("ERROR: TrackPoint index out of bounds exception\nAt TrackPointManager.GetTrackPointByIndex(int)\nReturned TrackPoint at index 0");
         return trackPoints[0];
+    }
+
+    public int GetTotalTrackPoints()
+    {
+        return trackPoints.Count;
+    }
+
+    public int GetNumTrackPointsByCheckpoint(int checkpoint) // if the checkpoint to check is the finish line: checkpoint == 0
+    {
+        if(checkpoint < numCheckpoints && checkpoint >= 0)
+        {
+            return numTrackPointsPerCP[checkpoint];
+        }
+        else
+        {
+            Debug.Log("ERROR: GetNumTrackPointsByCheckpoint | checkpoint parameter out of bounds | returned 0");
+            return 0;
+        }
     }
 }
