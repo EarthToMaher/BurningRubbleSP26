@@ -49,9 +49,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 15cbf7587fc99864fa48d937a48ec6e5, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 15cbf7587fc99864fa48d937a48ec6e5, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: e9b286e43a531694296390c05bc14edb, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 15cbf7587fc99864fa48d937a48ec6e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e01861176914b4e40a0aa868ff50734c, type: 2}
     - target: {fileID: 919132149155446097, guid: 15cbf7587fc99864fa48d937a48ec6e5, type: 3}
       propertyPath: m_Name
       value: QuickRepairCurve1
