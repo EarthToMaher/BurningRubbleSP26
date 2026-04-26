@@ -2,8 +2,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class TrackPoint : MonoBehaviour
-{
-    [SerializeField] private int pointIndex;
+{ 
+    [SerializeField] private int pointIndex; // the first trackpoint players will hit is 0, the next is 1, and so on. 
+    [SerializeField] private int afterCheckPoint; // set this to the checkpoint BEFORE this trackpoint. if that checkpoint is the finish line, set this to 0. 
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,5 +19,10 @@ public class TrackPoint : MonoBehaviour
     public int GetPointIndex()
     {
         return pointIndex;
+    }
+
+    public int GetAfterCheckPoint()
+    {
+        return afterCheckPoint;
     }
 }

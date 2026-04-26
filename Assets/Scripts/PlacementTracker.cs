@@ -4,20 +4,23 @@ using System.Collections.Generic;
 
 public class PlacementTracker : MonoBehaviour
 {
-    private int numTrackPointsHit;
-    private int nextPointIndex;
+    [SerializeField] private int numTrackPointsHit;
+    [SerializeField] private int nextPointIndex;
     private int place;
     [SerializeField] private List<GameObject> placementIndicators;
     private GameObject activeIndicator;
+    private TrackPointManager tpm;
+    [SerializeField] private int currLap;
 
     void Start()
     {
-        numTrackPointsHit = 0;
-
         // player's starting placement is their number (ie. Player 1 = 1st, Player 2 = 2nd, etc)
         place = GetComponent<PlayerInput>().playerIndex + 1;
+        numTrackPointsHit = 0;
+        currLap = 0;
         activeIndicator = placementIndicators[place - 1];
         activeIndicator.SetActive(true);
+        tpm = FindFirstObjectByType<TrackPointManager>(FindObjectsInactive.Include);
     }
 
     public void HandleTrackPointHit(int point)
@@ -32,6 +35,7 @@ public class PlacementTracker : MonoBehaviour
     public void ResetNextPointIndex()
     {
         nextPointIndex = 0;
+        currLap++;
     }
 
     public int GetNextTrackPoint()
@@ -55,5 +59,25 @@ public class PlacementTracker : MonoBehaviour
         activeIndicator.SetActive(false);
         activeIndicator = placementIndicators[placement - 1];
         activeIndicator.SetActive(true);
+    }
+
+    public void ResetAfterDeath(int currCheckpoint)
+    {
+        numTrackPointsHit = currLap * tpm.GetTotalTrackPoints();
+        if (currCheckpoint == 0)
+        {
+            nextPointIndex = 0;
+        }
+        else
+        {
+            int checkpointsBefore = 0;
+            for(int i=0; i<currCheckpoint; i++)
+            { 
+                numTrackPointsHit += tpm.GetNumTrackPointsByCheckpoint(i);
+                checkpointsBefore += tpm.GetNumTrackPointsByCheckpoint(i);
+            }
+
+            nextPointIndex = checkpointsBefore;
+        }
     }
 }
