@@ -602,6 +602,7 @@ GameObject:
   - component: {fileID: 180135966}
   - component: {fileID: 180135965}
   - component: {fileID: 180135964}
+  - component: {fileID: 180135967}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -693,6 +694,21 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &180135967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180135962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ee17e218aca3e4bb7c99bcf58cbd60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MultiplayerMapActivator
+  _mpManager: {fileID: 0}
+  _singlePlayerMap: {fileID: 1600273620}
+  _multiPlayerMap: {fileID: 1747774385}
 --- !u!1 &187743055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,7 +1915,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4428223490556215493, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
+    - {fileID: 2946815082880664677, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
