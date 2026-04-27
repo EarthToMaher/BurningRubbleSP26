@@ -208,6 +208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ===DeSTRUCTION===
       objectReference: {fileID: 0}
+    - target: {fileID: 1954005227485368986, guid: 6d439d5fbaf72ac46bf7eaddc308d150, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8900899977744296288, guid: 6d439d5fbaf72ac46bf7eaddc308d150, type: 3}
       propertyPath: m_LocalPosition.x
       value: 373.2
@@ -1715,7 +1719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineTriggerZone
   _splineToFollow: {fileID: 1241824975}
-  _duration: 5
+  _duration: 10
   _healAmt: 0
 --- !u!65 &586775319
 BoxCollider:
@@ -1843,7 +1847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineTriggerZone
   _splineToFollow: {fileID: 563524443}
-  _duration: 5
+  _duration: 10
   _healAmt: 0
 --- !u!65 &619232834
 BoxCollider:
@@ -3816,7 +3820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineTriggerZone
   _splineToFollow: {fileID: 920715379}
-  _duration: 5
+  _duration: 10
   _healAmt: 0
 --- !u!65 &1469663706
 BoxCollider:
