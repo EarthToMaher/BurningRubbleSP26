@@ -9,6 +9,7 @@ public class PlayerSelection : MonoBehaviour
     private UI_InputManager ui;
     private int numPlayers;
     private GameObject currIndicator;
+    private int currIndex;
     private GameObject joinScreen;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,6 +18,8 @@ public class PlayerSelection : MonoBehaviour
         mp = FindFirstObjectByType<MPManager>();
         ui = FindFirstObjectByType<UI_InputManager>();
         numPlayers = 1;
+        currIndex = 0;
+        currIndicator = playerIndicators[currIndex];
     }
 
     // Update is called once per frame
@@ -28,20 +31,9 @@ public class PlayerSelection : MonoBehaviour
         {
             numPlayers += (int)Mathf.Round(scrollX);
             numPlayers = Mathf.Clamp(numPlayers, 1, 4);
-            if (scrollX > 0 && numPlayers > 1)
-            {
-                currIndicator = playerIndicators[numPlayers - 1];
-                currIndicator.SetActive(true);
-                currIndicator.transform.GetChild(0).gameObject.SetActive(true); // get the text object that shows the numPlayers selected and set it to active
-                playerIndicators[numPlayers - 2].transform.GetChild(0).gameObject.SetActive(false); // set the previously active text object to inactive
-            }
-            else
-            {
-                currIndicator = playerIndicators[numPlayers];
-                currIndicator.SetActive(false);
-                playerIndicators[numPlayers - 1].transform.GetChild(0).gameObject.SetActive(true); // get the text object that shows the numPlayers selected and set it to active
-            }
-
+            currIndicator.SetActive(false);
+            currIndicator = playerIndicators[numPlayers - 1];
+            currIndicator.SetActive(true);
             StartCoroutine(ui.JoystickCooldown());
         }
 
