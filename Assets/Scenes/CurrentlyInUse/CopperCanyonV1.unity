@@ -336,6 +336,7 @@ GameObject:
   - component: {fileID: 59695794}
   - component: {fileID: 59695793}
   - component: {fileID: 59695792}
+  - component: {fileID: 59695795}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -436,6 +437,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59695790}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &59695795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59695790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &72196852
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -571,6 +586,7 @@ GameObject:
   - component: {fileID: 150708072}
   - component: {fileID: 150708071}
   - component: {fileID: 150708070}
+  - component: {fileID: 150708073}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -671,6 +687,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150708068}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &150708073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150708068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1 &187743055
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,6 +713,7 @@ GameObject:
   - component: {fileID: 187743059}
   - component: {fileID: 187743058}
   - component: {fileID: 187743057}
+  - component: {fileID: 187743060}
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
@@ -783,6 +814,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187743055}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &187743060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187743055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &201946952
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -817,6 +862,7 @@ GameObject:
   - component: {fileID: 242718289}
   - component: {fileID: 242718288}
   - component: {fileID: 242718287}
+  - component: {fileID: 242718290}
   m_Layer: 0
   m_Name: Cube (13)
   m_TagString: Untagged
@@ -917,6 +963,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242718285}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &242718290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242718285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1001 &248883664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -925,10 +985,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 919132149155446097, guid: 467d59d15586c11458d88ecdd8dc0d51, type: 3}
-      propertyPath: m_Name
-      value: QuickRepair (2)
-      objectReference: {fileID: 0}
+    - target: {fileID: 6445036711465312646, guid: 010997ba16cd78346b5a63556040f1e3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c0953d3dffe49a49a23ed79e3b2991a, type: 2}
+    - target: {fileID: 6445036711465312646, guid: 010997ba16cd78346b5a63556040f1e3, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c0953d3dffe49a49a23ed79e3b2991a, type: 2}
     - target: {fileID: -8679921383154817045, guid: 467d59d15586c11458d88ecdd8dc0d51, type: 3}
       propertyPath: m_LocalScale.x
       value: 300
@@ -985,14 +1049,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6445036711465312646, guid: 010997ba16cd78346b5a63556040f1e3, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 8c0953d3dffe49a49a23ed79e3b2991a, type: 2}
-    - target: {fileID: 6445036711465312646, guid: 010997ba16cd78346b5a63556040f1e3, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 8c0953d3dffe49a49a23ed79e3b2991a, type: 2}
+    - target: {fileID: 919132149155446097, guid: 467d59d15586c11458d88ecdd8dc0d51, type: 3}
+      propertyPath: m_Name
+      value: QuickRepair (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1013,6 +1073,7 @@ GameObject:
   - component: {fileID: 256298300}
   - component: {fileID: 256298299}
   - component: {fileID: 256298298}
+  - component: {fileID: 256298301}
   m_Layer: 0
   m_Name: Cube (11)
   m_TagString: Untagged
@@ -1113,6 +1174,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256298296}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &256298301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256298296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1001 &299856741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1121,10 +1196,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 743209974658604412, guid: 5176c1f9e06077c4b86015510cf7c291, type: 3}
-      propertyPath: m_Name
-      value: QuickRepair
+    - target: {fileID: 6445036711465312646, guid: 010997ba16cd78346b5a63556040f1e3, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6445036711465312646, guid: 010997ba16cd78346b5a63556040f1e3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c0953d3dffe49a49a23ed79e3b2991a, type: 2}
+    - target: {fileID: 6445036711465312646, guid: 010997ba16cd78346b5a63556040f1e3, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c0953d3dffe49a49a23ed79e3b2991a, type: 2}
+    - target: {fileID: 6445036711465312646, guid: 010997ba16cd78346b5a63556040f1e3, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c4ec33cbc01cc4f469ea011717efe4e0, type: 2}
     - target: {fileID: 79860984285349830, guid: 5176c1f9e06077c4b86015510cf7c291, type: 3}
       propertyPath: m_LocalScale.x
       value: 300
@@ -1181,22 +1268,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6445036711465312646, guid: 010997ba16cd78346b5a63556040f1e3, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 2
+    - target: {fileID: 743209974658604412, guid: 5176c1f9e06077c4b86015510cf7c291, type: 3}
+      propertyPath: m_Name
+      value: QuickRepair
       objectReference: {fileID: 0}
-    - target: {fileID: 6445036711465312646, guid: 010997ba16cd78346b5a63556040f1e3, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 8c0953d3dffe49a49a23ed79e3b2991a, type: 2}
-    - target: {fileID: 6445036711465312646, guid: 010997ba16cd78346b5a63556040f1e3, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 8c0953d3dffe49a49a23ed79e3b2991a, type: 2}
-    - target: {fileID: 6445036711465312646, guid: 010997ba16cd78346b5a63556040f1e3, type: 3}
-      propertyPath: 'm_Materials.Array.data[2]'
-      value: 
-      objectReference: {fileID: 2100000, guid: c4ec33cbc01cc4f469ea011717efe4e0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1386,6 +1461,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bff27b98921676f4cbc41636076de471, type: 3}
+--- !u!114 &344324380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &373518663
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1430,6 +1519,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
+--- !u!114 &404335549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &514140091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1 &527993392 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 90939400ea9b0b64c812733282e5f33b, type: 3}
@@ -1479,6 +1596,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
+--- !u!114 &579126751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1 &596641580 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 467d59d15586c11458d88ecdd8dc0d51, type: 3}
@@ -1506,6 +1637,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4493585093827132993, guid: ca64dddfb7af63a40a1111b6403a83a9, type: 3}
+--- !u!114 &598379720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &659817694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &688331902
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1540,6 +1699,7 @@ GameObject:
   - component: {fileID: 763328462}
   - component: {fileID: 763328461}
   - component: {fileID: 763328460}
+  - component: {fileID: 763328463}
   m_Layer: 0
   m_Name: Cube (17)
   m_TagString: Untagged
@@ -1640,6 +1800,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763328458}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &763328463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763328458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1 &764634156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,6 +1826,7 @@ GameObject:
   - component: {fileID: 764634160}
   - component: {fileID: 764634159}
   - component: {fileID: 764634158}
+  - component: {fileID: 764634161}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -1752,6 +1927,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764634156}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &764634161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764634156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &779574694
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1808,6 +1997,7 @@ GameObject:
   - component: {fileID: 837663600}
   - component: {fileID: 837663599}
   - component: {fileID: 837663598}
+  - component: {fileID: 837663601}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -1908,6 +2098,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837663596}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &837663601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837663596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1001 &863651441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1973,6 +2177,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
+--- !u!114 &919561250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &933330860
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2039,6 +2257,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
+--- !u!114 &987615882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &993761834
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2061,6 +2293,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
+--- !u!114 &1000641051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &1005497963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &1024065173
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2105,6 +2365,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2433263615954822249, guid: f1a50205ba1a01c43b710efec0f716b3, type: 3}
+--- !u!114 &1030730577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &1058590678
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2127,6 +2401,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
+--- !u!114 &1066009229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &1094831744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &1127825132
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2149,6 +2451,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
+--- !u!114 &1131226106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &1141386188
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2183,6 +2499,7 @@ GameObject:
   - component: {fileID: 1185032699}
   - component: {fileID: 1185032698}
   - component: {fileID: 1185032697}
+  - component: {fileID: 1185032700}
   m_Layer: 0
   m_Name: Cube (12)
   m_TagString: Untagged
@@ -2283,6 +2600,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185032695}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1185032700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185032695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1 &1194942188
 GameObject:
   m_ObjectHideFlags: 0
@@ -2295,6 +2626,7 @@ GameObject:
   - component: {fileID: 1194942192}
   - component: {fileID: 1194942191}
   - component: {fileID: 1194942190}
+  - component: {fileID: 1194942193}
   m_Layer: 0
   m_Name: Cube (18)
   m_TagString: Untagged
@@ -2395,6 +2727,48 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194942188}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1194942193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194942188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &1205423905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &1235983761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1001 &1238601985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2403,10 +2777,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 919132149155446097, guid: 467d59d15586c11458d88ecdd8dc0d51, type: 3}
-      propertyPath: m_Name
-      value: QuickRepair (1)
-      objectReference: {fileID: 0}
+    - target: {fileID: 6445036711465312646, guid: 010997ba16cd78346b5a63556040f1e3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c0953d3dffe49a49a23ed79e3b2991a, type: 2}
+    - target: {fileID: 6445036711465312646, guid: 010997ba16cd78346b5a63556040f1e3, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c0953d3dffe49a49a23ed79e3b2991a, type: 2}
     - target: {fileID: -8679921383154817045, guid: 467d59d15586c11458d88ecdd8dc0d51, type: 3}
       propertyPath: m_LocalScale.x
       value: 300
@@ -2463,14 +2841,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6445036711465312646, guid: 010997ba16cd78346b5a63556040f1e3, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 8c0953d3dffe49a49a23ed79e3b2991a, type: 2}
-    - target: {fileID: 6445036711465312646, guid: 010997ba16cd78346b5a63556040f1e3, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 8c0953d3dffe49a49a23ed79e3b2991a, type: 2}
+    - target: {fileID: 919132149155446097, guid: 467d59d15586c11458d88ecdd8dc0d51, type: 3}
+      propertyPath: m_Name
+      value: QuickRepair (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2479,6 +2853,20 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 596641581}
   m_SourcePrefab: {fileID: 100100000, guid: 467d59d15586c11458d88ecdd8dc0d51, type: 3}
+--- !u!114 &1276381930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &1316531541
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2523,6 +2911,48 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
+--- !u!114 &1349935090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &1357848263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &1363197260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1 &1411447527
 GameObject:
   m_ObjectHideFlags: 0
@@ -2535,6 +2965,7 @@ GameObject:
   - component: {fileID: 1411447531}
   - component: {fileID: 1411447530}
   - component: {fileID: 1411447529}
+  - component: {fileID: 1411447532}
   m_Layer: 0
   m_Name: Cube (10)
   m_TagString: Untagged
@@ -2635,6 +3066,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411447527}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1411447532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411447527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1 &1428390346
 GameObject:
   m_ObjectHideFlags: 0
@@ -2647,6 +3092,7 @@ GameObject:
   - component: {fileID: 1428390350}
   - component: {fileID: 1428390349}
   - component: {fileID: 1428390348}
+  - component: {fileID: 1428390351}
   m_Layer: 0
   m_Name: Cube (15)
   m_TagString: Untagged
@@ -2747,6 +3193,62 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428390346}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1428390351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428390346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &1429879628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &1456254369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &1487138856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1 &1491102652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2759,6 +3261,7 @@ GameObject:
   - component: {fileID: 1491102656}
   - component: {fileID: 1491102655}
   - component: {fileID: 1491102654}
+  - component: {fileID: 1491102657}
   m_Layer: 0
   m_Name: Cube (14)
   m_TagString: Untagged
@@ -2859,6 +3362,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491102652}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1491102657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491102652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1 &1509714082
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,6 +3388,7 @@ GameObject:
   - component: {fileID: 1509714086}
   - component: {fileID: 1509714085}
   - component: {fileID: 1509714084}
+  - component: {fileID: 1509714087}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -2971,6 +3489,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509714082}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1509714087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509714082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1 &1541385054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2983,6 +3515,7 @@ GameObject:
   - component: {fileID: 1541385058}
   - component: {fileID: 1541385057}
   - component: {fileID: 1541385056}
+  - component: {fileID: 1541385059}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -3083,6 +3616,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541385054}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1541385059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541385054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &1586635182
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3139,6 +3686,7 @@ GameObject:
   - component: {fileID: 1608785772}
   - component: {fileID: 1608785771}
   - component: {fileID: 1608785770}
+  - component: {fileID: 1608785773}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -3239,6 +3787,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608785768}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1608785773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608785768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &1613773145
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3261,6 +3823,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
+--- !u!114 &1629137733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &1632090966
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3283,6 +3859,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
+--- !u!114 &1649582944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1001 &1709057610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3340,6 +3930,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f213e5c3f798e4449b8c1662f865d25, type: 3}
+--- !u!114 &1718563148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1 &1725422544
 GameObject:
   m_ObjectHideFlags: 0
@@ -3352,6 +3956,7 @@ GameObject:
   - component: {fileID: 1725422548}
   - component: {fileID: 1725422547}
   - component: {fileID: 1725422546}
+  - component: {fileID: 1725422549}
   m_Layer: 0
   m_Name: Cube (9)
   m_TagString: Untagged
@@ -3452,6 +4057,34 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725422544}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1725422549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725422544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &1747905402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &1753950019
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3474,6 +4107,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
+--- !u!114 &1796818849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1 &1813654473 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 743209974658604412, guid: 5176c1f9e06077c4b86015510cf7c291, type: 3}
@@ -3501,6 +4148,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4493585093827132993, guid: ca64dddfb7af63a40a1111b6403a83a9, type: 3}
+--- !u!114 &1826045556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &1834493909
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3523,6 +4184,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
+--- !u!114 &1862250216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1 &1892092743
 GameObject:
   m_ObjectHideFlags: 0
@@ -3535,6 +4210,7 @@ GameObject:
   - component: {fileID: 1892092747}
   - component: {fileID: 1892092746}
   - component: {fileID: 1892092745}
+  - component: {fileID: 1892092748}
   m_Layer: 0
   m_Name: Cube (16)
   m_TagString: Untagged
@@ -3635,6 +4311,34 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892092743}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1892092748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892092743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &1909775718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &1924580781
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3706,6 +4410,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
+--- !u!114 &1996143761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!64 &2007706218
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3772,6 +4490,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
+--- !u!114 &2038784960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1 &2122611758
 GameObject:
   m_ObjectHideFlags: 0
@@ -3922,6 +4654,7 @@ GameObject:
   - component: {fileID: 2137736532}
   - component: {fileID: 2137736531}
   - component: {fileID: 2137736530}
+  - component: {fileID: 2137736533}
   m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Untagged
@@ -4022,6 +4755,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137736528}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2137736533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137736528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1001 &3152197746995283824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4195,117 +4942,231 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8626491833077806118, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8970552957871100450}
+    - targetCorrespondingSourceObject: {fileID: 8626491833077806118, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8970552957871100455}
     - targetCorrespondingSourceObject: {fileID: 1240548799859469876, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8970552957871100449}
+    - targetCorrespondingSourceObject: {fileID: 1240548799859469876, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8970552957871100454}
     - targetCorrespondingSourceObject: {fileID: 1208339850258994405, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8970552957871100448}
+    - targetCorrespondingSourceObject: {fileID: 1208339850258994405, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8970552957871100453}
     - targetCorrespondingSourceObject: {fileID: 2003685890407858905, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8970552957871100447}
+    - targetCorrespondingSourceObject: {fileID: 2003685890407858905, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8970552957871100452}
     - targetCorrespondingSourceObject: {fileID: 2514074765330075705, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8970552957871100446}
+    - targetCorrespondingSourceObject: {fileID: 2514074765330075705, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8970552957871100451}
     - targetCorrespondingSourceObject: {fileID: 4431482512961004298, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 74525509}
+    - targetCorrespondingSourceObject: {fileID: 4431482512961004298, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1205423905}
     - targetCorrespondingSourceObject: {fileID: 7103624668893118453, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 373518663}
+    - targetCorrespondingSourceObject: {fileID: 7103624668893118453, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1487138856}
     - targetCorrespondingSourceObject: {fileID: 306690850475754454, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1586635182}
+    - targetCorrespondingSourceObject: {fileID: 306690850475754454, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1826045556}
     - targetCorrespondingSourceObject: {fileID: 7839068398264499682, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 933330860}
+    - targetCorrespondingSourceObject: {fileID: 7839068398264499682, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2038784960}
     - targetCorrespondingSourceObject: {fileID: 1469103723856613781, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1030088882}
+    - targetCorrespondingSourceObject: {fileID: 1469103723856613781, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1718563148}
     - targetCorrespondingSourceObject: {fileID: 1106459769243712088, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 953027321}
+    - targetCorrespondingSourceObject: {fileID: 1106459769243712088, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1629137733}
     - targetCorrespondingSourceObject: {fileID: 2959837363872139685, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 72196852}
+    - targetCorrespondingSourceObject: {fileID: 2959837363872139685, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1235983761}
     - targetCorrespondingSourceObject: {fileID: 6008988151883788858, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1127825132}
+    - targetCorrespondingSourceObject: {fileID: 6008988151883788858, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1747905402}
     - targetCorrespondingSourceObject: {fileID: 8563711522679121363, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 834044697}
+    - targetCorrespondingSourceObject: {fileID: 8563711522679121363, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 659817694}
     - targetCorrespondingSourceObject: {fileID: 3218473838066105444, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 549687187}
+    - targetCorrespondingSourceObject: {fileID: 3218473838066105444, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1357848263}
     - targetCorrespondingSourceObject: {fileID: 3813603961877937074, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 201946952}
+    - targetCorrespondingSourceObject: {fileID: 3813603961877937074, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1796818849}
     - targetCorrespondingSourceObject: {fileID: 1209843309026982944, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1024065173}
+    - targetCorrespondingSourceObject: {fileID: 1209843309026982944, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1094831744}
     - targetCorrespondingSourceObject: {fileID: 3559106428029624763, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 688331902}
+    - targetCorrespondingSourceObject: {fileID: 3559106428029624763, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 598379720}
     - targetCorrespondingSourceObject: {fileID: 9154744673669269350, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1834493909}
+    - targetCorrespondingSourceObject: {fileID: 9154744673669269350, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 344324380}
     - targetCorrespondingSourceObject: {fileID: 4841368081915703864, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1753950019}
+    - targetCorrespondingSourceObject: {fileID: 4841368081915703864, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1131226106}
     - targetCorrespondingSourceObject: {fileID: 5250495183541407812, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 779574694}
+    - targetCorrespondingSourceObject: {fileID: 5250495183541407812, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1349935090}
     - targetCorrespondingSourceObject: {fileID: 3059528015785814833, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1924580781}
+    - targetCorrespondingSourceObject: {fileID: 3059528015785814833, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 514140091}
     - targetCorrespondingSourceObject: {fileID: 372278571082256435, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1141386188}
+    - targetCorrespondingSourceObject: {fileID: 372278571082256435, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1909775718}
     - targetCorrespondingSourceObject: {fileID: 6744620979811614124, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1334916462}
+    - targetCorrespondingSourceObject: {fileID: 6744620979811614124, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1862250216}
     - targetCorrespondingSourceObject: {fileID: 5031267604150605153, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1632090966}
+    - targetCorrespondingSourceObject: {fileID: 5031267604150605153, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1005497963}
     - targetCorrespondingSourceObject: {fileID: 6035216343185966514, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1987579422}
+    - targetCorrespondingSourceObject: {fileID: 6035216343185966514, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1066009229}
     - targetCorrespondingSourceObject: {fileID: 5722962163484506424, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1316531541}
+    - targetCorrespondingSourceObject: {fileID: 5722962163484506424, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1000641051}
     - targetCorrespondingSourceObject: {fileID: 7185371324476610584, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2007706218}
+    - targetCorrespondingSourceObject: {fileID: 7185371324476610584, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 404335549}
     - targetCorrespondingSourceObject: {fileID: 2377879430869107320, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 380646164}
+    - targetCorrespondingSourceObject: {fileID: 2377879430869107320, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1429879628}
     - targetCorrespondingSourceObject: {fileID: 3433782175381278919, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2032673302}
+    - targetCorrespondingSourceObject: {fileID: 3433782175381278919, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 579126751}
     - targetCorrespondingSourceObject: {fileID: 317531180069298842, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 12004265}
+    - targetCorrespondingSourceObject: {fileID: 317531180069298842, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1996143761}
     - targetCorrespondingSourceObject: {fileID: 3164594073309969579, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1613773145}
+    - targetCorrespondingSourceObject: {fileID: 3164594073309969579, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 919561250}
     - targetCorrespondingSourceObject: {fileID: 8530356544449684095, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 129833294}
+    - targetCorrespondingSourceObject: {fileID: 8530356544449684095, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1649582944}
     - targetCorrespondingSourceObject: {fileID: 1520035177611431100, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1058590678}
+    - targetCorrespondingSourceObject: {fileID: 1520035177611431100, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1363197260}
     - targetCorrespondingSourceObject: {fileID: 4399897062495167756, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 946536847}
+    - targetCorrespondingSourceObject: {fileID: 4399897062495167756, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1030730577}
     - targetCorrespondingSourceObject: {fileID: 511999517647951061, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 993761834}
+    - targetCorrespondingSourceObject: {fileID: 511999517647951061, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 987615882}
     - targetCorrespondingSourceObject: {fileID: 857513692173403764, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1597830199}
+    - targetCorrespondingSourceObject: {fileID: 857513692173403764, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1456254369}
     - targetCorrespondingSourceObject: {fileID: 7599264415100158560, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2027939193}
+    - targetCorrespondingSourceObject: {fileID: 7599264415100158560, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1276381930}
   m_SourcePrefab: {fileID: 100100000, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
 --- !u!1 &8970552957871100408 stripped
 GameObject:
@@ -4607,6 +5468,76 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
+--- !u!114 &8970552957871100451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &8970552957871100452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &8970552957871100453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &8970552957871100454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
+--- !u!114 &8970552957871100455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970552957871100445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  mainCamera: {fileID: 0}
+  UICamera: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

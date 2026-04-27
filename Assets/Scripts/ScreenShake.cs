@@ -3,16 +3,17 @@ using System.Collections;
 
 public class ScreenShake : MonoBehaviour
 {
-    public bool start = false;
+    //public bool start = false;
     public AnimationCurve curve;
     public float duration = 1f;
     void Update()
     {
-        if (start)
-        {
-            start = false;
-            StartCoroutine(Shaking());
-        }
+        
+    }
+
+    public void run()
+    {
+        StartCoroutine(Shaking());
     }
 
     IEnumerator Shaking()
