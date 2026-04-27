@@ -306,6 +306,7 @@ public class CarControl : MonoBehaviour
             }
             drifting = false;
             boostVal=0;
+            turnOnTurnOff(driftFires);
             return;
 
             
