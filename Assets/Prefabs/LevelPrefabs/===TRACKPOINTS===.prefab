@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1335158731915878715}
   - component: {fileID: 3823525410877633236}
   m_Layer: 0
-  m_Name: TrackPoint
+  m_Name: TrackPoint 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7733409d3befb0445a034492a2e9b4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrackPoint
-  trackingPointHit: 0
-  pointIndex: 0
+  pointIndex: 2
+  afterCheckPoint: 2
 --- !u!65 &3823525410877633236
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 621909011910462508}
   - component: {fileID: 7643216912606829400}
   m_Layer: 0
-  m_Name: TrackPoint (1)
+  m_Name: TrackPoint 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ Transform:
   m_GameObject: {fileID: 6402634331260295833}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -345.09998, y: 4.9, z: 0}
+  m_LocalPosition: {x: -390.8, y: 4.9, z: 0}
   m_LocalScale: {x: 1, y: 1.1915, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -113,8 +113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7733409d3befb0445a034492a2e9b4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrackPoint
-  trackingPointHit: 0
   pointIndex: 0
+  afterCheckPoint: 0
 --- !u!65 &7643216912606829400
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 5191367345798680609}
   - component: {fileID: 3034438438725075301}
   m_Layer: 0
-  m_Name: TrackPoint (2)
+  m_Name: TrackPoint 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,8 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7733409d3befb0445a034492a2e9b4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrackPoint
-  trackingPointHit: 0
-  pointIndex: 0
+  pointIndex: 1
+  afterCheckPoint: 1
 --- !u!65 &3034438438725075301
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -233,8 +233,77 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5202360868448776494}
   - {fileID: 2853184400880228077}
   - {fileID: 7218088426268581928}
+  - {fileID: 5202360868448776494}
+  - {fileID: 6373785393377570378}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7633326356402414388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6373785393377570378}
+  - component: {fileID: 3964926295868394786}
+  - component: {fileID: 8663427563596982660}
+  m_Layer: 0
+  m_Name: TrackPoint 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6373785393377570378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7633326356402414388}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7103389, z: 0, w: 0.7038598}
+  m_LocalPosition: {x: -488.9, y: 10.5, z: -116}
+  m_LocalScale: {x: 1, y: 1.1915, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1217668200170260717}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.525, z: 0}
+--- !u!114 &3964926295868394786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7633326356402414388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7733409d3befb0445a034492a2e9b4b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrackPoint
+  pointIndex: 3
+  afterCheckPoint: 3
+--- !u!65 &8663427563596982660
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7633326356402414388}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16.253784, y: 43.126854, z: 156.7555}
+  m_Center: {x: 1.6420288, y: 21.063427, z: -10.701294}

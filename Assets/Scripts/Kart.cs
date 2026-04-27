@@ -227,6 +227,7 @@ public class Kart : MonoBehaviour, I_Damageable
             CheckpointDetection _checkDetect = GetComponent<CheckpointDetection>();
             Vector3 _respawnPoint = FindFirstObjectByType<LapManager>().SetCheckpointPos(_checkDetect._currCheckpoint);
             Quaternion _respawnRotation = FindFirstObjectByType<LapManager>().SetCheckpointRot(_checkDetect._currCheckpoint);
+            GetComponent<PlacementTracker>().ResetAfterDeath(_checkDetect._currCheckpoint);
             this.transform.position = _respawnPoint+new Vector3(0f, 10f, 0f);
             this.transform.rotation = _respawnRotation;
     }
