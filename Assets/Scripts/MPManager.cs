@@ -91,4 +91,9 @@ public class MPManager : MonoBehaviour
     {
         joinScreen = FindFirstObjectByType<JoinScreenManager>();
     }
+
+    public int GetPlayerNum()
+    {
+        return numPlayers;
+    }
 }
