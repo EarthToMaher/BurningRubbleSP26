@@ -5,6 +5,7 @@ public class SplineTriggerZone : MonoBehaviour
 {
     [SerializeField] private SplineContainer _splineToFollow;
     [SerializeField] private float _duration;
+    [SerializeField] private int _healAmt;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,5 +21,10 @@ public class SplineTriggerZone : MonoBehaviour
     public float TriggerZoneDuration()
     {
         return _duration;
+    }
+
+    public int GetHealAmount()
+    {
+        return _healAmt;
     }
 }
