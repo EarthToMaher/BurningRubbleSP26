@@ -755,6 +755,10 @@ PrefabInstance:
       propertyPath: m_FillAmount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7720876779308017050, guid: 9dd6c883bc54040e093c4008b2c84c3e, type: 3}
+      propertyPath: hPSettings.hp
+      value: 800
+      objectReference: {fileID: 0}
     - target: {fileID: 8367016553226074548, guid: 9dd6c883bc54040e093c4008b2c84c3e, type: 3}
       propertyPath: m_FillAmount
       value: 0
@@ -811,6 +815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SplineTriggerZone
   _splineToFollow: {fileID: 0}
   _duration: 3
+  _healAmt: 0
 --- !u!65 &1086287576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1189,6 +1194,10 @@ PrefabInstance:
     - target: {fileID: 1248472299971967871, guid: 026db6dd5f4406e47b27f014da824871, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2403867285050588287, guid: 026db6dd5f4406e47b27f014da824871, type: 3}
+      propertyPath: _healAmt
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7059407083147857469, guid: 026db6dd5f4406e47b27f014da824871, type: 3}
       propertyPath: m_Name

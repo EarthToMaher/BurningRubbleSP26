@@ -110,7 +110,7 @@ public class CarControl : MonoBehaviour
             firstFrame = false;
             return;
         }
-        if (im.GetReload() > 0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (im.GetReload() > 0) SceneManager.LoadScene("Loading");
         if(!receivingInput) return;
         if(im.GetRespawnDebug() > 0) kartResources.KartDeath();
         float hInput = im.GetMoveDirectionX();

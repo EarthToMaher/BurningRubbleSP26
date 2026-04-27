@@ -2,28 +2,27 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class TrackPoint : MonoBehaviour
-{
-    [SerializeField] private bool trackingPointHit;
-    [SerializeField] private int pointIndex;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        trackingPointHit = false;
-    }
+{ 
+    [SerializeField] private int pointIndex; // the first trackpoint players will hit is 0, the next is 1, and so on. 
+    [SerializeField] private int afterCheckPoint; // set this to the checkpoint BEFORE this trackpoint. if that checkpoint is the finish line, set this to 0. 
 
     private void OnTriggerEnter(Collider other)
     {
         PlacementTracker placement = other.gameObject.GetComponent<PlacementTracker>();
         if (placement != null)
         {
-            Debug.Log("I detected player " + (placement.gameObject.GetComponent<PlayerInput>().playerIndex + 1));
-            trackingPointHit = true;
+            // handle track point hit
+            placement.HandleTrackPointHit(pointIndex);
         }
     }
 
-    public void Reset()
+    public int GetPointIndex()
     {
-        trackingPointHit = false;
+        return pointIndex;
+    }
+
+    public int GetAfterCheckPoint()
+    {
+        return afterCheckPoint;
     }
 }

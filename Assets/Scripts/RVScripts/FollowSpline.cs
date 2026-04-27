@@ -8,6 +8,7 @@ public class FollowSpline : MonoBehaviour
 {
     // Components
     [SerializeField] private CarControl _kartBoost;
+    [SerializeField] private Kart _kartHealing;
     [SerializeField] private SplineContainer _currentFollowingSpline;
     [SerializeField] private InputActionReference _cancelAction;
 
@@ -20,6 +21,7 @@ public class FollowSpline : MonoBehaviour
     private void Awake()
     {
         _kartBoost = this.GetComponent<CarControl>();
+        _kartHealing = this.GetComponent<Kart>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,11 +31,17 @@ public class FollowSpline : MonoBehaviour
         _currentFollowingSpline = _getSpline.SplineInTrigger();
         _duration = _getSpline.TriggerZoneDuration();
         AnimateAlongPathEngage();
+        HealKartEngage(_getSpline.TriggerZoneDuration(), _getSpline.GetHealAmount());
     }
 
     public void AnimateAlongPathEngage()
     {
         StartCoroutine(AnimateAlongPath());
+    }
+
+    public void HealKartEngage(float duration, int amount)
+    {
+        StartCoroutine(HealKart(duration, amount));
     }
 
     IEnumerator AnimateAlongPath()
@@ -84,5 +92,16 @@ public class FollowSpline : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    IEnumerator HealKart(float duration, int amount)
+    {
+        for (int i = 0; i <  duration; i++) 
+        {
+            _kartHealing.Heal(amount);
+            yield return new WaitForSeconds(1f);
+        }
+
+        yield return null;
     }
 }
