@@ -8,6 +8,7 @@ public class StartManager : MonoBehaviour
     private bool gameStarted;
     private JoinScreenManager joinScreen;
     private EndScreenManager endScreenMgr;
+    private TrackPointManager tpm;
 
     void Awake()
     {
@@ -16,6 +17,7 @@ public class StartManager : MonoBehaviour
         multiplayer = FindFirstObjectByType<MPManager>();
         joinScreen = FindFirstObjectByType<JoinScreenManager>();
         endScreenMgr = FindFirstObjectByType<EndScreenManager>(FindObjectsInactive.Include);
+        tpm = FindFirstObjectByType<TrackPointManager>(FindObjectsInactive.Include);
     }
 
     public void OnJoin()
@@ -27,6 +29,7 @@ public class StartManager : MonoBehaviour
             GetComponent<CarControl>().enabled = true;
             gameStarted = true;
             endScreenMgr.gameObject.SetActive(true);
+            tpm.gameObject.SetActive(true);
         }
     }
 }
