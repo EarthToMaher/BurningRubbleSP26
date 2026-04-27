@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4309228164865561798}
   - component: {fileID: 5624790989797710206}
   - component: {fileID: 4794551345684044344}
+  - component: {fileID: 6012326465827542903}
   m_Layer: 0
   m_Name: CanyonVar3 (18)
   m_TagString: Untagged
@@ -91,6 +92,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6012326465827542903
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306690850475754454}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &317531180069298842
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,6 +125,7 @@ GameObject:
   - component: {fileID: 8839890138582296438}
   - component: {fileID: 1136844025347580430}
   - component: {fileID: 3543254981938789478}
+  - component: {fileID: 7325720643113872690}
   m_Layer: 0
   m_Name: CanyonVar3 (12)
   m_TagString: Untagged
@@ -182,6 +206,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7325720643113872690
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317531180069298842}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &372278571082256435
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +239,7 @@ GameObject:
   - component: {fileID: 5760313700595294915}
   - component: {fileID: 6880396287758227628}
   - component: {fileID: 1113013902796753256}
+  - component: {fileID: 3414829044000312331}
   m_Layer: 0
   m_Name: CanyonVar2 (3)
   m_TagString: Untagged
@@ -273,6 +320,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3414829044000312331
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372278571082256435}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2433263615954822249, guid: f1a50205ba1a01c43b710efec0f716b3, type: 3}
 --- !u!1 &511999517647951061
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,6 +353,7 @@ GameObject:
   - component: {fileID: 5963705725027539688}
   - component: {fileID: 6167119636501582265}
   - component: {fileID: 4449112907447274584}
+  - component: {fileID: 7850579819759058886}
   m_Layer: 0
   m_Name: CanyonVar3 (16)
   m_TagString: Untagged
@@ -364,6 +434,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7850579819759058886
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511999517647951061}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &669791134627427461
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,6 +558,7 @@ GameObject:
   - component: {fileID: 3068012294498647851}
   - component: {fileID: 8883157026418154874}
   - component: {fileID: 1669499892960232103}
+  - component: {fileID: 5373509526977768889}
   m_Layer: 0
   m_Name: CanyonVar2 (5)
   m_TagString: Untagged
@@ -546,6 +639,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5373509526977768889
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857513692173403764}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2433263615954822249, guid: f1a50205ba1a01c43b710efec0f716b3, type: 3}
 --- !u!1 &1106459769243712088
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +672,7 @@ GameObject:
   - component: {fileID: 6134590635307019216}
   - component: {fileID: 8291409964997164974}
   - component: {fileID: 3793032920679191863}
+  - component: {fileID: 3508105616008421254}
   m_Layer: 0
   m_Name: CanyonVar1 (3)
   m_TagString: Untagged
@@ -637,6 +753,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3508105616008421254
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106459769243712088}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
 --- !u!1 &1208339850258994405
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +786,7 @@ GameObject:
   - component: {fileID: 7905192641340061662}
   - component: {fileID: 6016123583837266928}
   - component: {fileID: 1806147133570074628}
+  - component: {fileID: 8220412009555320963}
   m_Layer: 0
   m_Name: CanyonVar2
   m_TagString: Untagged
@@ -728,6 +867,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8220412009555320963
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208339850258994405}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2433263615954822249, guid: f1a50205ba1a01c43b710efec0f716b3, type: 3}
 --- !u!1 &1209843309026982944
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,6 +900,7 @@ GameObject:
   - component: {fileID: 7288136301221519211}
   - component: {fileID: 5560712420005295426}
   - component: {fileID: 3218595926057543240}
+  - component: {fileID: 6772540457942204841}
   m_Layer: 0
   m_Name: CanyonVar3 (6)
   m_TagString: Untagged
@@ -819,6 +981,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6772540457942204841
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209843309026982944}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &1240548799859469876
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,6 +1014,7 @@ GameObject:
   - component: {fileID: 485104849323805926}
   - component: {fileID: 7303535234665186440}
   - component: {fileID: 9160473074830990916}
+  - component: {fileID: 9067316964554355954}
   m_Layer: 0
   m_Name: CanyonVar3
   m_TagString: Untagged
@@ -910,6 +1095,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &9067316964554355954
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240548799859469876}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &1469103723856613781
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,6 +1128,7 @@ GameObject:
   - component: {fileID: 1635457200188851618}
   - component: {fileID: 1729842243291085110}
   - component: {fileID: 7538924668835368239}
+  - component: {fileID: 3107731263638610978}
   m_Layer: 0
   m_Name: CanyonVar2 (1)
   m_TagString: Untagged
@@ -1001,6 +1209,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3107731263638610978
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469103723856613781}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2433263615954822249, guid: f1a50205ba1a01c43b710efec0f716b3, type: 3}
 --- !u!1 &1520035177611431100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,6 +1242,7 @@ GameObject:
   - component: {fileID: 6457153174832227707}
   - component: {fileID: 728007478421016162}
   - component: {fileID: 8317793897325218961}
+  - component: {fileID: 3413503963661406995}
   m_Layer: 0
   m_Name: CanyonVar3 (15)
   m_TagString: Untagged
@@ -1092,6 +1323,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3413503963661406995
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520035177611431100}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &1840902172841730527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,6 +1468,7 @@ GameObject:
   - component: {fileID: 1728410015730416083}
   - component: {fileID: 1898911313434161055}
   - component: {fileID: 3091595743664779612}
+  - component: {fileID: 1857564826222839728}
   m_Layer: 0
   m_Name: CanyonVar1 (1)
   m_TagString: Untagged
@@ -1295,6 +1549,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1857564826222839728
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003685890407858905}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
 --- !u!1 &2377879430869107320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,6 +1582,7 @@ GameObject:
   - component: {fileID: 5120874459297272566}
   - component: {fileID: 3606637751364380502}
   - component: {fileID: 6650116344941237129}
+  - component: {fileID: 6164680584074844809}
   m_Layer: 0
   m_Name: CanyonVar3 (11)
   m_TagString: Untagged
@@ -1386,6 +1663,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6164680584074844809
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377879430869107320}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &2514074765330075705
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,6 +1696,7 @@ GameObject:
   - component: {fileID: 6402812582636921608}
   - component: {fileID: 8352969955143022519}
   - component: {fileID: 1294470965447975593}
+  - component: {fileID: 5344757694541985648}
   m_Layer: 0
   m_Name: CanyonVar3 (1)
   m_TagString: Untagged
@@ -1477,6 +1777,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5344757694541985648
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2514074765330075705}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &2959837363872139685
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,6 +1810,7 @@ GameObject:
   - component: {fileID: 2483329347473108022}
   - component: {fileID: 5939425582790338000}
   - component: {fileID: 8503489537888168452}
+  - component: {fileID: 4087073968027908127}
   m_Layer: 0
   m_Name: CanyonVar3 (3)
   m_TagString: Untagged
@@ -1568,6 +1891,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4087073968027908127
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2959837363872139685}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &3059528015785814833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,6 +1924,7 @@ GameObject:
   - component: {fileID: 3850585739057654377}
   - component: {fileID: 1639751520726216152}
   - component: {fileID: 3833970873052418271}
+  - component: {fileID: 4882741264016871969}
   m_Layer: 0
   m_Name: CanyonVar3 (9)
   m_TagString: Untagged
@@ -1659,6 +2005,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4882741264016871969
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059528015785814833}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &3164594073309969579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,6 +2038,7 @@ GameObject:
   - component: {fileID: 3265999840332143436}
   - component: {fileID: 270417862273373291}
   - component: {fileID: 6418437719312814028}
+  - component: {fileID: 2422026690028845421}
   m_Layer: 0
   m_Name: CanyonVar3 (13)
   m_TagString: Untagged
@@ -1750,6 +2119,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2422026690028845421
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3164594073309969579}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &3218473838066105444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,6 +2152,7 @@ GameObject:
   - component: {fileID: 1002756993351629134}
   - component: {fileID: 5661159806336310579}
   - component: {fileID: 5784616235809857502}
+  - component: {fileID: 6718508422735252436}
   m_Layer: 0
   m_Name: CanyonVar3 (5)
   m_TagString: Untagged
@@ -1841,6 +2233,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6718508422735252436
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3218473838066105444}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &3333638428108075728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1943,6 +2357,7 @@ GameObject:
   - component: {fileID: 2080067038946379898}
   - component: {fileID: 1414452209161691921}
   - component: {fileID: 3853040864992819341}
+  - component: {fileID: 3130945434908531947}
   m_Layer: 0
   m_Name: CanyonVar1 (10)
   m_TagString: Untagged
@@ -2023,6 +2438,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3130945434908531947
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3433782175381278919}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
 --- !u!1 &3559106428029624763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,6 +2471,7 @@ GameObject:
   - component: {fileID: 85441321187091878}
   - component: {fileID: 6659214048892287978}
   - component: {fileID: 5058197776120613734}
+  - component: {fileID: 6851810378493741388}
   m_Layer: 0
   m_Name: CanyonVar1 (5)
   m_TagString: Untagged
@@ -2114,6 +2552,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6851810378493741388
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3559106428029624763}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
 --- !u!1 &3813603961877937074
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,6 +2585,7 @@ GameObject:
   - component: {fileID: 9025439354832221343}
   - component: {fileID: 8035362616392515024}
   - component: {fileID: 925125352978749330}
+  - component: {fileID: 3085387621787292918}
   m_Layer: 0
   m_Name: CanyonVar2 (2)
   m_TagString: Untagged
@@ -2205,6 +2666,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3085387621787292918
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3813603961877937074}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2433263615954822249, guid: f1a50205ba1a01c43b710efec0f716b3, type: 3}
 --- !u!1 &4399897062495167756
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,6 +2699,7 @@ GameObject:
   - component: {fileID: 1498800727813625502}
   - component: {fileID: 7762833399583551719}
   - component: {fileID: 8247175019888404554}
+  - component: {fileID: 7816957081619339611}
   m_Layer: 0
   m_Name: CanyonVar1 (11)
   m_TagString: Untagged
@@ -2296,6 +2780,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7816957081619339611
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4399897062495167756}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
 --- !u!1 &4431482512961004298
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,6 +2813,7 @@ GameObject:
   - component: {fileID: 8297494017434597951}
   - component: {fileID: 606916814071360660}
   - component: {fileID: 3564859479059982109}
+  - component: {fileID: 1403585473153250325}
   m_Layer: 0
   m_Name: CanyonVar1 (2)
   m_TagString: Untagged
@@ -2387,6 +2894,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1403585473153250325
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431482512961004298}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
 --- !u!1 &4841368081915703864
 GameObject:
   m_ObjectHideFlags: 0
@@ -2398,6 +2927,7 @@ GameObject:
   - component: {fileID: 2640592376575833134}
   - component: {fileID: 1589758519151897144}
   - component: {fileID: 5349947726301516081}
+  - component: {fileID: 7744476025768898019}
   m_Layer: 0
   m_Name: CanyonVar3 (7)
   m_TagString: Untagged
@@ -2478,6 +3008,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7744476025768898019
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4841368081915703864}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &5031267604150605153
 GameObject:
   m_ObjectHideFlags: 0
@@ -2489,6 +3041,7 @@ GameObject:
   - component: {fileID: 5811378215187633840}
   - component: {fileID: 794957400540276054}
   - component: {fileID: 6867761307144973194}
+  - component: {fileID: 1729154573263570188}
   m_Layer: 0
   m_Name: CanyonVar3 (10)
   m_TagString: Untagged
@@ -2569,6 +3122,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1729154573263570188
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5031267604150605153}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &5250495183541407812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2580,6 +3155,7 @@ GameObject:
   - component: {fileID: 3010711128542963712}
   - component: {fileID: 5686723787866407950}
   - component: {fileID: 2820487668367052827}
+  - component: {fileID: 760486685197737725}
   m_Layer: 0
   m_Name: CanyonVar3 (8)
   m_TagString: Untagged
@@ -2660,6 +3236,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &760486685197737725
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5250495183541407812}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &5450218207479153023
 GameObject:
   m_ObjectHideFlags: 0
@@ -2684,7 +3282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5450218207479153023}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2796,6 +3394,7 @@ GameObject:
   - component: {fileID: 3513585186373181806}
   - component: {fileID: 6216154657717740339}
   - component: {fileID: 2655745304300199404}
+  - component: {fileID: 3625658660229986420}
   m_Layer: 0
   m_Name: CanyonVar2 (4)
   m_TagString: Untagged
@@ -2876,6 +3475,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3625658660229986420
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5722962163484506424}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2433263615954822249, guid: f1a50205ba1a01c43b710efec0f716b3, type: 3}
 --- !u!1 &6008988151883788858
 GameObject:
   m_ObjectHideFlags: 0
@@ -2887,6 +3508,7 @@ GameObject:
   - component: {fileID: 8737757335599023654}
   - component: {fileID: 8921748328711898679}
   - component: {fileID: 820596857693945730}
+  - component: {fileID: 7580353725848793346}
   m_Layer: 0
   m_Name: CanyonVar3 (4)
   m_TagString: Untagged
@@ -2967,6 +3589,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7580353725848793346
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6008988151883788858}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &6035216343185966514
 GameObject:
   m_ObjectHideFlags: 0
@@ -2978,6 +3622,7 @@ GameObject:
   - component: {fileID: 6977921800176892227}
   - component: {fileID: 4741371322700293958}
   - component: {fileID: 662895390397585116}
+  - component: {fileID: 2816248214024801891}
   m_Layer: 0
   m_Name: CanyonVar1 (8)
   m_TagString: Untagged
@@ -3058,6 +3703,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2816248214024801891
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6035216343185966514}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
 --- !u!1 &6235557721906029404
 GameObject:
   m_ObjectHideFlags: 0
@@ -3160,6 +3827,7 @@ GameObject:
   - component: {fileID: 8141403777429981735}
   - component: {fileID: 3322813295341380964}
   - component: {fileID: 6607932245804123133}
+  - component: {fileID: 2026583332206905461}
   m_Layer: 0
   m_Name: CanyonVar1 (7)
   m_TagString: Untagged
@@ -3240,6 +3908,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2026583332206905461
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6744620979811614124}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
 --- !u!1 &7062105746800158958
 GameObject:
   m_ObjectHideFlags: 0
@@ -3342,6 +4032,7 @@ GameObject:
   - component: {fileID: 1872345485317656929}
   - component: {fileID: 3950555067941850399}
   - component: {fileID: 302924879491685420}
+  - component: {fileID: 725553058347603692}
   m_Layer: 0
   m_Name: CanyonVar3 (2)
   m_TagString: Untagged
@@ -3422,6 +4113,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &725553058347603692
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7103624668893118453}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &7185371324476610584
 GameObject:
   m_ObjectHideFlags: 0
@@ -3433,6 +4146,7 @@ GameObject:
   - component: {fileID: 2468395757356400517}
   - component: {fileID: 2715317957904488446}
   - component: {fileID: 8344022111751979277}
+  - component: {fileID: 746992432549342038}
   m_Layer: 0
   m_Name: CanyonVar1 (9)
   m_TagString: Untagged
@@ -3513,6 +4227,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &746992432549342038
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7185371324476610584}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
 --- !u!1 &7305306300509731528
 GameObject:
   m_ObjectHideFlags: 0
@@ -3553,9 +4289,9 @@ Terrain:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7305306300509731528}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: 4c9e76b42e263a347b7b1157e103eec8, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: b1e2617856db48f48ac7382be784024e, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
@@ -3604,7 +4340,7 @@ TerrainCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_TerrainData: {fileID: 15600000, guid: 4c9e76b42e263a347b7b1157e103eec8, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: b1e2617856db48f48ac7382be784024e, type: 2}
   m_EnableTreeColliders: 1
 --- !u!1 &7599264415100158560
 GameObject:
@@ -3617,6 +4353,7 @@ GameObject:
   - component: {fileID: 6711436664255284911}
   - component: {fileID: 4090011679284275785}
   - component: {fileID: 1517981223006032530}
+  - component: {fileID: 2504351795214667169}
   m_Layer: 0
   m_Name: CanyonVar3 (17)
   m_TagString: Untagged
@@ -3697,6 +4434,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2504351795214667169
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7599264415100158560}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &7839068398264499682
 GameObject:
   m_ObjectHideFlags: 0
@@ -3708,6 +4467,7 @@ GameObject:
   - component: {fileID: 6905571887912328019}
   - component: {fileID: 6207071164167758301}
   - component: {fileID: 2937484343257052858}
+  - component: {fileID: 7113164663287416222}
   m_Layer: 0
   m_Name: CanyonVar3 (19)
   m_TagString: Untagged
@@ -3788,6 +4548,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7113164663287416222
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7839068398264499682}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &8295405056328149580
 GameObject:
   m_ObjectHideFlags: 0
@@ -4140,6 +4922,7 @@ GameObject:
   - component: {fileID: 1765346847225056502}
   - component: {fileID: 5763729486926543668}
   - component: {fileID: 3388453553013477031}
+  - component: {fileID: 1959565378709868029}
   m_Layer: 0
   m_Name: CanyonVar3 (14)
   m_TagString: Untagged
@@ -4220,6 +5003,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1959565378709868029
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8530356544449684095}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8427622862716400718, guid: 9cec64e93eb0f1a4680bf2f659b037f8, type: 3}
 --- !u!1 &8563711522679121363
 GameObject:
   m_ObjectHideFlags: 0
@@ -4231,6 +5036,7 @@ GameObject:
   - component: {fileID: 8431989213202811534}
   - component: {fileID: 9214078900966658596}
   - component: {fileID: 7373788830792627937}
+  - component: {fileID: 7234872790794235563}
   m_Layer: 0
   m_Name: CanyonVar1 (4)
   m_TagString: Untagged
@@ -4311,6 +5117,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7234872790794235563
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8563711522679121363}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
 --- !u!1 &8626491833077806118
 GameObject:
   m_ObjectHideFlags: 0
@@ -4322,6 +5150,7 @@ GameObject:
   - component: {fileID: 3363335445429135192}
   - component: {fileID: 6419664598058593776}
   - component: {fileID: 2392860485202949367}
+  - component: {fileID: 2017442450277153561}
   m_Layer: 0
   m_Name: CanyonVar1
   m_TagString: Untagged
@@ -4402,6 +5231,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2017442450277153561
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8626491833077806118}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
 --- !u!1 &9071298037161260887
 GameObject:
   m_ObjectHideFlags: 0
@@ -4452,6 +5303,7 @@ GameObject:
   - component: {fileID: 1131110319691113596}
   - component: {fileID: 6348898426543497961}
   - component: {fileID: 4510065448392945483}
+  - component: {fileID: 2602841466622295461}
   m_Layer: 0
   m_Name: CanyonVar1 (6)
   m_TagString: Untagged
@@ -4532,3 +5384,25 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2602841466622295461
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9154744673669269350}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3870914203038805784, guid: f6a459b0613bf3f4892538eaf30c8ff1, type: 3}
