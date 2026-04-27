@@ -26,6 +26,7 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
     [SerializeField] private ParticleSystem destructionParticleSystem; //for voxel destruction
     [SerializeField] private ScreenShake mainCamera; //for Screenshake
     [SerializeField] private ScreenShake UICamera; //for Screenshake
+    public float dampining = 3f;
 
     void Awake()
     {
@@ -68,7 +69,7 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
         {
             if (instigator.tag == "Player")
             {
-                mainCamera.run();
+                mainCamera.run(dampining);
             }
         }
         Vector3 hitpoint = meshCollider.ClosestPoint(cause.transform.position);

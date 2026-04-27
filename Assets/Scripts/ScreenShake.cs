@@ -11,12 +11,12 @@ public class ScreenShake : MonoBehaviour
         
     }
 
-    public void run()
+    public void run(float dampining)
     {
-        StartCoroutine(Shaking());
+        StartCoroutine(Shaking(dampining));
     }
 
-    IEnumerator Shaking()
+    IEnumerator Shaking(float dampining)
     {
         Vector3 startingPosition = transform.position;
         float elapsedTime = 0f;
@@ -25,7 +25,7 @@ public class ScreenShake : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
             float strength = curve.Evaluate(elapsedTime / duration);
-            transform.position += Random.insideUnitSphere * strength;
+            transform.position += (Random.insideUnitSphere * strength) / dampining;
             yield return null;
         }
     }

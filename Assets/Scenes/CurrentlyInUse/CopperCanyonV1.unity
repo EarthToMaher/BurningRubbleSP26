@@ -212,7 +212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1954005227485368986, guid: 6d439d5fbaf72ac46bf7eaddc308d150, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2493496609306602912, guid: 6d439d5fbaf72ac46bf7eaddc308d150, type: 3}
       propertyPath: texture
@@ -449,8 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &72196852
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -699,8 +698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1 &187743055
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,8 +824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &201946952
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -975,8 +972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1001 &248883664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1186,8 +1182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1001 &299856741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1473,8 +1468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &373518663
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1531,8 +1525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &514140091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1545,8 +1538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1 &527993392 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 90939400ea9b0b64c812733282e5f33b, type: 3}
@@ -1608,8 +1600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1 &596641580 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 467d59d15586c11458d88ecdd8dc0d51, type: 3}
@@ -1649,8 +1640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &659817694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1663,8 +1653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &688331902
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1812,8 +1801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1 &764634156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,8 +1927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &779574694
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2110,8 +2097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1001 &863651441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2120,6 +2106,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2946815082880664677, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5031995550055895889, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
       propertyPath: m_PlayerPrefab
       value: 
@@ -2189,8 +2179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &933330860
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2269,8 +2258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &993761834
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2305,8 +2293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &1005497963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2319,8 +2306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &1024065173
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2377,8 +2363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &1058590678
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2413,8 +2398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &1094831744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2427,8 +2411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &1127825132
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2463,8 +2446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &1141386188
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2612,8 +2594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1 &1194942188
 GameObject:
   m_ObjectHideFlags: 0
@@ -2739,8 +2720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &1205423905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2753,8 +2733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &1235983761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2767,8 +2746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1001 &1238601985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2865,8 +2843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &1316531541
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2923,8 +2900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &1357848263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2937,8 +2913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &1363197260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2951,8 +2926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1 &1411447527
 GameObject:
   m_ObjectHideFlags: 0
@@ -3078,8 +3052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1 &1428390346
 GameObject:
   m_ObjectHideFlags: 0
@@ -3205,8 +3178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &1429879628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3219,8 +3191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &1456254369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3233,8 +3204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &1487138856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3247,8 +3217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1 &1491102652
 GameObject:
   m_ObjectHideFlags: 0
@@ -3374,8 +3343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1 &1509714082
 GameObject:
   m_ObjectHideFlags: 0
@@ -3501,8 +3469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1 &1541385054
 GameObject:
   m_ObjectHideFlags: 0
@@ -3628,8 +3595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &1586635182
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3799,8 +3765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &1613773145
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3835,8 +3800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &1632090966
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3871,8 +3835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1001 &1709057610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3942,8 +3905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1 &1725422544
 GameObject:
   m_ObjectHideFlags: 0
@@ -4069,8 +4031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &1747905402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4083,8 +4044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &1753950019
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4119,8 +4079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1 &1813654473 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 743209974658604412, guid: 5176c1f9e06077c4b86015510cf7c291, type: 3}
@@ -4160,8 +4119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &1834493909
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4196,8 +4154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1 &1892092743
 GameObject:
   m_ObjectHideFlags: 0
@@ -4323,8 +4280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &1909775718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4337,8 +4293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &1924580781
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4422,8 +4377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!64 &2007706218
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4502,8 +4456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1 &2122611758
 GameObject:
   m_ObjectHideFlags: 0
@@ -4767,8 +4720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1001 &3152197746995283824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5480,8 +5432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &8970552957871100452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5494,8 +5445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &8970552957871100453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5508,8 +5458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &8970552957871100454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5522,8 +5471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!114 &8970552957871100455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5536,8 +5484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
-  mainCamera: {fileID: 0}
-  UICamera: {fileID: 0}
+  dampining: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
