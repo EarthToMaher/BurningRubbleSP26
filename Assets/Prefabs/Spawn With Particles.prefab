@@ -746,7 +746,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2470557787151832477, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       insertIndex: -1
       addedObject: {fileID: 284580592347113011}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 645739342941954777, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7394262991041055039}
+    - targetCorrespondingSourceObject: {fileID: 251830358082345005, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1632076128846198888}
   m_SourcePrefab: {fileID: 100100000, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
 --- !u!1 &365119779982656043 stripped
 GameObject:
@@ -793,6 +799,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 452031021185341369, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
   m_PrefabInstance: {fileID: 7401506650628156178}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7334606177013707583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 251830358082345005, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+  m_PrefabInstance: {fileID: 7401506650628156178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1632076128846198888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7334606177013707583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17ef379175c8414983f054c992fd705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScreenShake
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.9524621
+      outSlope: 1.9524621
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.10279361
+      value: 0.20070063
+      inSlope: -0.74490684
+      outSlope: -0.74490684
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.06873604
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.22369505
+      outSlope: -0.22369505
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  duration: 1
 --- !u!114 &7720876779308017050 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 977702865069313672, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
@@ -804,6 +861,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c85ffe730f63154aa9f728cae21c837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Kart
+--- !u!1 &7944718730316827083 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 645739342941954777, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+  m_PrefabInstance: {fileID: 7401506650628156178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7394262991041055039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7944718730316827083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17ef379175c8414983f054c992fd705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScreenShake
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.9524621
+      outSlope: 1.9524621
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.10279361
+      value: 0.20070063
+      inSlope: -0.74490684
+      outSlope: -0.74490684
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.06873604
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.22369505
+      outSlope: -0.22369505
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  duration: 1
 --- !u!4 &9041016378130726015 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2003903285955237741, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
