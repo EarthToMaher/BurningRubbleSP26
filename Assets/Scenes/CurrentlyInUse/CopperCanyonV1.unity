@@ -195,7 +195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5337863925108918124, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5835688579013118587, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
       propertyPath: m_Name
@@ -604,8 +604,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 144724056}
+  - component: {fileID: 144724058}
+  - component: {fileID: 144724059}
   - component: {fileID: 144724057}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SinglePlayerMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,9 +629,9 @@ RectTransform:
   - {fileID: 201678900}
   m_Father: {fileID: 1892093610}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.8, y: 0.8}
-  m_AnchorMax: {x: 0.8, y: 0.8}
-  m_AnchoredPosition: {x: 207, y: -455.5}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 785, y: -130}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &144724057
@@ -646,6 +648,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RectMask2D
   m_Padding: {x: 0, y: 70, z: 0, w: 70}
   m_Softness: {x: 0, y: 0}
+--- !u!222 &144724058
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144724055}
+  m_CullTransparentMesh: 1
+--- !u!114 &144724059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144724055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &150708068
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,7 +926,7 @@ GameObject:
   - component: {fileID: 201678900}
   - component: {fileID: 201678902}
   - component: {fileID: 201678901}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SinglePlayerMinimap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1875,7 +1915,7 @@ GameObject:
   - component: {fileID: 738350022}
   - component: {fileID: 738350024}
   - component: {fileID: 738350023}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MultiplayerMiniMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1946,13 +1986,13 @@ GameObject:
   m_Component:
   - component: {fileID: 757274616}
   - component: {fileID: 757274617}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MultiplayerMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &757274616
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4391,7 +4431,7 @@ GameObject:
   - component: {fileID: 1892093613}
   - component: {fileID: 1892093612}
   - component: {fileID: 1892093611}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
