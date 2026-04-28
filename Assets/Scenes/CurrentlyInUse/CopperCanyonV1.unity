@@ -250,6 +250,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3858632662890533390, guid: 6d439d5fbaf72ac46bf7eaddc308d150, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -23.65001
+      objectReference: {fileID: 0}
     - target: {fileID: 8900899977744296288, guid: 6d439d5fbaf72ac46bf7eaddc308d150, type: 3}
       propertyPath: m_LocalPosition.x
       value: 373.2
@@ -3319,7 +3323,7 @@ PrefabInstance:
       objectReference: {fileID: 1930243454488128383, guid: 2ed011e5f1e70489baa624298848e430, type: 3}
     - target: {fileID: 8191327140858036771, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
       propertyPath: _checkpointReqNum
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8378775531679100674, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
       propertyPath: m_Name

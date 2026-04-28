@@ -91,10 +91,13 @@ public class Kart : MonoBehaviour, I_Damageable
         [SerializeField] private float rubbleAngle = 100;
         [Tooltip("Amount needed to perform a rubble charge action")]
         [SerializeField] private float rubbleBoostLength = 100;
+        [SerializeField] private Image rubbleFlame;
+        public float rubbleFlameFillRate = 0.5f;
 
         public void GainRubble(int amt)
         {
             currRubbleAmt = Mathf.Clamp(currRubbleAmt+amt, 0, MAX_AMT);
+            if(currRubbleAmt>=rubbleChargeAmt) rubbleFlameFillRate = 2f;
             UpdateUI();
         }
         public float GetRubbleBoostLength()
@@ -120,7 +123,13 @@ public class Kart : MonoBehaviour, I_Damageable
         public void UseRubble(int amt)
         {
             currRubbleAmt-=amt;
+            if(currRubbleAmt<rubbleChargeAmt) rubbleFlameFillRate = -4f;
             UpdateUI();
+        }
+
+        public void UpdateRubbleFlame(float delta)
+        {
+            rubbleFlame.fillAmount = Mathf.Clamp(rubbleFlame.fillAmount + (delta*rubbleFlameFillRate),0,1);
         }
 
         public void UpdateUI()
@@ -193,6 +202,7 @@ public class Kart : MonoBehaviour, I_Damageable
         //transform.position = new Vector3(transform.position.x, 2.001f, transform.position.z);
         //if (rubbleAction.WasPerformedThisFrame()) RubbleBoost();
         //if (restart.WasPerformedThisFrame()) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        rubbleSettings.UpdateRubbleFlame(Time.deltaTime);
     }
     public void TakeDamage(int dmg)
     {

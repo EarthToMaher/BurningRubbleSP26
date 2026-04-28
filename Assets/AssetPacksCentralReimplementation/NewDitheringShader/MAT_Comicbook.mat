@@ -28,7 +28,7 @@ Material:
     - _DitherOpacity: 0.197
     - _DitherScale: 6.7
     - _EdgeThickness: 1.92
-    - _EdgeThreshold: 0.19
+    - _EdgeThreshold: 0.624
     - _Steps: 4
     m_Colors:
     - _DarkColor: {r: 0.049999982, g: 0.049999982, b: 0.049999982, a: 1}
