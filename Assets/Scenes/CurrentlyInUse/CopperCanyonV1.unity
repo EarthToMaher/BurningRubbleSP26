@@ -119,6 +119,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &22147314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2959837363872139685, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &22147319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22147314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1001 &23628728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127,6 +145,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1120934658815077908, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 863651442}
+    - target: {fileID: 1120934658815077908, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120934658815077908, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Loading
+      objectReference: {fileID: 0}
     - target: {fileID: 3304701490660175518, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -174,6 +204,14 @@ PrefabInstance:
     - target: {fileID: 5337863925108918124, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626392697373417264, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 863651442}
+    - target: {fileID: 5626392697373417264, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
       objectReference: {fileID: 0}
     - target: {fileID: 5835688579013118587, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
       propertyPath: m_Name
@@ -326,6 +364,7 @@ GameObject:
   - component: {fileID: 59695794}
   - component: {fileID: 59695793}
   - component: {fileID: 59695792}
+  - component: {fileID: 59695795}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -426,6 +465,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59695790}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &59695795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59695790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1 &60755264
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +684,42 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f213e5c3f798e4449b8c1662f865d25, type: 3}
+--- !u!1 &132074480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8530356544449684095, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &132074485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132074480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &138677328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1209843309026982944, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &138677333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138677328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!114 &141625733 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1120934658815077908, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
@@ -655,6 +743,7 @@ GameObject:
   - component: {fileID: 150708072}
   - component: {fileID: 150708071}
   - component: {fileID: 150708070}
+  - component: {fileID: 150708073}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -755,6 +844,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150708068}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &150708073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150708068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1 &184870724 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3082703930187220001, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
@@ -772,6 +874,7 @@ GameObject:
   - component: {fileID: 187743059}
   - component: {fileID: 187743058}
   - component: {fileID: 187743057}
+  - component: {fileID: 187743060}
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
@@ -872,6 +975,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187743055}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &187743060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187743055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1001 &199886107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1038,6 +1154,7 @@ GameObject:
   - component: {fileID: 242718289}
   - component: {fileID: 242718288}
   - component: {fileID: 242718287}
+  - component: {fileID: 242718290}
   m_Layer: 0
   m_Name: Cube (13)
   m_TagString: Untagged
@@ -1138,6 +1255,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242718285}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &242718290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242718285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &250789721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1520035177611431100, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &250789726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250789721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1 &256298296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,6 +1298,7 @@ GameObject:
   - component: {fileID: 256298300}
   - component: {fileID: 256298299}
   - component: {fileID: 256298298}
+  - component: {fileID: 256298301}
   m_Layer: 0
   m_Name: Cube (11)
   m_TagString: Untagged
@@ -1250,6 +1399,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256298296}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &256298301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256298296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &263054359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3433782175381278919, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &263054364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263054359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1001 &305377846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1431,11 +1611,155 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bff27b98921676f4cbc41636076de471, type: 3}
+--- !u!1 &308651357 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4399897062495167756, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &308651362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308651357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1 &320688399 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2094233406480631178, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
   m_PrefabInstance: {fileID: 23628728}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &324719691 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1208339850258994405, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &324719696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324719691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &336416619 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1106459769243712088, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &336416624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336416619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &339646910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 317531180069298842, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &339646915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339646910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &378423967 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6008988151883788858, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &378423972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378423967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &382819147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7599264415100158560, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &382819152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382819147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &400778187 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9154744673669269350, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &400778192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400778187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &454903242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2003685890407858905, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &454903247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454903242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!114 &524293382 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1012386093835787914, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
@@ -1951,7 +2275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SplineTriggerZone
   _splineToFollow: {fileID: 1241824975}
   _duration: 10
-  _healAmt: 0
+  _healAmt: 20
 --- !u!65 &586775319
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2079,7 +2403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SplineTriggerZone
   _splineToFollow: {fileID: 563524443}
   _duration: 10
-  _healAmt: 0
+  _healAmt: 20
 --- !u!65 &619232834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2158,6 +2482,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619232831}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &638337302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 372278571082256435, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &638337307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638337302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!114 &639017584 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8670927343738395885, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
@@ -2477,6 +2819,78 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721947306}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &734957271 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3164594073309969579, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &734957276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734957271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &755535510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1469103723856613781, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &755535515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755535510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &758591090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7185371324476610584, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &758591095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758591090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &759790060 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6035216343185966514, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &759790065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759790060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1 &763328458
 GameObject:
   m_ObjectHideFlags: 0
@@ -2489,6 +2903,7 @@ GameObject:
   - component: {fileID: 763328462}
   - component: {fileID: 763328461}
   - component: {fileID: 763328460}
+  - component: {fileID: 763328463}
   m_Layer: 0
   m_Name: Cube (17)
   m_TagString: Untagged
@@ -2589,6 +3004,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763328458}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &763328463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763328458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1 &764634156
 GameObject:
   m_ObjectHideFlags: 0
@@ -2601,6 +3029,7 @@ GameObject:
   - component: {fileID: 764634160}
   - component: {fileID: 764634159}
   - component: {fileID: 764634158}
+  - component: {fileID: 764634161}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -2701,6 +3130,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764634156}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &764634161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764634156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &774076316 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2514074765330075705, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &774076321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774076316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1 &837663596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2713,6 +3173,7 @@ GameObject:
   - component: {fileID: 837663600}
   - component: {fileID: 837663599}
   - component: {fileID: 837663598}
+  - component: {fileID: 837663601}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -2813,6 +3274,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837663596}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &837663601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837663596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &838375135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3559106428029624763, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &838375140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838375135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1001 &863651441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2821,6 +3313,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7184575576220208698, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
+      propertyPath: m_PlayerPrefab
+      value: 
+      objectReference: {fileID: 1930243454488128383, guid: 2ed011e5f1e70489baa624298848e430, type: 3}
+    - target: {fileID: 8191327140858036771, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
+      propertyPath: _checkpointReqNum
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8378775531679100674, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
       propertyPath: m_Name
       value: ===MANAGeRS===
@@ -2938,6 +3438,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
+--- !u!114 &863651442 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2561010732726542153, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
+  m_PrefabInstance: {fileID: 863651441}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a190f8f83510484ea68494bcaba0227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneController
 --- !u!114 &879681278 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2875138261531537000, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
@@ -3182,6 +3693,42 @@ Transform:
   - {fileID: 1469663704}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &962995519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7103624668893118453, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &962995524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962995519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &1040246659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8563711522679121363, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1040246664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040246659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!114 &1064603410 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3670704420376120038, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
@@ -3193,6 +3740,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &1089264162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3059528015785814833, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1089264167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089264162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1001 &1091361867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3278,6 +3843,7 @@ GameObject:
   - component: {fileID: 1185032699}
   - component: {fileID: 1185032698}
   - component: {fileID: 1185032697}
+  - component: {fileID: 1185032700}
   m_Layer: 0
   m_Name: Cube (12)
   m_TagString: Untagged
@@ -3378,6 +3944,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185032695}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1185032700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185032695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1 &1194942188
 GameObject:
   m_ObjectHideFlags: 0
@@ -3390,6 +3969,7 @@ GameObject:
   - component: {fileID: 1194942192}
   - component: {fileID: 1194942191}
   - component: {fileID: 1194942190}
+  - component: {fileID: 1194942193}
   m_Layer: 0
   m_Name: Cube (18)
   m_TagString: Untagged
@@ -3490,6 +4070,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194942188}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1194942193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194942188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &1196032092 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3813603961877937074, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1196032097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196032092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1001 &1197977937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3567,6 +4178,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 467d59d15586c11458d88ecdd8dc0d51, type: 3}
+--- !u!1 &1198410926 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 306690850475754454, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1198410931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198410926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1001 &1212467836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3782,6 +4411,24 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &1228333850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7839068398264499682, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1228333855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228333850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1 &1241824974
 GameObject:
   m_ObjectHideFlags: 0
@@ -3955,6 +4602,42 @@ Transform:
   - {fileID: 586775317}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1270603333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3218473838066105444, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1270603338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270603333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &1294250243 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5722962163484506424, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1294250248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294250243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1 &1300711251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3988,6 +4671,60 @@ Transform:
   - {fileID: 548493630}
   m_Father: {fileID: 23628729}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1313365365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6744620979811614124, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1313365370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313365365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &1316767796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 511999517647951061, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1316767801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316767796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &1349738683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4431482512961004298, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1349738688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349738683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1001 &1394194015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4065,6 +4802,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 467d59d15586c11458d88ecdd8dc0d51, type: 3}
+--- !u!1 &1403231320 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4841368081915703864, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1403231325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403231320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!114 &1403598996 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1094162309681145660, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
@@ -4088,6 +4843,7 @@ GameObject:
   - component: {fileID: 1411447531}
   - component: {fileID: 1411447530}
   - component: {fileID: 1411447529}
+  - component: {fileID: 1411447532}
   m_Layer: 0
   m_Name: Cube (10)
   m_TagString: Untagged
@@ -4188,6 +4944,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411447527}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1411447532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411447527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1 &1428390346
 GameObject:
   m_ObjectHideFlags: 0
@@ -4200,6 +4969,7 @@ GameObject:
   - component: {fileID: 1428390350}
   - component: {fileID: 1428390349}
   - component: {fileID: 1428390348}
+  - component: {fileID: 1428390351}
   m_Layer: 0
   m_Name: Cube (15)
   m_TagString: Untagged
@@ -4300,6 +5070,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428390346}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1428390351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428390346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!114 &1445566469 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1200505846582689117, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
@@ -4360,7 +5143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SplineTriggerZone
   _splineToFollow: {fileID: 920715379}
   _duration: 10
-  _healAmt: 0
+  _healAmt: 20
 --- !u!65 &1469663706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4451,6 +5234,7 @@ GameObject:
   - component: {fileID: 1491102656}
   - component: {fileID: 1491102655}
   - component: {fileID: 1491102654}
+  - component: {fileID: 1491102657}
   m_Layer: 0
   m_Name: Cube (14)
   m_TagString: Untagged
@@ -4551,6 +5335,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491102652}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1491102657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491102652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &1491540003 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1240548799859469876, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1491540008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491540003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1001 &1506883047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4640,6 +5455,7 @@ GameObject:
   - component: {fileID: 1509714086}
   - component: {fileID: 1509714085}
   - component: {fileID: 1509714084}
+  - component: {fileID: 1509714087}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -4740,6 +5556,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509714082}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1509714087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509714082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &1519955178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5031267604150605153, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1519955183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519955178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1 &1541385054
 GameObject:
   m_ObjectHideFlags: 0
@@ -4752,6 +5599,7 @@ GameObject:
   - component: {fileID: 1541385058}
   - component: {fileID: 1541385057}
   - component: {fileID: 1541385056}
+  - component: {fileID: 1541385059}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -4852,6 +5700,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541385054}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1541385059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541385054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &1603064105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5250495183541407812, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1603064110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603064105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1 &1608785768
 GameObject:
   m_ObjectHideFlags: 0
@@ -4864,6 +5743,7 @@ GameObject:
   - component: {fileID: 1608785772}
   - component: {fileID: 1608785771}
   - component: {fileID: 1608785770}
+  - component: {fileID: 1608785773}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -4964,6 +5844,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608785768}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1608785773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608785768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1 &1624642056 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3451878947862830078, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
@@ -5046,6 +5939,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 467d59d15586c11458d88ecdd8dc0d51, type: 3}
+--- !u!1 &1655529766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 857513692173403764, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1655529771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655529766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1001 &1709057610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5269,6 +6180,7 @@ GameObject:
   - component: {fileID: 1725422548}
   - component: {fileID: 1725422547}
   - component: {fileID: 1725422546}
+  - component: {fileID: 1725422549}
   m_Layer: 0
   m_Name: Cube (9)
   m_TagString: Untagged
@@ -5369,6 +6281,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725422544}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1725422549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725422544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1 &1769902094 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3255554249786671047, guid: 666bb24ef0fe4f143ac6ce72d8a2ae27, type: 3}
@@ -5465,6 +6390,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829710459}
   m_CullTransparentMesh: 1
+--- !u!1 &1833765684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8626491833077806118, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1833765689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833765684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1 &1892092743
 GameObject:
   m_ObjectHideFlags: 0
@@ -5477,6 +6420,7 @@ GameObject:
   - component: {fileID: 1892092747}
   - component: {fileID: 1892092746}
   - component: {fileID: 1892092745}
+  - component: {fileID: 1892092748}
   m_Layer: 0
   m_Name: Cube (16)
   m_TagString: Untagged
@@ -5577,6 +6521,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892092743}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1892092748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892092743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
+--- !u!1 &1917894361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2377879430869107320, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+  m_PrefabInstance: {fileID: 8970552957871100407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1917894366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917894361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1001 &1922978535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5738,6 +6713,7 @@ GameObject:
   - component: {fileID: 2137736532}
   - component: {fileID: 2137736531}
   - component: {fileID: 2137736530}
+  - component: {fileID: 2137736533}
   m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Untagged
@@ -5838,6 +6814,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137736528}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2137736533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137736528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2602a85f014ea4c31bfc423b2ea19ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionWithWalls
+  dampining: 2
 --- !u!1001 &3152197746995283824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5947,6 +6936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ===CHECKPOINTS===
       objectReference: {fileID: 0}
+    - target: {fileID: 6182568950349144338, guid: ff78eed0c79ceca448f32792ee5b5284, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6007,7 +7000,121 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8626491833077806118, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1833765689}
+    - targetCorrespondingSourceObject: {fileID: 1240548799859469876, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1491540008}
+    - targetCorrespondingSourceObject: {fileID: 1208339850258994405, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 324719696}
+    - targetCorrespondingSourceObject: {fileID: 2003685890407858905, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 454903247}
+    - targetCorrespondingSourceObject: {fileID: 2514074765330075705, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 774076321}
+    - targetCorrespondingSourceObject: {fileID: 4431482512961004298, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1349738688}
+    - targetCorrespondingSourceObject: {fileID: 7103624668893118453, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 962995524}
+    - targetCorrespondingSourceObject: {fileID: 306690850475754454, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1198410931}
+    - targetCorrespondingSourceObject: {fileID: 7839068398264499682, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1228333855}
+    - targetCorrespondingSourceObject: {fileID: 1469103723856613781, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 755535515}
+    - targetCorrespondingSourceObject: {fileID: 1106459769243712088, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 336416624}
+    - targetCorrespondingSourceObject: {fileID: 2959837363872139685, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 22147319}
+    - targetCorrespondingSourceObject: {fileID: 6008988151883788858, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 378423972}
+    - targetCorrespondingSourceObject: {fileID: 8563711522679121363, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1040246664}
+    - targetCorrespondingSourceObject: {fileID: 3218473838066105444, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1270603338}
+    - targetCorrespondingSourceObject: {fileID: 3813603961877937074, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1196032097}
+    - targetCorrespondingSourceObject: {fileID: 1209843309026982944, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 138677333}
+    - targetCorrespondingSourceObject: {fileID: 3559106428029624763, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 838375140}
+    - targetCorrespondingSourceObject: {fileID: 9154744673669269350, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 400778192}
+    - targetCorrespondingSourceObject: {fileID: 4841368081915703864, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1403231325}
+    - targetCorrespondingSourceObject: {fileID: 5250495183541407812, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1603064110}
+    - targetCorrespondingSourceObject: {fileID: 3059528015785814833, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1089264167}
+    - targetCorrespondingSourceObject: {fileID: 372278571082256435, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 638337307}
+    - targetCorrespondingSourceObject: {fileID: 6744620979811614124, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1313365370}
+    - targetCorrespondingSourceObject: {fileID: 5031267604150605153, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1519955183}
+    - targetCorrespondingSourceObject: {fileID: 6035216343185966514, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 759790065}
+    - targetCorrespondingSourceObject: {fileID: 5722962163484506424, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1294250248}
+    - targetCorrespondingSourceObject: {fileID: 7185371324476610584, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 758591095}
+    - targetCorrespondingSourceObject: {fileID: 2377879430869107320, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1917894366}
+    - targetCorrespondingSourceObject: {fileID: 3433782175381278919, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 263054364}
+    - targetCorrespondingSourceObject: {fileID: 317531180069298842, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 339646915}
+    - targetCorrespondingSourceObject: {fileID: 3164594073309969579, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 734957276}
+    - targetCorrespondingSourceObject: {fileID: 8530356544449684095, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 132074485}
+    - targetCorrespondingSourceObject: {fileID: 1520035177611431100, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 250789726}
+    - targetCorrespondingSourceObject: {fileID: 4399897062495167756, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 308651362}
+    - targetCorrespondingSourceObject: {fileID: 511999517647951061, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1316767801}
+    - targetCorrespondingSourceObject: {fileID: 857513692173403764, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1655529771}
+    - targetCorrespondingSourceObject: {fileID: 7599264415100158560, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 382819152}
   m_SourcePrefab: {fileID: 100100000, guid: 8bda64c5c05706c429f30a31ba31e3cd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
