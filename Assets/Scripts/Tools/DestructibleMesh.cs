@@ -49,7 +49,7 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
 
     void OnTriggerEnter(Collider other)
     {
-        destructionParticleSystem = GameObject.Find("Rock Particles").GetComponent<ParticleSystem>(); //gets the game object the particle system is on.
+        destructionParticleSystem = other.transform.GetChild(3).GetComponent<ParticleSystem>(); //gets the game object the particle system is on.
         mainCamera = other.transform.parent.GetChild(2).GetComponent<ScreenShake>(); //2
         UICamera = other.transform.parent.GetChild(3).GetComponent<ScreenShake>(); //3
         //Debug.Log("Collision detected with " + other.gameObject.name);
