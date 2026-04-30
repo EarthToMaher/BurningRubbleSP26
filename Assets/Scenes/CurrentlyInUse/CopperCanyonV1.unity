@@ -3323,7 +3323,7 @@ PrefabInstance:
       objectReference: {fileID: 1930243454488128383, guid: 2ed011e5f1e70489baa624298848e430, type: 3}
     - target: {fileID: 8191327140858036771, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
       propertyPath: _checkpointReqNum
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8378775531679100674, guid: 55d6e19be66391a4d94d050bf8332640, type: 3}
       propertyPath: m_Name
