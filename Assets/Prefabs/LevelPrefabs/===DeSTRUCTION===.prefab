@@ -654,7 +654,7 @@ Transform:
   m_GameObject: {fileID: 683147808635574515}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.37909767, z: -0, w: 0.9253567}
-  m_LocalPosition: {x: 764.7, y: 4.44, z: 552.2}
+  m_LocalPosition: {x: 765.2, y: 4.44, z: 551.7}
   m_LocalScale: {x: 10, y: 1, z: 13}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1328,13 +1328,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902386385713464451}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.019331466, y: 0.68333906, z: -0.0123209525, w: 0.7297412}
-  m_LocalPosition: {x: 359.93, y: 2.42, z: 665.84}
+  m_LocalRotation: {x: -0.020389818, y: 0.61279196, z: -0.010476964, w: 0.78991175}
+  m_LocalPosition: {x: 359.8, y: 2.5, z: 668}
   m_LocalScale: {x: 5, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3858632662890533390}
-  m_LocalEulerAnglesHint: {x: -0.652, y: 86.253, z: -2.545}
+  m_LocalEulerAnglesHint: {x: -1.11, y: 75.63, z: -2.381}
 --- !u!33 &1715593089693992245
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2983,7 +2983,7 @@ Transform:
   m_GameObject: {fileID: 3360125913078683412}
   serializedVersion: 2
   m_LocalRotation: {x: -0.023663625, y: 0.41279218, z: 0.010728889, w: 0.91045463}
-  m_LocalPosition: {x: 344.5, y: 1.88, z: 656.1}
+  m_LocalPosition: {x: 343.4, y: 1.88, z: 657.3}
   m_LocalScale: {x: 10, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3118,7 +3118,7 @@ Transform:
   m_GameObject: {fileID: 3728209596178623784}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.18268584, z: -0, w: 0.9831714}
-  m_LocalPosition: {x: 547.6, y: 7.37, z: 464.2}
+  m_LocalPosition: {x: 547.6, y: 8.4, z: 464.2}
   m_LocalScale: {x: 30, y: 1, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3793,7 +3793,7 @@ Transform:
   m_GameObject: {fileID: 4691660875184218108}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0325093, y: 0.9919827, z: -0.0016202196, w: 0.122110344}
-  m_LocalPosition: {x: 392.11, y: 2.78, z: 653.1}
+  m_LocalPosition: {x: 396.4, y: 3.1, z: 654.2}
   m_LocalScale: {x: 5, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4516,7 +4516,7 @@ Transform:
   m_GameObject: {fileID: 5555597016750293607}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70796067, z: -0, w: 0.7062519}
-  m_LocalPosition: {x: 755.68, y: 4.44, z: 547.22}
+  m_LocalPosition: {x: 755.7, y: 4.44, z: 546.8}
   m_LocalScale: {x: 10, y: 1, z: 13}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5460,13 +5460,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6479171656494999210}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.6942034, z: -0, w: 0.7197789}
-  m_LocalPosition: {x: 725.92, y: 2.35, z: 652.11}
+  m_LocalRotation: {x: -0, y: -0.55978954, z: -0, w: 0.82863486}
+  m_LocalPosition: {x: 724.1, y: 2.35, z: 652.4}
   m_LocalScale: {x: 10, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3858632662890533390}
-  m_LocalEulerAnglesHint: {x: 0, y: -87.928, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -68.082, z: 0}
 --- !u!33 &5934025161193444390
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5866,7 +5866,7 @@ Transform:
   m_GameObject: {fileID: 6639590593225560886}
   serializedVersion: 2
   m_LocalRotation: {x: -0.036361136, y: 0.80180573, z: -0.002910124, w: 0.5964705}
-  m_LocalPosition: {x: 379.44, y: 2.87, z: 664.24}
+  m_LocalPosition: {x: 380.5, y: 3.1, z: 667.5}
   m_LocalScale: {x: 5, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6541,7 +6541,7 @@ Transform:
   m_GameObject: {fileID: 7300009336384475227}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 772.1, y: 0.62, z: 655.2}
+  m_LocalPosition: {x: 773.69, y: 0.62, z: 655.2}
   m_LocalScale: {x: 10, y: 1, z: 13}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7571,6 +7571,8 @@ MonoBehaviour:
   smoothNormals: 1
   drawNormals: 0
   worldVoxelization: {fileID: 2749345862772934774}
+  texture: {fileID: 2800000, guid: 0cc3a9431eaf444d6909b26ffc1e2f01, type: 3}
+  outlineMat: {fileID: 2100000, guid: e01861176914b4e40a0aa868ff50734c, type: 2}
 --- !u!114 &2133200973541769979
 MonoBehaviour:
   m_ObjectHideFlags: 0

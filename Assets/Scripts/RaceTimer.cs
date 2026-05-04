@@ -14,6 +14,7 @@ public class RaceTimer : MonoBehaviour
     [Tooltip("The text element we want to modify")]
     [SerializeField] private TextMeshProUGUI raceTime;
     [SerializeField] private TextMeshProUGUI bestTimeText;
+    [SerializeField] private TextMeshProUGUI finishText;
     [SerializeField] private GameObject player;
 
     private EndScreenManager endScreenMgr;
@@ -67,7 +68,7 @@ public class RaceTimer : MonoBehaviour
             {
                 endScreenMgr.PlayerFinish(raceTime.text, playerName);
                 addedToResults = true;
-                Debug.Log("Player finished!");
+                finishText.gameObject.SetActive(true);
             }
 
             if (time < bestTime) SaveBestTime();
