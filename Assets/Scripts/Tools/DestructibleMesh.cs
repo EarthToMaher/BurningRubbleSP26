@@ -24,6 +24,9 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
     private MeshCollider meshCollider;
     private Example marchingCubesScript;
     [SerializeField] private ParticleSystem destructionParticleSystem; //for voxel destruction
+    [SerializeField] private ScreenShake mainCamera; //for Screenshake
+    [SerializeField] private ScreenShake UICamera; //for Screenshake
+    public float dampining = 3f;
 
     void Awake()
     {
@@ -46,7 +49,9 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
 
     void OnTriggerEnter(Collider other)
     {
-        destructionParticleSystem = GameObject.Find("Rock Particles").GetComponent<ParticleSystem>(); //gets the game object the particle system is on.
+        destructionParticleSystem = other.transform.GetChild(3).GetComponent<ParticleSystem>(); //gets the game object the particle system is on.
+        mainCamera = other.transform.parent.GetChild(2).GetComponent<ScreenShake>(); //2
+        UICamera = other.transform.parent.GetChild(3).GetComponent<ScreenShake>(); //3
         //Debug.Log("Collision detected with " + other.gameObject.name);
         DestroyMe(other.gameObject, other.gameObject);
     }
@@ -60,6 +65,13 @@ public class DestructibleMesh : MonoBehaviour, I_Destructible
     public void DestroyMe(GameObject instigator, GameObject cause)
     {
         destructionParticleSystem.Play(); // runs particle system here
+        if(mainCamera != null && UICamera != null)
+        {
+            if (instigator.tag == "Player")
+            {
+                mainCamera.run(dampining);
+            }
+        }
         Vector3 hitpoint = meshCollider.ClosestPoint(cause.transform.position);
         Debug.Log("Hitpoint: " + hitpoint);
         int numDestroyed = ApplyHit(hitpoint);

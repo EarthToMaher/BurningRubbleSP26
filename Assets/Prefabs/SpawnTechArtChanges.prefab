@@ -8,14 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 940759178396683523, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2955205348286451495, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3942606959318540822, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_LocalPosition.x
       value: -41.9
@@ -56,74 +48,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4301217625654968273, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 5453940168262288877, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5453940168262288877, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7478920715709650959, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+    - target: {fileID: 5453940168262288877, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
+      propertyPath: m_fontSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705251910006131896, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8970877045213511789, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
       propertyPath: m_Name
-      value: Spawn With Particles
+      value: SpawnTechArtChanges
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 645739342941954777, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6685394967903500340}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
---- !u!1 &7944718730316827083 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 645739342941954777, guid: 39946a717a8b80044a8433a664ac0c63, type: 3}
-  m_PrefabInstance: {fileID: 7401506650628156178}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6685394967903500340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7944718730316827083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a17ef379175c8414983f054c992fd705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScreenShake
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 1.9524621
-      outSlope: 1.9524621
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.10279361
-      value: 0.20070063
-      inSlope: -0.74490684
-      outSlope: -0.74490684
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.06873604
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -0.22369505
-      outSlope: -0.22369505
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  duration: 1
