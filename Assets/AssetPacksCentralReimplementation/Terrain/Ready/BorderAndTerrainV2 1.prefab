@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5171734677408510878
+--- !u!1001 &7865902886478672461
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -62,12 +62,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b0b49e49e3f7e9c46b87d7191a1c62fb, type: 3}
       propertyPath: m_Name
-      value: BorderAndTerrainV2
+      value: BorderAndTerrainV2 1
       objectReference: {fileID: 0}
     - target: {fileID: 6067772529189424433, guid: b0b49e49e3f7e9c46b87d7191a1c62fb, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c9a10f19ebc357545b8c9155fe442030, type: 2}
+      objectReference: {fileID: 2100000, guid: b2f1367aa67dd2f4db028394b58de4f9, type: 2}
     - target: {fileID: 8006827931920951818, guid: b0b49e49e3f7e9c46b87d7191a1c62fb, type: 3}
       propertyPath: m_Materials.Array.size
       value: 2
